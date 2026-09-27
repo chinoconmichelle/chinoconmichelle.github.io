@@ -73,7 +73,7 @@ function runSearch(q){
     sum.append(left, tag); d.appendChild(sum);
     const body = el("div","sbody");
     const b = el("button", null, T("hear")); b.onclick = e => { e.preventDefault(); sayZh(c.say||c.s); };
-    body.append(b, el("div","sx", c.x||""));
+    body.append(b, el("div","sx", xText(c)));
     d.appendChild(body); box.appendChild(d);
   });
 }

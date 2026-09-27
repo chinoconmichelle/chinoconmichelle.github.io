@@ -9,7 +9,7 @@ directly from disk (file://), so data is loaded with <script> tags, not fetch().
 - Card content never gets translated by the interface switch.
 - Card fields: id, s (simplified), t (traditional, only when different), py, es, en, x (explanation), say (optional TTS text).
 - Card ids are permanent (progress is keyed by them). Prefix per topic, e.g. `num-12`. Never renumber; append new ids.
-- `x` explanations are in Spanish and go as deep as possible: break each character into components, and those
+- `x` explanations are written in Spanish first; English and Chinese versions live in data/i18n/*.js via XL(topicId,{cardId:{en,zh}}). Every new card needs all three. They go as deep as possible: break each character into components, and those
   into their pictographic origins. Say plainly when a component is only phonetic, and flag disputed etymologies
   instead of inventing a story.
 - Audio: Chinese only (browser speechSynthesis, zh-CN).

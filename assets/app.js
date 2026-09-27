@@ -252,10 +252,13 @@ function applyUI(){
   const ae=document.getElementById("authErr"); if(ae && ae.dataset.k) ae.textContent=T(ae.dataset.k);
   const ao=document.getElementById("authOk"); if(ao && ao.dataset.k) ao.textContent=T(ao.dataset.k);
   const pm=document.getElementById("pwMatch"); if(pm && pm.dataset.k) pm.textContent=T(pm.dataset.k);
+  if(topic && curId && !document.getElementById("studyView").classList.contains("hidden")){ const c=card(curId); if(c) document.getElementById("explainText").textContent = xText(c); }
   renderTiles();
   if(!document.getElementById("drillView").classList.contains("hidden")) renderDrill();
   if(!document.getElementById("knownView").classList.contains("hidden")) renderKnown();
 }
+/* Explanation in the interface language; falls back to Spanish (the original) */
+function xText(c){ const l=S().lang; return (l!=="es" && c["x_"+l]) || c.x || ""; }
 function setSetting(k,v){ state.settings[k]=v; state.settings.u=Date.now(); save(); applyUI(); }
 
 /* =========================================================
@@ -356,7 +359,7 @@ function renderCard(){
   front.innerHTML = ""; back.innerHTML = "";
   if(S().mode===1){ faceChinese(front, c, S().pinyin); faceMeaning(back, c); }
   else            { faceMeaning(front, c); faceChinese(back, c, true); }
-  document.getElementById("explainText").textContent = c.x || "";
+  document.getElementById("explainText").textContent = xText(c);
 }
 
 function flip(){
