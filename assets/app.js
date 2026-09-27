@@ -22,7 +22,15 @@ const UI = {
     importOk:"Progreso importado.",importFail:"Ese archivo no es un progreso válido.",
     confirmReset:"¿Reiniciar el progreso de este tema?",
     noTTS:"Este navegador no puede leer en voz alta.",
-    storageNote:"El progreso se guarda en este navegador, en este dispositivo. Para pasarlo a otro dispositivo o navegador, usá «Exportar progreso» y después «Importar progreso» del otro lado.",
+    storageNote:"Tu progreso se guarda en tu cuenta y te sigue a cualquier dispositivo donde entres.",
+    authTitle:"Chino con Michelle",authSub:"Entrá con tu usuario para guardar tu progreso en cualquier dispositivo.",
+    username:"Usuario",password:"Contraseña",signIn:"Entrar",signUp:"Crear cuenta",signOut:"Salir",
+    hello:"Hola, {u}",saved:"Guardado ✓",saving:"Guardando…",offline:"Sin conexión: se guardará al volver",
+    errUser:"El usuario debe tener entre 3 y 30 caracteres: letras, números, punto, guion o guion bajo.",
+    errPass:"La contraseña debe tener al menos 6 caracteres.",
+    errExists:"Ese usuario ya existe. Probá con otro, o entrá con tu contraseña.",
+    errWrong:"Usuario o contraseña incorrectos.",errNet:"No se pudo conectar. Revisá tu conexión e intentá de nuevo.",
+    errSignupOff:"La creación de cuentas está desactivada. Pedile una cuenta a quien administra el sitio.",
     keys:"Teclado: espacio = girar · ← → = anterior/siguiente · 1 = todavía no · 2 = la sé · S = escuchar"
   },
   en:{
@@ -45,7 +53,15 @@ const UI = {
     importOk:"Progress imported.",importFail:"That file isn't valid progress data.",
     confirmReset:"Reset progress for this topic?",
     noTTS:"This browser can't read text aloud.",
-    storageNote:"Progress is saved in this browser, on this device. To move it to another device or browser, use “Export progress”, then “Import progress” on the other side.",
+    storageNote:"Your progress is saved to your account and follows you to any device where you sign in.",
+    authTitle:"Mandarin with Michelle",authSub:"Sign in with your username to keep your progress on any device.",
+    username:"Username",password:"Password",signIn:"Sign in",signUp:"Create account",signOut:"Sign out",
+    hello:"Hi, {u}",saved:"Saved ✓",saving:"Saving…",offline:"Offline: will save when you're back",
+    errUser:"Username must be 3–30 characters: letters, numbers, dot, hyphen or underscore.",
+    errPass:"Password must be at least 6 characters.",
+    errExists:"That username is taken. Try another, or sign in with your password.",
+    errWrong:"Wrong username or password.",errNet:"Couldn't connect. Check your connection and try again.",
+    errSignupOff:"New accounts are turned off. Ask the site admin for an account.",
     keys:"Keyboard: space = flip · ← → = previous/next · 1 = not yet · 2 = I know it · S = hear"
   },
   zh:{
@@ -68,7 +84,15 @@ const UI = {
     importOk:"进度已导入。",importFail:"这个文件不是有效的进度数据。",
     confirmReset:"确定要重置本主题的进度吗？",
     noTTS:"当前浏览器不支持语音朗读。",
-    storageNote:"进度只保存在当前设备的当前浏览器。要换设备或浏览器，请先【导出进度】，再在另一边【导入进度】。",
+    storageNote:"进度保存在你的账号里，在任何设备登录都能继续。",
+    authTitle:"中文学习卡片",authSub:"用你的用户名登录，在任何设备上保存进度。",
+    username:"用户名",password:"密码",signIn:"登录",signUp:"创建账号",signOut:"退出",
+    hello:"你好，{u}",saved:"已保存 ✓",saving:"保存中…",offline:"离线：恢复连接后会自动保存",
+    errUser:"用户名需为 3–30 个字符：字母、数字、点、连字符或下划线。",
+    errPass:"密码至少需要 6 个字符。",
+    errExists:"这个用户名已被使用。请换一个，或用密码登录。",
+    errWrong:"用户名或密码错误。",errNet:"无法连接。请检查网络后重试。",
+    errSignupOff:"目前不开放注册。请向网站管理员申请账号。",
     keys:"键盘：空格 = 翻面 · ← → = 上一张/下一张 · 1 = 还不会 · 2 = 我会了 · S = 朗读"
   }
 };
@@ -88,28 +112,93 @@ const TOPICS = window.TOPICS;
 /* =========================================================
    STATE  (one localStorage key; progress keyed by card id)
    ========================================================= */
-const STORE_KEY = "mzhApp.v1";
+const OLD_KEY = "mzhApp.v1";                 // Phase 1 (before accounts)
+const cacheKey = uid => "mzhApp.v2." + uid;  // local copy per user
 const DEFAULT_SETTINGS = {lang:"es", theme:"light", font:1, mode:1, pinyin:true, shuffle:false};
 let state = {settings:{...DEFAULT_SETTINGS}, topics:{}};
 let topic = null;        // current topic object
 let order = [];          // card ids in study order
 let curId = null;        // current card id
+let user = null;         // signed-in Supabase user
 
-function load(){
-  try{
-    const raw = localStorage.getItem(STORE_KEY);
-    if(raw){
-      const d = JSON.parse(raw);
-      if(d && typeof d==="object"){
-        state.settings = {...DEFAULT_SETTINGS, ...(d.settings||{})};
-        state.topics = d.topics || {};
-      }
-    }
-  }catch(e){}
+/* ---------- Supabase ---------- */
+const SUPABASE_URL = "https://qmjjpelvbplaoennylva.supabase.co";
+const SUPABASE_KEY = "sb_publishable_g9Ph7pcTg2EIj1zbX3bHRQ_YK9ahxCZ";   // publishable: safe in the browser, protected by RLS
+const EMAIL_DOMAIN = "chinoconmichelle.app";                               // usernames become <user>@<domain> internally
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const userToEmail = u => u.trim().toLowerCase() + "@" + EMAIL_DOMAIN;
+const emailToUser = e => (e||"").split("@")[0];
+
+function readJSON(key){ try{ const r=localStorage.getItem(key); return r?JSON.parse(r):null; }catch(e){ return null; } }
+function writeJSON(key,v){ try{ localStorage.setItem(key, JSON.stringify(v)); }catch(e){} }
+
+/* Settings: keep the last choice on this device even before signing in */
+function loadDeviceSettings(){
+  const d = readJSON("mzhApp.settings") || (readJSON(OLD_KEY)||{}).settings;
+  if(d) state.settings = {...DEFAULT_SETTINGS, ...d};
 }
-function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){} }
+
+/* Merge two progress objects: each topic keeps whichever copy changed last */
+function merge(a, b){
+  const out = {settings:{...DEFAULT_SETTINGS}, topics:{}};
+  const sa=(a&&a.settings)||{}, sbb=(b&&b.settings)||{};
+  out.settings = {...DEFAULT_SETTINGS, ...((sa.u||0) >= (sbb.u||0) ? sa : sbb)};
+  const ta=(a&&a.topics)||{}, tb=(b&&b.topics)||{};
+  new Set([...Object.keys(ta), ...Object.keys(tb)]).forEach(id => {
+    const x=ta[id], y=tb[id];
+    out.topics[id] = !x ? y : !y ? x : ((x.u||0) >= (y.u||0) ? x : y);
+  });
+  return out;
+}
+
+let saveTimer = null, pending = false;
+function setStatus(k){ const el=document.getElementById("syncStatus"); if(el){ el.dataset.k=k; el.textContent=k?T(k):""; } }
+
+function save(){
+  if(topic){ tstate(topic.id).u = Date.now(); }
+  state.settings.u = state.settings.u || 0;
+  writeJSON("mzhApp.settings", state.settings);
+  if(!user) return;
+  writeJSON(cacheKey(user.id), state);
+  pending = true; setStatus("saving");
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(pushRemote, 1200);
+}
+async function pushRemote(){
+  if(!user || !pending) return;
+  clearTimeout(saveTimer);
+  const payload = {user_id:user.id, data:state, updated_at:new Date().toISOString()};
+  const {error} = await sb.from("progress").upsert(payload);
+  if(error){ setStatus("offline"); return; }
+  pending = false; setStatus("saved");
+}
+async function pullRemote(){
+  const {data, error} = await sb.from("progress").select("data").eq("user_id", user.id).maybeSingle();
+  if(error) return null;
+  return data ? data.data : {};
+}
+
+/* After sign-in: combine local copy (or Phase 1 progress) with the account's copy */
+async function startSession(u){
+  user = u;
+  let local = readJSON(cacheKey(u.id));
+  if(!local){
+    const old = readJSON(OLD_KEY);                 // carry over progress made before accounts existed
+    if(old && old.topics){ local = old; try{ localStorage.removeItem(OLD_KEY); }catch(e){} }
+  }
+  const remote = await pullRemote();
+  const deviceSettings = {...state.settings};
+  state = merge(local||{}, remote||{});
+  if(!remote || !remote.settings) state.settings = {...deviceSettings, ...state.settings, u:state.settings.u||0};
+  writeJSON(cacheKey(u.id), state);
+  pending = true; await pushRemote();
+  document.getElementById("helloUser").textContent = T("hello").replace("{u}", emailToUser(u.email));
+  show("home"); applyUI();
+  if(remote===null) setStatus("offline");
+}
+
 function tstate(id){
-  if(!state.topics[id]) state.topics[id] = {known:[], cur:null};
+  if(!state.topics[id]) state.topics[id] = {known:[], cur:null, u:0};
   return state.topics[id];
 }
 const S = () => state.settings;
@@ -131,10 +220,13 @@ function applyUI(){
   document.getElementById("pinyinBtn").classList.toggle("on", S().pinyin);
   document.getElementById("shuffleBtn").classList.toggle("on", S().shuffle);
   if(topic){ document.getElementById("topicTitle").textContent = topic.name[S().lang]; }
+  if(user) document.getElementById("helloUser").textContent = T("hello").replace("{u}", emailToUser(user.email));
+  const st=document.getElementById("syncStatus"); if(st && st.dataset.k) st.textContent=T(st.dataset.k);
+  const ae=document.getElementById("authErr"); if(ae && ae.dataset.k) ae.textContent=T(ae.dataset.k);
   renderTiles();
   if(!document.getElementById("knownView").classList.contains("hidden")) renderKnown();
 }
-function setSetting(k,v){ state.settings[k]=v; save(); applyUI(); }
+function setSetting(k,v){ state.settings[k]=v; state.settings.u=Date.now(); save(); applyUI(); }
 
 /* =========================================================
    HOME
@@ -181,7 +273,7 @@ function openTopic(id){
   renderCard();
 }
 function show(v){
-  ["home","study","known"].forEach(n => document.getElementById(n+"View").classList.toggle("hidden", n!==v));
+  ["auth","home","study","known"].forEach(n => document.getElementById(n+"View").classList.toggle("hidden", n!==v));
   if(v==="home"){ topic=null; renderTiles(); }
   window.scrollTo(0,0);
 }
@@ -289,29 +381,6 @@ function renderKnown(){
   });
 }
 
-/* ---------- Export / import ---------- */
-function exportProgress(){
-  const blob = new Blob([JSON.stringify({app:"mzhApp",version:1,exported:new Date().toISOString(),...state},null,2)],{type:"application/json"});
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "mandarin-progress-" + new Date().toISOString().slice(0,10) + ".json";
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
-}
-function importProgress(file){
-  const r = new FileReader();
-  r.onload = () => {
-    try{
-      const d = JSON.parse(r.result);
-      if(!d || typeof d.topics!=="object") throw 0;
-      state.topics = d.topics;
-      state.settings = {...DEFAULT_SETTINGS, ...(d.settings||{})};
-      save(); applyUI(); alert(T("importOk"));
-    }catch(e){ alert(T("importFail")); }
-  };
-  r.readAsText(file);
-}
-
 /* =========================================================
    EVENTS
    ========================================================= */
@@ -337,9 +406,6 @@ document.getElementById("resetBtn").onclick = () => {
 };
 document.getElementById("viewKnownBtn").onclick = () => { show("known"); renderKnown(); };
 document.getElementById("backToStudy").onclick = () => { show("study"); renderCard(); };
-document.getElementById("exportBtn").onclick = exportProgress;
-document.getElementById("importBtn").onclick = () => document.getElementById("importFile").click();
-document.getElementById("importFile").onchange = e => { if(e.target.files[0]) importProgress(e.target.files[0]); e.target.value=""; };
 
 document.addEventListener("keydown", e => {
   if(document.getElementById("studyView").classList.contains("hidden") || !curId) return;
@@ -352,5 +418,56 @@ document.addEventListener("keydown", e => {
   else if(e.key.toLowerCase()==="s") speak();
 });
 
-load();
-applyUI();
+/* ---------- Sign in / create account / sign out ---------- */
+function authError(k){ const el=document.getElementById("authErr"); el.textContent = k ? T(k) : ""; el.dataset.k = k||""; }
+function busy(on){ ["signInBtn","signUpBtn"].forEach(id => document.getElementById(id).disabled = on); }
+function readForm(){
+  const u = document.getElementById("authUser").value.trim().toLowerCase();
+  const p = document.getElementById("authPass").value;
+  if(!/^[a-z0-9._-]{3,30}$/.test(u)){ authError("errUser"); return null; }
+  if(p.length < 6){ authError("errPass"); return null; }
+  return {u,p};
+}
+async function doAuth(kind){
+  const f = readForm(); if(!f) return;
+  authError(""); busy(true);
+  try{
+    const creds = {email:userToEmail(f.u), password:f.p};
+    const res = kind==="up" ? await sb.auth.signUp(creds) : await sb.auth.signInWithPassword(creds);
+    if(res.error){
+      const m = (res.error.message||"").toLowerCase();
+      if(m.includes("already")) authError("errExists");
+      else if(m.includes("invalid login") || m.includes("invalid credentials")) authError("errWrong");
+      else if(m.includes("signups not allowed") || m.includes("signup is disabled")) authError("errSignupOff");
+      else if(m.includes("password")) authError("errPass");
+      else authError("errNet");
+      return;
+    }
+    const u = res.data.user || (res.data.session && res.data.session.user);
+    if(!u || !res.data.session){ authError("errNet"); return; }
+    document.getElementById("authPass").value = "";
+    await startSession(u);
+  }catch(e){ authError("errNet"); }
+  finally{ busy(false); }
+}
+document.getElementById("signInBtn").onclick = () => doAuth("in");
+document.getElementById("signUpBtn").onclick = () => doAuth("up");
+document.getElementById("authForm").onsubmit = e => { e.preventDefault(); doAuth("in"); };
+document.getElementById("signOutBtn").onclick = async () => {
+  await pushRemote();
+  await sb.auth.signOut();
+  user = null; state.topics = {};
+  show("auth"); applyUI();
+};
+
+/* Save before the page is hidden or closed; retry when back online */
+document.addEventListener("visibilitychange", () => { if(document.visibilityState==="hidden") pushRemote(); });
+window.addEventListener("online", () => { if(pending) pushRemote(); });
+
+(async function start(){
+  loadDeviceSettings();
+  applyUI();
+  const {data} = await sb.auth.getSession();
+  if(data && data.session){ await startSession(data.session.user); }
+  else { show("auth"); applyUI(); }
+})();

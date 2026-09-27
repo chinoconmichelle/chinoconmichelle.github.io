@@ -18,5 +18,4 @@ data/topics.js    creates the topic list
 data/<topic>.js   one file per topic; the order of <script> tags in index.html is the home-screen order
 ```
 
-Progress is saved in the browser (localStorage key `mzhApp.v1`) and keyed by card `id`,
-so card ids must never be reused or renumbered.
+Progress is saved per user account (Supabase) and keyed by card `id`, so card ids must never be reused or renumbered.

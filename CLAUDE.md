@@ -1,7 +1,7 @@
 # Project notes for Claude
 
 Mandarin study app for Vladimir's classes with Michelle Hsu (Taiwanese teacher, classes taught in Spanish).
-Static site on GitHub Pages; no build step, no dependencies. Must also work when index.html is opened
+Static site on GitHub Pages; no build step. Only dependency: assets/supabase.min.js (supabase-js, pinned copy). Must also work when index.html is opened
 directly from disk (file://), so data is loaded with <script> tags, not fetch().
 
 ## Conventions
@@ -16,3 +16,11 @@ directly from disk (file://), so data is loaded with <script> tags, not fetch().
 - New topic = new file in data/ calling window.TOPICS.push({...}) + a <script> tag in index.html.
   A topic with `soon:true` and no cards shows as "coming soon".
 - Terminology from class: simplified characters shown first, traditional next to them.
+
+## Accounts and progress (Supabase)
+- Project URL and publishable key are in assets/app.js. Never put the secret / service_role key in this repo.
+- Username + password only. A username `x` becomes the internal email `x@chinoconmichelle.app`; "Confirm email" is off.
+- Table `public.progress` (user_id uuid PK -> auth.users, data jsonb, updated_at). RLS: each user can select/insert/update only their own row; only the `authenticated` role has grants.
+- `data` = {settings:{..., u}, topics:{<topicId>:{known:[cardIds], cur, u}}}. `u` = last-change timestamp; when a device syncs, each topic keeps the newer copy.
+- A local copy per user is kept in localStorage (`mzhApp.v2.<userId>`); saves go to Supabase ~1 s after a change and when the page is hidden.
+- Free tier pauses the project after ~1 week without activity (restore from the dashboard).

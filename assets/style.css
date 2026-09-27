@@ -111,3 +111,20 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 .kitem button{font-size:.78rem;padding:7px 10px;flex-shrink:0}
 .empty{text-align:center;color:var(--sub);padding:24px 0;font-size:.9rem}
 @media (hover:none){.keys{display:none}}
+
+/* Sign in */
+.authbox{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);
+  padding:24px 20px;margin-top:24px;display:flex;flex-direction:column;gap:12px}
+.authglyph{font-size:2.6rem;font-weight:700;color:var(--accent);line-height:1}
+.authbox h1{font-size:1.3rem}
+.authbox p{font-size:.85rem;color:var(--sub);line-height:1.5}
+.authbox label{display:flex;flex-direction:column;gap:5px;font-size:.85rem;color:var(--sub)}
+.authbox input{font:inherit;font-size:1rem;color:var(--text);background:var(--bg);border:1px solid var(--border);
+  border-radius:10px;padding:10px 12px}
+.authbox input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.authbox button{font-size:1rem;padding:11px}
+.autherr{color:var(--bad);font-size:.85rem;min-height:1.1em;line-height:1.4}
+.account{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-size:.85rem}
+.account #helloUser{font-weight:600}
+.account .sync{flex:1;color:var(--sub);font-size:.78rem}
+.account button{font-size:.78rem;padding:5px 10px}

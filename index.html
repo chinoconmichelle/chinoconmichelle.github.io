@@ -26,18 +26,36 @@
     </div>
   </div>
 
+  <!-- SIGN IN -->
+  <section id="authView" class="hidden">
+    <form class="authbox" id="authForm" autocomplete="on">
+      <div class="authglyph">中</div>
+      <h1 data-i18n="authTitle"></h1>
+      <p data-i18n="authSub"></p>
+      <label><span data-i18n="username"></span>
+        <input id="authUser" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="30">
+      </label>
+      <label><span data-i18n="password"></span>
+        <input id="authPass" name="password" type="password" autocomplete="current-password">
+      </label>
+      <div class="autherr" id="authErr" role="alert"></div>
+      <button type="submit" class="on" id="signInBtn" data-i18n="signIn"></button>
+      <button type="button" class="ghost" id="signUpBtn" data-i18n="signUp"></button>
+    </form>
+  </section>
+
   <!-- HOME -->
-  <section id="homeView">
+  <section id="homeView" class="hidden">
+    <div class="account">
+      <span id="helloUser"></span>
+      <span class="sync" id="syncStatus"></span>
+      <button class="ghost" id="signOutBtn" data-i18n="signOut"></button>
+    </div>
     <header>
       <h1 data-i18n="appTitle"></h1>
       <p data-i18n="appSub"></p>
     </header>
     <div class="tiles" id="tiles"></div>
-    <div class="tools">
-      <button class="ghost" id="exportBtn" data-i18n="export"></button>
-      <button class="ghost" id="importBtn" data-i18n="import"></button>
-      <input type="file" id="importFile" accept="application/json,.json" class="hidden">
-    </div>
     <div class="note" data-i18n="storageNote"></div>
   </section>
 
@@ -100,6 +118,7 @@
   </section>
 </div>
 
+<script src="assets/supabase.min.js"></script>
 <script src="data/topics.js"></script>
 <script src="data/saludos.js"></script>
 <script src="data/pronombres.js"></script>
