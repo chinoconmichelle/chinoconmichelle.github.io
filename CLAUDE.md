@@ -13,6 +13,7 @@ directly from disk (file://), so data is loaded with <script> tags, not fetch().
   into their pictographic origins. Say plainly when a component is only phonetic, and flag disputed etymologies
   instead of inventing a story.
 - Audio: Chinese only (browser speechSynthesis, zh-CN).
+- assets/extras.js adds search, the Tones & sounds page (content in its TONES object, all three languages) and the per-topic listening quiz; it wraps show/applyUI/renderTiles from app.js. The number drill lives in app.js.
 - New topic = new file in data/ calling window.TOPICS.push({...}) + a <script> tag in index.html.
   A topic with `soon:true` and no cards shows as "coming soon".
 - Terminology from class: simplified characters shown first, traditional next to them.

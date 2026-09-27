@@ -145,3 +145,40 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 .authbox[data-mode="reset"] .not-reset{display:none}
 .tile.drill{border-style:dashed}
 .tile.drill .glyph{color:var(--sub)}
+
+/* Search */
+.search{width:100%;font:inherit;font-size:1rem;color:var(--text);background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:11px 14px;margin:14px 0 4px;box-shadow:var(--shadow)}
+.search:focus{outline:2px solid var(--accent);outline-offset:1px}
+.searchresults{margin:10px 0 16px}
+.searchcount{font-size:.8rem;color:var(--sub);margin-bottom:8px}
+.sitem{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:8px}
+.sitem summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
+.sitem summary::-webkit-details-marker{display:none}
+.sitem .kw{flex:1;min-width:0}
+.stopic{font-size:.7rem;color:var(--sub);border:1px solid var(--border);border-radius:8px;padding:2px 7px;white-space:nowrap}
+.sbody{padding:0 14px 14px}
+.sbody button{font-size:.85rem;margin-bottom:8px}
+.sx{white-space:pre-line;font-size:calc(.92rem * var(--fs));line-height:1.7}
+
+/* Tones reference */
+.tintro{font-size:.9rem;line-height:1.6;color:var(--sub);margin-bottom:14px}
+.tsec{margin-bottom:22px}
+.tsec h3{font-size:1rem;margin-bottom:4px}
+.tsec .tp{font-size:.85rem;color:var(--sub);line-height:1.6;margin-bottom:10px}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.titem{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px;text-align:left;
+  display:flex;flex-direction:column;gap:4px;color:var(--text)}
+.tzh{font-size:calc(1.8rem * var(--fs));font-weight:700;line-height:1.2}
+.tlab{font-size:.85rem;color:var(--accent);font-weight:600}
+.tnote{font-size:.78rem;color:var(--sub);line-height:1.45}
+
+/* Listening quiz */
+.qopts{display:grid;gap:8px;margin-bottom:12px}
+.qopt{text-align:left;font-size:calc(1.05rem * var(--fs));padding:14px;background:var(--card);border:1px solid var(--border);color:var(--text)}
+.qopt.right{background:var(--good-bg);color:var(--good);border-color:var(--good)}
+.qopt.wrong{background:var(--bad-bg);color:var(--bad);border-color:var(--bad)}
+.qopt:disabled{opacity:1}
+.qreveal{text-align:center;margin-bottom:12px}
+.qreveal .qmsg{font-weight:600;margin-bottom:6px}
+.qreveal .kes{color:var(--sub);margin-top:4px}

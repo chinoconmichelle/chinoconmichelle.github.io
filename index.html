@@ -66,6 +66,8 @@
       <h1 data-i18n="appTitle"></h1>
       <p data-i18n="appSub"></p>
     </header>
+    <input class="search" id="searchBox" type="search" autocomplete="off" spellcheck="false">
+    <div class="searchresults hidden" id="searchResults"></div>
     <div class="tiles" id="tiles"></div>
     <div class="note" data-i18n="storageNote"></div>
   </section>
@@ -81,6 +83,7 @@
       <button id="mode2" data-i18n="mode2"></button>
       <button id="pinyinBtn" data-i18n="pinyin"></button>
       <button id="shuffleBtn" data-i18n="shuffle"></button>
+      <button id="quizBtn" data-i18n="quiz"></button>
     </div>
     <div class="countbar">
       <span><span data-i18n="remaining"></span>: <b id="count">0</b></span>
@@ -126,6 +129,28 @@
       <h2><span data-i18n="knownTitle"></span> (<span id="knownCount">0</span>)</h2>
     </div>
     <div id="knownList"></div>
+  </section>
+
+  <!-- TONES & SOUNDS -->
+  <section id="tonesView" class="hidden">
+    <div class="studyhead">
+      <button class="ghost" id="tonesHome" data-i18n="back"></button>
+      <h2 data-i18n="tonesTitle"></h2>
+    </div>
+    <div id="tonesBody"></div>
+  </section>
+
+  <!-- LISTENING QUIZ -->
+  <section id="quizView" class="hidden">
+    <div class="studyhead">
+      <button class="ghost" id="quizBack" data-i18n="backTopic"></button>
+      <h2><span data-i18n="quizTitle"></span> · <span id="quizTopic"></span></h2>
+    </div>
+    <div class="countbar"><span data-i18n="quizQ"></span><b id="quizScore"></b></div>
+    <div class="row"><button id="quizReplay" class="on" data-i18n="replay"></button></div>
+    <div class="qopts" id="quizOpts"></div>
+    <div class="qreveal" id="quizReveal"></div>
+    <div class="row"><button id="quizNext" class="hidden" data-i18n="nextQ"></button></div>
   </section>
 
   <!-- NUMBER DRILL -->
@@ -180,5 +205,6 @@
 <script src="data/frases.js"></script>
 <script src="data/radicales.js"></script>
 <script src="assets/app.js"></script>
+<script src="assets/extras.js"></script>
 </body>
 </html>
