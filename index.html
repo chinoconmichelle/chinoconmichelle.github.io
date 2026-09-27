@@ -28,19 +28,30 @@
 
   <!-- SIGN IN -->
   <section id="authView" class="hidden">
-    <form class="authbox" id="authForm" autocomplete="on">
+    <form class="authbox" id="authForm" autocomplete="on" data-mode="in">
       <div class="authglyph">中</div>
       <h1 data-i18n="authTitle"></h1>
       <p data-i18n="authSub"></p>
+      <div class="authtabs">
+        <button type="button" data-mode="in" data-i18n="signIn"></button>
+        <button type="button" data-mode="up" data-i18n="signUp"></button>
+      </div>
+      <p class="resetintro only-reset" data-i18n="resetIntro"></p>
       <label><span data-i18n="username"></span>
         <input id="authUser" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="30">
       </label>
-      <label><span data-i18n="password"></span>
-        <input id="authPass" name="password" type="password" autocomplete="current-password">
+      <label><span class="not-reset" data-i18n="password"></span><span class="only-reset" data-i18n="newPassword"></span>
+        <span class="pw"><input id="authPass" name="password" type="password" autocomplete="current-password">
+        <button type="button" class="eye" id="eyeBtn" data-i18n="show"></button></span>
+      </label>
+      <label class="only-new"><span data-i18n="password2"></span>
+        <input id="authPass2" name="password2" type="password" autocomplete="new-password">
       </label>
       <div class="autherr" id="authErr" role="alert"></div>
-      <button type="submit" class="on" id="signInBtn" data-i18n="signIn"></button>
-      <button type="button" class="ghost" id="signUpBtn" data-i18n="signUp"></button>
+      <div class="authok" id="authOk" role="status"></div>
+      <button type="submit" class="on" id="authSubmit"></button>
+      <button type="button" class="linkbtn only-in" id="forgotBtn" data-i18n="forgot"></button>
+      <button type="button" class="linkbtn only-reset" id="backInBtn" data-i18n="backToSignIn"></button>
     </form>
   </section>
 

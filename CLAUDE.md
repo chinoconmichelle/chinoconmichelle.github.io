@@ -24,3 +24,7 @@ directly from disk (file://), so data is loaded with <script> tags, not fetch().
 - `data` = {settings:{..., u}, topics:{<topicId>:{known:[cardIds], cur, u}}}. `u` = last-change timestamp; when a device syncs, each topic keeps the newer copy.
 - A local copy per user is kept in localStorage (`mzhApp.v2.<userId>`); saves go to Supabase ~1 s after a change and when the page is hidden.
 - Free tier pauses the project after ~1 week without activity (restore from the dashboard).
+- Password reset (beta, deliberately simple): SQL function `public.reset_password(p_username, p_new_password)`,
+  security definer, callable by anon. Anyone who knows a username can reset that password. The user accepted this
+  for the beta; revisit (e.g. a recovery word, or email) before inviting other students.
+- Sign-up asks for the password twice and has a show/hide button.

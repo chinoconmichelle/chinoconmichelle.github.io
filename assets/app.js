@@ -23,6 +23,11 @@ const UI = {
     confirmReset:"¿Reiniciar el progreso de este tema?",
     noTTS:"Este navegador no puede leer en voz alta.",
     storageNote:"Tu progreso se guarda en tu cuenta y te sigue a cualquier dispositivo donde entres.",
+    show:"Mostrar",hide:"Ocultar",password2:"Repetí la contraseña",newPassword:"Nueva contraseña",
+    forgot:"¿Olvidaste tu contraseña?",backToSignIn:"← Volver a entrar",resetBtn:"Cambiar contraseña",
+    resetIntro:"Escribí tu usuario y elegí una contraseña nueva.",
+    errMatch:"Las dos contraseñas no coinciden.",errNoUser:"No existe ese usuario.",
+    resetOk:"Contraseña cambiada. Entrando…",errResetOff:"El cambio de contraseña todavía no está activado en el servidor.",
     authTitle:"Chino con Michelle",authSub:"Entrá con tu usuario para guardar tu progreso en cualquier dispositivo.",
     username:"Usuario",password:"Contraseña",signIn:"Entrar",signUp:"Crear cuenta",signOut:"Salir",
     hello:"Hola, {u}",saved:"Guardado ✓",saving:"Guardando…",offline:"Sin conexión: se guardará al volver",
@@ -54,6 +59,11 @@ const UI = {
     confirmReset:"Reset progress for this topic?",
     noTTS:"This browser can't read text aloud.",
     storageNote:"Your progress is saved to your account and follows you to any device where you sign in.",
+    show:"Show",hide:"Hide",password2:"Repeat password",newPassword:"New password",
+    forgot:"Forgot your password?",backToSignIn:"← Back to sign in",resetBtn:"Change password",
+    resetIntro:"Type your username and choose a new password.",
+    errMatch:"The two passwords don't match.",errNoUser:"That username doesn't exist.",
+    resetOk:"Password changed. Signing in…",errResetOff:"Password reset isn't switched on on the server yet.",
     authTitle:"Mandarin with Michelle",authSub:"Sign in with your username to keep your progress on any device.",
     username:"Username",password:"Password",signIn:"Sign in",signUp:"Create account",signOut:"Sign out",
     hello:"Hi, {u}",saved:"Saved ✓",saving:"Saving…",offline:"Offline: will save when you're back",
@@ -85,6 +95,11 @@ const UI = {
     confirmReset:"确定要重置本主题的进度吗？",
     noTTS:"当前浏览器不支持语音朗读。",
     storageNote:"进度保存在你的账号里，在任何设备登录都能继续。",
+    show:"显示",hide:"隐藏",password2:"再输入一次密码",newPassword:"新密码",
+    forgot:"忘记密码？",backToSignIn:"← 返回登录",resetBtn:"修改密码",
+    resetIntro:"输入你的用户名，然后设置新密码。",
+    errMatch:"两次输入的密码不一致。",errNoUser:"这个用户名不存在。",
+    resetOk:"密码已修改，正在登录…",errResetOff:"服务器还没有开启重置密码功能。",
     authTitle:"中文学习卡片",authSub:"用你的用户名登录，在任何设备上保存进度。",
     username:"用户名",password:"密码",signIn:"登录",signUp:"创建账号",signOut:"退出",
     hello:"你好，{u}",saved:"已保存 ✓",saving:"保存中…",offline:"离线：恢复连接后会自动保存",
@@ -223,6 +238,7 @@ function applyUI(){
   if(user) document.getElementById("helloUser").textContent = T("hello").replace("{u}", emailToUser(user.email));
   const st=document.getElementById("syncStatus"); if(st && st.dataset.k) st.textContent=T(st.dataset.k);
   const ae=document.getElementById("authErr"); if(ae && ae.dataset.k) ae.textContent=T(ae.dataset.k);
+  const ao=document.getElementById("authOk"); if(ao && ao.dataset.k) ao.textContent=T(ao.dataset.k);
   renderTiles();
   if(!document.getElementById("knownView").classList.contains("hidden")) renderKnown();
 }
@@ -418,46 +434,84 @@ document.addEventListener("keydown", e => {
   else if(e.key.toLowerCase()==="s") speak();
 });
 
-/* ---------- Sign in / create account / sign out ---------- */
-function authError(k){ const el=document.getElementById("authErr"); el.textContent = k ? T(k) : ""; el.dataset.k = k||""; }
-function busy(on){ ["signInBtn","signUpBtn"].forEach(id => document.getElementById(id).disabled = on); }
+/* ---------- Sign in / create account / reset password / sign out ---------- */
+let authMode = "in";                       // "in" | "up" | "reset"
+const $ = id => document.getElementById(id);
+function authMsg(errKey, okKey){
+  const e=$("authErr"), o=$("authOk");
+  e.dataset.k = errKey||""; e.textContent = errKey ? T(errKey) : "";
+  o.dataset.k = okKey||"";  o.textContent = okKey ? T(okKey) : "";
+}
+function setAuthMode(m){
+  authMode = m;
+  const f=$("authForm"); f.dataset.mode = m;
+  document.querySelectorAll(".authtabs button").forEach(b => b.classList.toggle("on", b.dataset.mode===m));
+  $("authSubmit").dataset.i18n = m==="in" ? "signIn" : m==="up" ? "signUp" : "resetBtn";
+  $("authSubmit").textContent = T($("authSubmit").dataset.i18n);
+  $("authPass").autocomplete = m==="in" ? "current-password" : "new-password";
+  $("authPass").value = ""; $("authPass2").value = "";
+  authMsg("");
+}
+function togglePw(){
+  const show = $("authPass").type === "password";
+  $("authPass").type = $("authPass2").type = show ? "text" : "password";
+  $("eyeBtn").dataset.i18n = show ? "hide" : "show";
+  $("eyeBtn").textContent = T($("eyeBtn").dataset.i18n);
+}
 function readForm(){
-  const u = document.getElementById("authUser").value.trim().toLowerCase();
-  const p = document.getElementById("authPass").value;
-  if(!/^[a-z0-9._-]{3,30}$/.test(u)){ authError("errUser"); return null; }
-  if(p.length < 6){ authError("errPass"); return null; }
+  const u = $("authUser").value.trim().toLowerCase();
+  const p = $("authPass").value, p2 = $("authPass2").value;
+  if(!/^[a-z0-9._-]{3,30}$/.test(u)){ authMsg("errUser"); return null; }
+  if(p.length < 6){ authMsg("errPass"); return null; }
+  if(authMode!=="in" && p!==p2){ authMsg("errMatch"); return null; }
   return {u,p};
 }
-async function doAuth(kind){
+async function signInWith(u,p){
+  const res = await sb.auth.signInWithPassword({email:userToEmail(u), password:p});
+  if(res.error) return res.error;
+  $("authPass").value = ""; $("authPass2").value = "";
+  await startSession(res.data.user);
+  return null;
+}
+async function submitAuth(){
   const f = readForm(); if(!f) return;
-  authError(""); busy(true);
+  authMsg(""); $("authSubmit").disabled = true;
   try{
-    const creds = {email:userToEmail(f.u), password:f.p};
-    const res = kind==="up" ? await sb.auth.signUp(creds) : await sb.auth.signInWithPassword(creds);
-    if(res.error){
-      const m = (res.error.message||"").toLowerCase();
-      if(m.includes("already")) authError("errExists");
-      else if(m.includes("invalid login") || m.includes("invalid credentials")) authError("errWrong");
-      else if(m.includes("signups not allowed") || m.includes("signup is disabled")) authError("errSignupOff");
-      else if(m.includes("password")) authError("errPass");
-      else authError("errNet");
+    if(authMode==="reset"){
+      const {data, error} = await sb.rpc("reset_password", {p_username:f.u, p_new_password:f.p});
+      if(error){ authMsg((error.code==="PGRST202" || /function/i.test(error.message||"")) ? "errResetOff" : "errNet"); return; }
+      if(!data){ authMsg("errNoUser"); return; }
+      authMsg("", "resetOk");
+      const e = await signInWith(f.u, f.p); if(e) authMsg("errNet");
       return;
     }
-    const u = res.data.user || (res.data.session && res.data.session.user);
-    if(!u || !res.data.session){ authError("errNet"); return; }
-    document.getElementById("authPass").value = "";
-    await startSession(u);
-  }catch(e){ authError("errNet"); }
-  finally{ busy(false); }
+    if(authMode==="up"){
+      const res = await sb.auth.signUp({email:userToEmail(f.u), password:f.p});
+      if(res.error){
+        const m=(res.error.message||"").toLowerCase();
+        authMsg(m.includes("already") ? "errExists" : (m.includes("not allowed")||m.includes("disabled")) ? "errSignupOff" : m.includes("password") ? "errPass" : "errNet");
+        return;
+      }
+      if(!res.data.session){ authMsg("errNet"); return; }
+      $("authPass").value = ""; $("authPass2").value = "";
+      await startSession(res.data.user);
+      return;
+    }
+    const e = await signInWith(f.u, f.p);
+    if(e){ const m=(e.message||"").toLowerCase(); authMsg(m.includes("invalid") ? "errWrong" : "errNet"); }
+  }catch(err){ authMsg("errNet"); }
+  finally{ $("authSubmit").disabled = false; }
 }
-document.getElementById("signInBtn").onclick = () => doAuth("in");
-document.getElementById("signUpBtn").onclick = () => doAuth("up");
-document.getElementById("authForm").onsubmit = e => { e.preventDefault(); doAuth("in"); };
+document.querySelectorAll(".authtabs button").forEach(b => b.onclick = () => setAuthMode(b.dataset.mode));
+$("forgotBtn").onclick = () => setAuthMode("reset");
+$("backInBtn").onclick = () => setAuthMode("in");
+$("eyeBtn").onclick = togglePw;
+$("authForm").onsubmit = e => { e.preventDefault(); submitAuth(); };
 document.getElementById("signOutBtn").onclick = async () => {
   await pushRemote();
   await sb.auth.signOut();
   user = null; state.topics = {};
-  show("auth"); applyUI();
+  show("auth"); setAuthMode("in"); applyUI();
 };
 
 /* Save before the page is hidden or closed; retry when back online */
@@ -469,5 +523,5 @@ window.addEventListener("online", () => { if(pending) pushRemote(); });
   applyUI();
   const {data} = await sb.auth.getSession();
   if(data && data.session){ await startSession(data.session.user); }
-  else { show("auth"); applyUI(); }
+  else { show("auth"); setAuthMode("in"); applyUI(); }
 })();

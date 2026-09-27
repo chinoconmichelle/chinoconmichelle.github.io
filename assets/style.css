@@ -128,3 +128,18 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 .account #helloUser{font-weight:600}
 .account .sync{flex:1;color:var(--sub);font-size:.78rem}
 .account button{font-size:.78rem;padding:5px 10px}
+
+.authtabs{display:flex;gap:4px;background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:3px}
+.authtabs button{flex:1;background:transparent;font-size:.9rem;padding:8px}
+.authtabs button.on{background:var(--accent);color:var(--accent-text)}
+.authbox[data-mode="reset"] .authtabs{display:none}
+.authbox:not([data-mode="in"]) .only-in{display:none}
+.authbox[data-mode="in"] .only-new{display:none}
+.authbox:not([data-mode="reset"]) .only-reset{display:none}
+.pw{display:flex;gap:6px}
+.pw input{flex:1;min-width:0}
+.eye{font-size:.8rem;padding:8px 10px;white-space:nowrap}
+.linkbtn{background:transparent;color:var(--accent);font-size:.85rem;padding:4px;text-decoration:underline}
+.authok{color:var(--good);font-size:.85rem;line-height:1.4}
+.authok:empty,.autherr:empty{display:none}
+.authbox[data-mode="reset"] .not-reset{display:none}
