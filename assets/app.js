@@ -141,7 +141,7 @@ const TOPICS = window.TOPICS;
    ========================================================= */
 const OLD_KEY = "mzhApp.v1";                 // Phase 1 (before accounts)
 const cacheKey = uid => "mzhApp.v2." + uid;  // local copy per user
-const DEFAULT_SETTINGS = {lang:"es", theme:"light", font:1, mode:1, pinyin:true, shuffle:false, drange:"0-100", dmode:1, dorder:false};
+const DEFAULT_SETTINGS = {lang:"es", theme:"dark", font:1, mode:1, pinyin:true, shuffle:false, drange:"0-100", dmode:1, dorder:false};
 let state = {settings:{...DEFAULT_SETTINGS}, topics:{}};
 let topic = null;        // current topic object
 let order = [];          // card ids in study order
