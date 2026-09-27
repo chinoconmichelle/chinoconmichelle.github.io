@@ -28,6 +28,9 @@ const UI = {
     resetIntro:"Escribí tu usuario y elegí una contraseña nueva.",
     errMatch:"Las dos contraseñas no coinciden.",errNoUser:"No existe ese usuario.",
     resetOk:"Contraseña cambiada. Entrando…",errResetOff:"El cambio de contraseña todavía no está activado en el servidor.",
+    drillTitle:"Práctica de números",drillSub:"Números al azar o en orden, para contar",
+    dmode1:"Número → chino",dmode2:"Chino → número",dorder:"En orden",howBuilt:"Cómo se arma",
+    dkeys:"Teclado: espacio = girar · → = siguiente · ← = anterior · S = escuchar",
     authTitle:"Chino con Michelle",authSub:"Entrá con tu usuario para guardar tu progreso en cualquier dispositivo.",
     username:"Usuario",password:"Contraseña",signIn:"Entrar",signUp:"Crear cuenta",signOut:"Salir",
     hello:"Hola, {u}",saved:"Guardado ✓",saving:"Guardando…",offline:"Sin conexión: se guardará al volver",
@@ -64,6 +67,9 @@ const UI = {
     resetIntro:"Type your username and choose a new password.",
     errMatch:"The two passwords don't match.",errNoUser:"That username doesn't exist.",
     resetOk:"Password changed. Signing in…",errResetOff:"Password reset isn't switched on on the server yet.",
+    drillTitle:"Number practice",drillSub:"Random numbers, or in order for counting",
+    dmode1:"Number → Chinese",dmode2:"Chinese → number",dorder:"In order",howBuilt:"How it's built",
+    dkeys:"Keyboard: space = flip · → = next · ← = previous · S = hear",
     authTitle:"Mandarin with Michelle",authSub:"Sign in with your username to keep your progress on any device.",
     username:"Username",password:"Password",signIn:"Sign in",signUp:"Create account",signOut:"Sign out",
     hello:"Hi, {u}",saved:"Saved ✓",saving:"Saving…",offline:"Offline: will save when you're back",
@@ -100,6 +106,9 @@ const UI = {
     resetIntro:"输入你的用户名，然后设置新密码。",
     errMatch:"两次输入的密码不一致。",errNoUser:"这个用户名不存在。",
     resetOk:"密码已修改，正在登录…",errResetOff:"服务器还没有开启重置密码功能。",
+    drillTitle:"数字练习",drillSub:"随机或按顺序练习数数",
+    dmode1:"数字 → 中文",dmode2:"中文 → 数字",dorder:"按顺序",howBuilt:"组成方式",
+    dkeys:"键盘：空格 = 翻面 · → = 下一个 · ← = 上一个 · S = 朗读",
     authTitle:"中文学习卡片",authSub:"用你的用户名登录，在任何设备上保存进度。",
     username:"用户名",password:"密码",signIn:"登录",signUp:"创建账号",signOut:"退出",
     hello:"你好，{u}",saved:"已保存 ✓",saving:"保存中…",offline:"离线：恢复连接后会自动保存",
@@ -129,7 +138,7 @@ const TOPICS = window.TOPICS;
    ========================================================= */
 const OLD_KEY = "mzhApp.v1";                 // Phase 1 (before accounts)
 const cacheKey = uid => "mzhApp.v2." + uid;  // local copy per user
-const DEFAULT_SETTINGS = {lang:"es", theme:"light", font:1, mode:1, pinyin:true, shuffle:false};
+const DEFAULT_SETTINGS = {lang:"es", theme:"light", font:1, mode:1, pinyin:true, shuffle:false, drange:"0-100", dmode:1, dorder:false};
 let state = {settings:{...DEFAULT_SETTINGS}, topics:{}};
 let topic = null;        // current topic object
 let order = [];          // card ids in study order
@@ -240,6 +249,7 @@ function applyUI(){
   const ae=document.getElementById("authErr"); if(ae && ae.dataset.k) ae.textContent=T(ae.dataset.k);
   const ao=document.getElementById("authOk"); if(ao && ao.dataset.k) ao.textContent=T(ao.dataset.k);
   renderTiles();
+  if(!document.getElementById("drillView").classList.contains("hidden")) renderDrill();
   if(!document.getElementById("knownView").classList.contains("hidden")) renderKnown();
 }
 function setSetting(k,v){ state.settings[k]=v; state.settings.u=Date.now(); save(); applyUI(); }
@@ -264,6 +274,15 @@ function renderTiles(){
     b.querySelector(".meta").textContent = tp.soon ? T("soon") : `${k} / ${n} ${T("learned")}`;
     if(tp.soon){ b.disabled = true; } else { b.onclick = () => openTopic(tp.id); }
     box.appendChild(b);
+    if(tp.id==="numeros"){
+      const d = document.createElement("button");
+      d.className = "tile drill";
+      d.innerHTML = `<span class="glyph">练</span><span class="name"></span><span class="meta"></span>`;
+      d.querySelector(".name").textContent = T("drillTitle");
+      d.querySelector(".meta").textContent = T("drillSub");
+      d.onclick = openDrill;
+      box.appendChild(d);
+    }
   });
 }
 
@@ -289,7 +308,7 @@ function openTopic(id){
   renderCard();
 }
 function show(v){
-  ["auth","home","study","known"].forEach(n => document.getElementById(n+"View").classList.toggle("hidden", n!==v));
+  ["auth","home","study","known","drill"].forEach(n => document.getElementById(n+"View").classList.toggle("hidden", n!==v));
   if(v==="home"){ topic=null; renderTiles(); }
   window.scrollTo(0,0);
 }
@@ -432,6 +451,111 @@ document.addEventListener("keydown", e => {
   else if(e.key==="1") markUnknown();
   else if(e.key==="2") markKnown();
   else if(e.key.toLowerCase()==="s") speak();
+});
+
+
+/* =========================================================
+   NUMBER DRILL (0–999)
+   ========================================================= */
+const ZH_D = ["零","一","二","三","四","五","六","七","八","九"];
+const PY_D = ["líng","yī","èr","sān","sì","wǔ","liù","qī","bā","jiǔ"];
+/* Returns {zh, py, parts:[[chars, pinyin, meaning]]} following the class rules:
+   11–19 = 十 + unit · tens = digit + 十 · 100s need 一 · 200 = 两百 · missing tens = 零 · after 百, ten = 一十 */
+function numToZh(n){
+  if(n<10) return {zh:ZH_D[n], py:PY_D[n], parts:[[ZH_D[n],PY_D[n],String(n)]]};
+  const parts=[]; const h=Math.floor(n/100), t=Math.floor(n%100/10), u=n%10;
+  if(h){
+    const hz = h===2 ? "两" : ZH_D[h];
+    const hp = h===1 ? "yì" : h===2 ? "liǎng" : PY_D[h];
+    parts.push([hz+"百", hp+"bǎi", String(h*100)]);
+  }
+  if(t===0 && u===0){}
+  else if(t===0){ parts.push(["零","líng","0"]); parts.push([ZH_D[u],PY_D[u],String(u)]); }
+  else{
+    const tz = (t===1 && !h) ? "十" : ZH_D[t]+"十";
+    const tp = (t===1 && !h) ? "shí" : PY_D[t]+"shí";
+    parts.push([tz, tp, String(t*10)]);
+    if(u) parts.push([ZH_D[u],PY_D[u],String(u)]);
+  }
+  const zh = parts.map(p=>p[0]).join("");
+  // pinyin: hundreds as one word, the rest as another (yìbǎi èrshísān, yìbǎi líng yī)
+  let py;
+  if(h){
+    const rest = parts.slice(1);
+    const zero = rest.length && rest[0][0]==="零";
+    py = parts[0][1] + (rest.length ? " " + (zero ? rest.map(p=>p[1]).join(" ") : rest.map(p=>p[1]).join("")) : "");
+  } else py = parts.map(p=>p[1]).join("");
+  return {zh, py, parts};
+}
+function drillNote(n, r){
+  const lines = r.parts.map(p => `${p[0]}  ${p[1]}  = ${p[2]}`);
+  const tips = {
+    es:{teen:"Del 11 al 19: 十 + unidad, sin 一 adelante.", hund:"Con 百 el uno es obligatorio: 一百.", two:"200 se dice 两百 (también se oye 二百).", zero:"零 marca que falta la decena.", yishi:"Después de 百, el diez lleva su uno: 一十.", yi:"一 antes de 百 se pronuncia yì."},
+    en:{teen:"11–19: 十 + unit, no 一 in front.", hund:"With 百 the one is required: 一百.", two:"200 is 两百 (二百 is also heard).", zero:"零 marks the missing tens.", yishi:"After 百, ten keeps its one: 一十.", yi:"一 before 百 is pronounced yì."},
+    zh:{teen:"11–19：十 + 个位数，前面不加一。", hund:"百前面一定要说一：一百。", two:"200 说两百（也可以说二百）。", zero:"零表示十位是空的。", yishi:"百后面的十要说一十。", yi:"一在百前面读 yì。"}
+  }[S().lang];
+  const h=Math.floor(n/100), t=Math.floor(n%100/10), u=n%10;
+  if(n>10 && n<20) lines.push("", tips.teen);
+  if(h===1){ lines.push("", tips.hund, tips.yi); }
+  if(h===2) lines.push("", tips.two);
+  if(h && t===0 && u) lines.push(tips.zero);
+  if(h && t===1) lines.push(tips.yishi);
+  return lines.join("\n");
+}
+let dNum = 0;
+const dRange = () => S().drange.split("-").map(Number);
+function drillPick(step){
+  const [lo,hi] = dRange();
+  if(S().dorder){ dNum = (dNum<lo||dNum>hi) ? lo : (dNum - lo + step + (hi-lo+1)) % (hi-lo+1) + lo; }
+  else { let x; do{ x = lo + Math.floor(Math.random()*(hi-lo+1)); }while(x===dNum && hi>lo); dNum = x; }
+  renderDrill();
+}
+function renderDrill(){
+  const c = document.getElementById("dcard");
+  c.classList.add("noanim"); c.classList.remove("flipped"); void c.offsetWidth;
+  requestAnimationFrame(()=>c.classList.remove("noanim"));
+  document.getElementById("dexplain").classList.add("hidden");
+  const r = numToZh(dNum);
+  const f = document.getElementById("dfront"), b = document.getElementById("dback");
+  f.innerHTML = ""; b.innerHTML = "";
+  const big = t => { const d=document.createElement("div"); d.className="zh"; d.textContent=t; return d; };
+  const py = t => { const d=document.createElement("div"); d.className="py"; d.textContent=t; return d; };
+  if(S().dmode===1){ f.appendChild(big(String(dNum))); b.append(big(r.zh), py(r.py)); }
+  else { f.appendChild(big(r.zh)); if(S().pinyin) f.appendChild(py(r.py)); b.append(big(String(dNum)), py(r.py)); }
+  document.getElementById("dexplainText").textContent = drillNote(dNum, r);
+  document.querySelectorAll("#drillRange button").forEach(x => x.classList.toggle("on", x.dataset.r===S().drange));
+  document.getElementById("dmode1").classList.toggle("on", S().dmode===1);
+  document.getElementById("dmode2").classList.toggle("on", S().dmode===2);
+  document.getElementById("dorder").classList.toggle("on", S().dorder);
+  document.getElementById("dpinyin").classList.toggle("on", S().pinyin);
+}
+function drillFlip(){
+  const c = document.getElementById("dcard"); c.classList.toggle("flipped");
+  document.getElementById("dexplain").classList.toggle("hidden", !c.classList.contains("flipped"));
+}
+function drillSpeak(){
+  if(!("speechSynthesis" in window)){ alert(T("noTTS")); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(numToZh(dNum).zh); u.lang="zh-CN"; u.rate=0.8;
+  if(zhVoice) u.voice = zhVoice; speechSynthesis.speak(u);
+}
+function openDrill(){ show("drill"); const [lo]=dRange(); dNum = S().dorder ? lo : dNum; if(!S().dorder) drillPick(1); else renderDrill(); }
+document.getElementById("drillHome").onclick = () => show("home");
+document.querySelectorAll("#drillRange button").forEach(b => b.onclick = () => { setSetting("drange", b.dataset.r); dNum = dRange()[0]; S().dorder ? renderDrill() : drillPick(1); });
+document.getElementById("dmode1").onclick = () => { setSetting("dmode",1); renderDrill(); };
+document.getElementById("dmode2").onclick = () => { setSetting("dmode",2); renderDrill(); };
+document.getElementById("dorder").onclick = () => { setSetting("dorder", !S().dorder); if(S().dorder){ dNum = dRange()[0]; } renderDrill(); };
+document.getElementById("dpinyin").onclick = () => { setSetting("pinyin", !S().pinyin); renderDrill(); };
+document.getElementById("dcard").onclick = drillFlip;
+document.getElementById("dspeak").onclick = drillSpeak;
+document.getElementById("dnext").onclick = () => drillPick(1);
+document.getElementById("dprev").onclick = () => { if(S().dorder) drillPick(-1); };
+document.addEventListener("keydown", e => {
+  if(document.getElementById("drillView").classList.contains("hidden") || e.target.tagName==="INPUT") return;
+  if(e.key===" " || e.key==="Enter"){ e.preventDefault(); drillFlip(); }
+  else if(e.key==="ArrowRight") drillPick(1);
+  else if(e.key==="ArrowLeft" && S().dorder) drillPick(-1);
+  else if(e.key.toLowerCase()==="s") drillSpeak();
 });
 
 /* ---------- Sign in / create account / reset password / sign out ---------- */

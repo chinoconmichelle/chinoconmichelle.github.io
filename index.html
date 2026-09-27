@@ -127,6 +127,44 @@
     </div>
     <div id="knownList"></div>
   </section>
+
+  <!-- NUMBER DRILL -->
+  <section id="drillView" class="hidden">
+    <div class="studyhead">
+      <button class="ghost" id="drillHome" data-i18n="back"></button>
+      <h2 data-i18n="drillTitle"></h2>
+    </div>
+    <div class="opts" id="drillRange">
+      <button data-r="0-10">0–10</button>
+      <button data-r="0-20">0–20</button>
+      <button data-r="0-100">0–100</button>
+      <button data-r="100-200">100–200</button>
+      <button data-r="0-999">0–999</button>
+    </div>
+    <div class="opts">
+      <button id="dmode1" data-i18n="dmode1"></button>
+      <button id="dmode2" data-i18n="dmode2"></button>
+      <button id="dorder" data-i18n="dorder"></button>
+      <button id="dpinyin" data-i18n="pinyin"></button>
+    </div>
+    <div class="card" id="dcard" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="face front" id="dfront"></div>
+        <div class="face back" id="dback"></div>
+      </div>
+    </div>
+    <div class="hint" data-i18n="hint"></div>
+    <details class="explain hidden" id="dexplain" open>
+      <summary data-i18n="howBuilt"></summary>
+      <div id="dexplainText"></div>
+    </details>
+    <div class="row"><button id="dspeak" data-i18n="hear"></button></div>
+    <div class="row">
+      <button id="dprev" data-i18n="prev"></button>
+      <button id="dnext" data-i18n="next"></button>
+    </div>
+    <div class="keys" data-i18n="dkeys"></div>
+  </section>
 </div>
 
 <script src="assets/supabase.min.js"></script>

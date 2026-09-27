@@ -143,3 +143,5 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 .authok{color:var(--good);font-size:.85rem;line-height:1.4}
 .authok:empty,.autherr:empty{display:none}
 .authbox[data-mode="reset"] .not-reset{display:none}
+.tile.drill{border-style:dashed}
+.tile.drill .glyph{color:var(--sub)}
