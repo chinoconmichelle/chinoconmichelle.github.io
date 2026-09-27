@@ -31,6 +31,7 @@ const UI = {
     drillTitle:"Práctica de números",drillSub:"Números al azar o en orden, para contar",
     dmode1:"Número → chino",dmode2:"Chino → número",dorder:"En orden",howBuilt:"Cómo se arma",
     dkeys:"Teclado: espacio = girar · → = siguiente · ← = anterior · S = escuchar",
+    pwOk:"✓ Las contraseñas coinciden",pwNo:"✗ Todavía no coinciden",
     authTitle:"Chino con Michelle",authSub:"Entrá con tu usuario para guardar tu progreso en cualquier dispositivo.",
     username:"Usuario",password:"Contraseña",signIn:"Entrar",signUp:"Crear cuenta",signOut:"Salir",
     hello:"Hola, {u}",saved:"Guardado ✓",saving:"Guardando…",offline:"Sin conexión: se guardará al volver",
@@ -70,6 +71,7 @@ const UI = {
     drillTitle:"Number practice",drillSub:"Random numbers, or in order for counting",
     dmode1:"Number → Chinese",dmode2:"Chinese → number",dorder:"In order",howBuilt:"How it's built",
     dkeys:"Keyboard: space = flip · → = next · ← = previous · S = hear",
+    pwOk:"✓ Passwords match",pwNo:"✗ Passwords don't match yet",
     authTitle:"Mandarin with Michelle",authSub:"Sign in with your username to keep your progress on any device.",
     username:"Username",password:"Password",signIn:"Sign in",signUp:"Create account",signOut:"Sign out",
     hello:"Hi, {u}",saved:"Saved ✓",saving:"Saving…",offline:"Offline: will save when you're back",
@@ -109,6 +111,7 @@ const UI = {
     drillTitle:"数字练习",drillSub:"随机或按顺序练习数数",
     dmode1:"数字 → 中文",dmode2:"中文 → 数字",dorder:"按顺序",howBuilt:"组成方式",
     dkeys:"键盘：空格 = 翻面 · → = 下一个 · ← = 上一个 · S = 朗读",
+    pwOk:"✓ 两次密码一致",pwNo:"✗ 两次密码还不一致",
     authTitle:"中文学习卡片",authSub:"用你的用户名登录，在任何设备上保存进度。",
     username:"用户名",password:"密码",signIn:"登录",signUp:"创建账号",signOut:"退出",
     hello:"你好，{u}",saved:"已保存 ✓",saving:"保存中…",offline:"离线：恢复连接后会自动保存",
@@ -248,6 +251,7 @@ function applyUI(){
   const st=document.getElementById("syncStatus"); if(st && st.dataset.k) st.textContent=T(st.dataset.k);
   const ae=document.getElementById("authErr"); if(ae && ae.dataset.k) ae.textContent=T(ae.dataset.k);
   const ao=document.getElementById("authOk"); if(ao && ao.dataset.k) ao.textContent=T(ao.dataset.k);
+  const pm=document.getElementById("pwMatch"); if(pm && pm.dataset.k) pm.textContent=T(pm.dataset.k);
   renderTiles();
   if(!document.getElementById("drillView").classList.contains("hidden")) renderDrill();
   if(!document.getElementById("knownView").classList.contains("hidden")) renderKnown();
@@ -574,13 +578,15 @@ function setAuthMode(m){
   $("authSubmit").textContent = T($("authSubmit").dataset.i18n);
   $("authPass").autocomplete = m==="in" ? "current-password" : "new-password";
   $("authPass").value = ""; $("authPass2").value = "";
+  $("authPass").name = m==="in" ? "password" : "new-password";
+  updateMatchSafe();
   authMsg("");
 }
+function updateMatchSafe(){ if(typeof updateMatch==="function") updateMatch(); }
 function togglePw(){
   const show = $("authPass").type === "password";
   $("authPass").type = $("authPass2").type = show ? "text" : "password";
-  $("eyeBtn").dataset.i18n = show ? "hide" : "show";
-  $("eyeBtn").textContent = T($("eyeBtn").dataset.i18n);
+  ["eyeBtn","eyeBtn2"].forEach(id => { $(id).dataset.i18n = show ? "hide" : "show"; $(id).textContent = T($(id).dataset.i18n); });
 }
 function readForm(){
   const u = $("authUser").value.trim().toLowerCase();
@@ -593,6 +599,7 @@ function readForm(){
 async function signInWith(u,p){
   const res = await sb.auth.signInWithPassword({email:userToEmail(u), password:p});
   if(res.error) return res.error;
+  offerSave(u, p);
   $("authPass").value = ""; $("authPass2").value = "";
   await startSession(res.data.user);
   return null;
@@ -617,6 +624,7 @@ async function submitAuth(){
         return;
       }
       if(!res.data.session){ authMsg("errNet"); return; }
+      offerSave(f.u, f.p);
       $("authPass").value = ""; $("authPass2").value = "";
       await startSession(res.data.user);
       return;
@@ -630,6 +638,25 @@ document.querySelectorAll(".authtabs button").forEach(b => b.onclick = () => set
 $("forgotBtn").onclick = () => setAuthMode("reset");
 $("backInBtn").onclick = () => setAuthMode("in");
 $("eyeBtn").onclick = togglePw;
+$("eyeBtn2").onclick = togglePw;
+function updateMatch(){
+  const a=$("authPass").value, b=$("authPass2").value, m=$("pwMatch");
+  if(authMode==="in" || !b){ m.textContent=""; m.className="pwmatch only-new"; m.dataset.k=""; return; }
+  const ok = a===b; m.dataset.k = ok ? "pwOk" : "pwNo";
+  m.textContent = T(m.dataset.k); m.className = "pwmatch only-new " + (ok ? "ok" : "no");
+}
+$("authPass").addEventListener("input", updateMatch);
+$("authPass2").addEventListener("input", updateMatch);
+/* Browser password managers (Chrome/Google, Edge…) may fill both boxes without typing events */
+setInterval(() => { if(!$("authView").classList.contains("hidden")) updateMatch(); }, 700);
+/* Ask the browser to save the login (Chrome shows its "Save password?" prompt) */
+async function offerSave(u, p){
+  try{
+    if(window.PasswordCredential && navigator.credentials){
+      await navigator.credentials.store(new PasswordCredential({id:u, password:p, name:u}));
+    }
+  }catch(e){}
+}
 $("authForm").onsubmit = e => { e.preventDefault(); submitAuth(); };
 document.getElementById("signOutBtn").onclick = async () => {
   await pushRemote();
