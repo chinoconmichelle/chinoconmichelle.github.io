@@ -185,3 +185,5 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 .pwmatch{font-size:.85rem;min-height:1.1em;margin-top:-4px}
 .pwmatch.ok{color:var(--good)}
 .pwmatch.no{color:var(--bad)}
+.cltag{display:inline-block;margin-left:6px;padding:1px 8px;border:1px solid var(--border);border-radius:8px;font-size:.7rem}
+.cltag:empty{display:none}

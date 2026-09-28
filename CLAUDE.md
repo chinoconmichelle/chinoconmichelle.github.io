@@ -7,11 +7,16 @@ directly from disk (file://), so data is loaded with <script> tags, not fetch().
 ## Conventions
 - Interface text lives in `UI` in assets/app.js, in three languages: es, en, zh. Every new string needs all three.
 - Card content never gets translated by the interface switch.
-- Card fields: id, s (simplified), t (traditional, only when different), py, es, en, x (explanation), say (optional TTS text).
+- Card fields: id, s (simplified), t (traditional, only when different), py, es, en, cl (class tag, optional override of the topic's cl), say (optional TTS text), x = {es, en, zh}.
+- Class tags (CLASSES in assets/app.js): c1 = 31 Aug, c2 = 7 Sep, c3 = 14 Sep, fc = Michelle's flashcards, ex = extra. Add c4, c5… for new classes.
 - Card ids are permanent (progress is keyed by them). Prefix per topic, e.g. `num-12`. Never renumber; append new ids.
-- `x` explanations are written in Spanish first; English and Chinese versions live in data/i18n/*.js via XL(topicId,{cardId:{en,zh}}). Every new card needs all three. They go as deep as possible: break each character into components, and those
+- `x` holds all three languages in the card itself. Vladimir learns orally with no textbook, so every explanation must be
+  self-contained: what each character means and how it is built, why the word or sentence is formed that way, the grammar
+  rule it illustrates (as Michelle explained it), a contrast or common mistake, and pronunciation traps. Never just "A + B". They go as deep as possible: break each character into components, and those
   into their pictographic origins. Say plainly when a component is only phonetic, and flag disputed etymologies
   instead of inventing a story.
+- tools/check.py validates fields, ids, traditional forms and counts short explanations; it runs on every push (.github/workflows/check.yml).
+- tools/rewrite.py can regenerate data/<topic>.js from JSON.
 - Audio: Chinese only (browser speechSynthesis, zh-CN).
 - assets/extras.js adds search, the Tones & sounds page (content in its TONES object, all three languages) and the per-topic listening quiz; it wraps show/applyUI/renderTiles from app.js. The number drill lives in app.js.
 - New topic = new file in data/ calling window.TOPICS.push({...}) + a <script> tag in index.html.

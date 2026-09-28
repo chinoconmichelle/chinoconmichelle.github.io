@@ -252,13 +252,27 @@ function applyUI(){
   const ae=document.getElementById("authErr"); if(ae && ae.dataset.k) ae.textContent=T(ae.dataset.k);
   const ao=document.getElementById("authOk"); if(ao && ao.dataset.k) ao.textContent=T(ao.dataset.k);
   const pm=document.getElementById("pwMatch"); if(pm && pm.dataset.k) pm.textContent=T(pm.dataset.k);
-  if(topic && curId && !document.getElementById("studyView").classList.contains("hidden")){ const c=card(curId); if(c) document.getElementById("explainText").textContent = xText(c); }
+  if(topic && curId && !document.getElementById("studyView").classList.contains("hidden")){ const c=card(curId); if(c){ document.getElementById("explainText").textContent = xText(c); document.getElementById("clTag").textContent = clLabel(c, topic); } }
   renderTiles();
   if(!document.getElementById("drillView").classList.contains("hidden")) renderDrill();
   if(!document.getElementById("knownView").classList.contains("hidden")) renderKnown();
 }
 /* Explanation in the interface language; falls back to Spanish (the original) */
-function xText(c){ const l=S().lang; return (l!=="es" && c["x_"+l]) || c.x || ""; }
+function xText(c){
+  const x = c.x; if(!x) return "";
+  if(typeof x === "string") return x;
+  return x[S().lang] || x.es || "";
+}
+/* Where each card comes from (cards can override their topic's cl) */
+const CLASSES = {
+  c1:{es:"Clase 1 · 31 ago", en:"Class 1 · Aug 31", zh:"第1课 · 8月31日"},
+  c2:{es:"Clase 2 · 7 sep",  en:"Class 2 · Sep 7",  zh:"第2课 · 9月7日"},
+  c3:{es:"Clase 3 · 14 sep", en:"Class 3 · Sep 14", zh:"第3课 · 9月14日"},
+  fc:{es:"Tarjetas de Michelle", en:"Michelle's flashcards", zh:"Michelle 老师的卡片"},
+  ex:{es:"Extra", en:"Extra", zh:"补充"}
+};
+function clOf(c, t){ return c.cl || (t && t.cl) || ""; }
+function clLabel(c, t){ const k = clOf(c,t); return k && CLASSES[k] ? CLASSES[k][S().lang] : ""; }
 function setSetting(k,v){ state.settings[k]=v; state.settings.u=Date.now(); save(); applyUI(); }
 
 /* =========================================================
@@ -360,6 +374,7 @@ function renderCard(){
   if(S().mode===1){ faceChinese(front, c, S().pinyin); faceMeaning(back, c); }
   else            { faceMeaning(front, c); faceChinese(back, c, true); }
   document.getElementById("explainText").textContent = xText(c);
+  document.getElementById("clTag").textContent = clLabel(c, topic);
 }
 
 function flip(){

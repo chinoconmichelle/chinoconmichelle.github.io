@@ -69,7 +69,7 @@ function runSearch(q){
     const sum = el("summary");
     const left = el("div","kw");
     left.append(el("div","kzh", c.s + (c.t && c.t!==c.s ? " · "+c.t : "")), el("div","kpy", c.py), el("div","kes", c.es+" · "+c.en));
-    const tag = el("span","stopic", t.name[S().lang]);
+    const tag = el("span","stopic", t.name[S().lang] + (clLabel(c,t) ? " · " + clLabel(c,t) : ""));
     sum.append(left, tag); d.appendChild(sum);
     const body = el("div","sbody");
     const b = el("button", null, T("hear")); b.onclick = e => { e.preventDefault(); sayZh(c.say||c.s); };
