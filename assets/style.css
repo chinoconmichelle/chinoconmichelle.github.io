@@ -192,3 +192,24 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 .seg.homeby{width:max-content;margin:0 auto 14px}
 .seg.homeby button{font-size:.9rem;padding:7px 16px}
 .tile .clfrom{font-size:.78rem;opacity:.75;line-height:1.35}
+
+/* Class recap */
+.rintro{font-size:1rem;line-height:1.55;margin:4px 0 6px}
+.rsource{font-size:.78rem;color:var(--sub);line-height:1.5;margin-bottom:12px}
+.rstudy{width:100%;padding:12px;font-size:.95rem;margin-bottom:8px}
+.rhint{font-size:.78rem;color:var(--sub);margin-bottom:14px}
+.rsec{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:12px}
+.rsec h3{font-size:1rem;margin-bottom:8px;color:var(--accent)}
+.rp{white-space:pre-line;line-height:1.65;font-size:calc(.92rem * var(--fs))}
+.rex{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.rrow,.rq{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;width:100%;background:var(--btn);padding:9px 12px}
+.rzh{font-size:calc(1.15rem * var(--fs));font-weight:600;color:var(--text)}
+.rpy{font-size:.82rem;color:var(--accent)}
+.rmean{font-size:.8rem;color:var(--sub)}
+.rtips ul{padding-left:18px;line-height:1.6;font-size:.9rem}
+.rtips li{margin-bottom:6px}
+.rcheck .rp{color:var(--sub);font-size:.82rem;margin-bottom:10px}
+.rq{margin-top:6px}
+.rqq{font-size:.95rem;color:var(--text)}
+.rtap{font-size:.75rem;color:var(--sub)}
+.ra{display:flex;flex-direction:column;gap:2px;margin-top:4px}

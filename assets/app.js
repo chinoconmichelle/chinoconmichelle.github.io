@@ -346,7 +346,7 @@ function renderClassTiles(box){
       <span class="bar"><i style="width:${pct}%"></i></span>`;
     b.querySelector(".name").textContent = CLASSES[k][S().lang];
     b.querySelector(".clfrom").textContent = d.from.map(t => t.name[S().lang]).join(" · ");
-    b.querySelector(".meta").textContent = `${kn} / ${n} ${T("learned")}`;
+    b.querySelector(".meta").textContent = `${kn} / ${n} ${T("learned")}` + (window.CLASS_NOTES && CLASS_NOTES[k] ? " · " + T("recapBtn") : "");
     b.onclick = () => openClass(k);
     box.appendChild(b);
   });

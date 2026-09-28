@@ -18,6 +18,7 @@ directly from disk (file://), so data is loaded with <script> tags, not fetch().
   instead of inventing a story.
 - tools/check.py validates fields, ids, traditional forms and counts short explanations; it runs on every push (.github/workflows/check.yml).
 - tools/rewrite.py can regenerate data/<topic>.js from JSON.
+- Class recaps: data/classes.js (window.CLASS_NOTES[classTag] = intro, source, parts[{h,p,ex}], tips, homework, check), rendered by assets/recap.js. A class tile opens its recap when one exists; the recap links to the class cards. Text in es/en/zh; example rows [zh, py, es, en]. Write them from the class transcript/PDF: what Michelle taught, in order, with her tips and the homework; say in `source` what it was built from. c1 and c2 come from transcripts + PDFs; c3 from the cards (no transcript yet).
 - Audio: Chinese only (browser speechSynthesis, zh-CN).
 - assets/extras.js adds search, the Tones & sounds page (content in its TONES object, all three languages) and the per-topic listening quiz; it wraps show/applyUI/renderTiles from app.js. The number drill lives in app.js.
 - New topic = new file in data/ calling window.TOPICS.push({...}) + a <script> tag in index.html.
