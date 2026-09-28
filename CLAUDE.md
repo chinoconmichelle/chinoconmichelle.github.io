@@ -26,6 +26,13 @@ directly from disk (file://), so data is loaded with <script> tags, not fetch().
 - New topic = new file in data/ calling window.TOPICS.push({...}) + a <script> tag in index.html.
   A topic with `soon:true` and no cards shows as "coming soon".
 - Terminology from class: simplified characters shown first, traditional next to them.
+- Pinyin in prose (Vladimir can't read characters yet): every Chinese word or sentence inside Spanish/English text
+  (card x and w, recaps, Tones page, drill tips, UI) carries its pinyin right after it, at least on its first mention
+  in each paragraph: `你 (nǐ)`; with a gloss, merge them: `大人 (dàrén, adulto)`; already inside parentheses, no extra
+  ones: `(en 什么 shénme)`; stroke names too: `(撇 piě)`. Lines whose next line is the pinyin (EJEMPLO blocks) and
+  `x.zh` text are left as they are. Use the card's own `py` for its words (Michelle's readings, e.g. yí ge, zhè ge,
+  péngyǒu where the card says so); write 一/不 with their tone change (yí ge, bú shì) and neutral tones (māma, míngzi).
+  Components with no reading (⺈) stay bare.
 
 ## Accounts and progress (Supabase)
 - Project URL and publishable key are in assets/app.js. Never put the secret / service_role key in this repo.

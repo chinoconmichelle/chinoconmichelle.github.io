@@ -39,8 +39,8 @@ const STROKE_NAMES = [
   ["捺","nà",{es:"diagonal que cae hacia la derecha, ensanchándose",en:"falling to the right, widening",zh:"捺"}],
   ["点","diǎn",{es:"punto",en:"dot",zh:"点"}],
   ["提","tí",{es:"trazo corto que sube hacia la derecha",en:"short rising stroke",zh:"提"}],
-  ["钩","gōu",{es:"gancho al final de un trazo (竖钩, 斜钩…)",en:"hook at the end of a stroke (竖钩, 斜钩…)",zh:"钩"}],
-  ["折","zhé",{es:"quiebre: el trazo dobla (横撇, 横折…)",en:"turn: the stroke bends (横撇, 横折…)",zh:"折"}]
+  ["钩","gōu",{es:"gancho al final de un trazo (竖钩 shùgōu, 斜钩 xiégōu…)",en:"hook at the end of a stroke (竖钩 shùgōu, 斜钩 xiégōu…)",zh:"钩"}],
+  ["折","zhé",{es:"quiebre: el trazo dobla (横撇 héngpiě, 横折 héngzhé…)",en:"turn: the stroke bends (横撇 héngpiě, 横折 héngzhé…)",zh:"折"}]
 ];
 
 /* ---------- on-demand data (script tags, file:// friendly) ---------- */

@@ -250,7 +250,7 @@ The class sentence: my boss's brother is Luis → 我老板的弟弟是 Luis (w�
         zh:`「是」不变位。我老板的弟弟是 Luis。进店可以叫「老板」。`},
      ex:[["是","shì","ser","to be"],["我老板的弟弟是 Luis。","wǒ lǎobǎn de dìdi shì Luis","el hermano (menor) de mi jefe es Luis","my boss's (younger) brother is Luis"]]},
 
-    {h:{es:"6. 叫 (jiào) y tu nombre: 瓦迪铭", en:"6. 叫 (jiào) and your name: 瓦迪铭", zh:"6. 「叫」和你的名字：瓦迪铭"},
+    {h:{es:"6. 叫 (jiào) y tu nombre: 瓦迪铭 (Wǎ Dí Míng)", en:"6. 叫 (jiào) and your name: 瓦迪铭 (Wǎ Dí Míng)", zh:"6. 「叫」和你的名字：瓦迪铭"},
      p:{es:`En chino no existe «me llamo»: se dice «yo llamo»: 我叫 (wǒ jiào)…
 Tu nombre chino: 瓦迪铭 (Wǎ Dí Míng). Michelle lo buscó con una IA china porque la versión transcrita del ruso es muy larga. Contó que 迪 (dí) sugiere que las cosas salen bien y 铭 (míng) es «grabado», como un nombre que queda en la historia.
 Se usan las dos: 我是瓦迪铭 (wǒ shì Wǎ Dí Míng, soy Vladimir) y 我叫瓦迪铭 (wǒ jiào Wǎ Dí Míng, me llamo Vladimir).`,
@@ -273,23 +273,23 @@ What's your sister's friend called? → 你妹妹的朋友叫什么名字？ (n�
      ex:[["你是谁？","nǐ shì shéi?","¿quién sos?","who are you?"],["你叫什么名字？","nǐ jiào shénme míngzi?","¿cómo te llamás?","what's your name?"],["你妹妹的朋友叫什么名字？","nǐ mèimei de péngyou jiào shénme míngzi?","¿cómo se llama el amigo de tu hermana?","what's your sister's friend's name?"],["我妹妹的朋友叫 Juan。","wǒ mèimei de péngyou jiào Juan","el amigo de mi hermana se llama Juan","my sister's friend is called Juan"]]},
 
     {h:{es:"8. Mismo sonido, otro carácter", en:"8. Same sound, different character", zh:"8. 同音不同字"},
-     p:{es:`Preguntaste por qué el shì de 是 y el de 电视 (diànshì) suenan igual. Michelle: muchísimas palabras se pronuncian igual y tienen caracteres distintos; se entienden por el contexto. También 是 shì (4.º) y 什 shén (2.º, en 什么) son caracteres totalmente diferentes.
+     p:{es:`Preguntaste por qué el shì de 是 y el de 电视 (diànshì) suenan igual. Michelle: muchísimas palabras se pronuncian igual y tienen caracteres distintos; se entienden por el contexto. También 是 shì (4.º) y 什 shén (2.º, en 什么 shénme) son caracteres totalmente diferentes.
 
 Y te mostró por qué conviene conocer caracteres: 电 (diàn) parece un enchufe con su cable, y es «electricidad». 电视 (diànshì) = electricidad + visión = tele. 电脑 (diànnǎo) = cerebro eléctrico = computadora. Cuando ves 电 sabés que es un aparato.`,
-        en:`You asked why the shì in 是 and in 电视 (diànshì) sound the same. Michelle: lots of words sound alike and have different characters; context tells them apart. Also 是 shì (4th) and 什 shén (2nd, in 什么) are completely different characters.
+        en:`You asked why the shì in 是 (shì) and in 电视 (diànshì) sound the same. Michelle: lots of words sound alike and have different characters; context tells them apart. Also 是 shì (4th) and 什 shén (2nd, in 什么 shénme) are completely different characters.
 
 And she showed why characters are worth knowing: 电 (diàn) looks like a plug with its cable, and means "electricity". 电视 (diànshì) = electricity + vision = TV. 电脑 (diànnǎo) = electric brain = computer. When you see 电 you know it's a device.`,
         zh:`同音字很多，靠上下文分辨。电像插头和电线；电视、电脑。`},
      ex:[["电","diàn","electricidad","electricity"],["电视","diànshì","tele","TV"],["电脑","diànnǎo","computadora","computer"]]},
 
     {h:{es:"9. 他 (tā), 她 (tā), 女 (nǚ) y 男 (nán)", en:"9. 他 (tā), 她 (tā), 女 (nǚ) and 男 (nán)", zh:"9. 他、她、女、男"},
-     p:{es:`他 y 她 suenan igual (tā). 他 sirve para los dos; si querés marcar que es mujer, escribís 她, con el radical 女 (nǚ).
+     p:{es:`他 (tā) y 她 suenan igual (tā). 他 sirve para los dos; si querés marcar que es mujer, escribís 她, con el radical 女 (nǚ).
 女 (nǚ): una mujer sentada sobre las piernas, en la postura antigua. Si un carácter tiene 女, algo tiene que ver con mujer.
-他 lleva 亻, persona.
+他 lleva 亻 (rén), persona.
 男 (nán) hombre: arriba 田 (tián), el campo de arroz dividido en cuadraditos; abajo 力 (lì), fuerza (el dibujo de una herramienta de labranza). Los hombres eran la fuerza que trabajaba el campo.`,
-        en:`他 and 她 sound the same (tā). 他 works for both; to mark a woman you write 她, with the 女 (nǚ) radical.
+        en:`他 (tā) and 她 sound the same (tā). 他 works for both; to mark a woman you write 她, with the 女 (nǚ) radical.
 女 (nǚ): a woman sitting on her legs, in the old posture. A character with 女 has something to do with women.
-他 has 亻, person.
+他 has 亻 (rén), person.
 男 (nán) man: on top 田 (tián), the rice field divided into squares; below 力 (lì), strength (a drawing of a farming tool). Men were the strength that worked the fields.`,
         zh:`他、她同音。女：跪坐的女子；亻：人。男＝田＋力，在田里出力的人。`},
      ex:[["他","tā","él","he"],["她","tā","ella","she"],["女","nǚ","mujer","woman"],["男","nán","hombre","man"],["田","tián","campo de arroz","rice field"],["力","lì","fuerza","strength"]]},
@@ -392,14 +392,14 @@ Also: 对不起 (duìbuqǐ) sorry → 没关系 (méi guānxi) no problem. 拜�
      p:{es:`Solo hay que memorizar del 0 al 10; el resto se arma con lógica, como una multiplicación:
 十一 (shíyī) = 10 + 1 (once) · 二十 (èrshí) = 2 × 10 (veinte) · 二十五 (èrshíwǔ) = 2 × 10 + 5 · 九十九 (jiǔshíjiǔ).
 百 (bǎi) cien · 千 (qiān) mil · 万 (wàn) diez mil (el chino agrupa de a cuatro cifras: 10.000 es una unidad).
-Si falta un lugar en el medio, se dice 零 (líng): 101 = 一百零一 (yìbǎi líng yī) (si no, 一百一 se entiende 110).
-两 (liǎng) es el «dos» delante de un clasificador y en 两百 (liǎngbǎi): 两个老师 (liǎng ge lǎoshī), no 二个.
+Si falta un lugar en el medio, se dice 零 (líng): 101 = 一百零一 (yìbǎi líng yī) (si no, 一百一 yìbǎi yī se entiende 110).
+两 (liǎng) es el «dos» delante de un clasificador y en 两百 (liǎngbǎi): 两个老师 (liǎng ge lǎoshī), no 二个 (èr ge).
 El 一 (yī) cambia de tono: yì antes de 1.º, 2.º y 3.º (一百 yìbǎi), yí antes del 4.º (一万 yíwàn, 一个 yí ge).`,
         en:`You only memorize 0 to 10; the rest is built by logic, like multiplying:
 十一 (shíyī) = 10 + 1 (eleven) · 二十 (èrshí) = 2 × 10 (twenty) · 二十五 (èrshíwǔ) = 2 × 10 + 5 · 九十九 (jiǔshíjiǔ).
 百 (bǎi) hundred · 千 (qiān) thousand · 万 (wàn) ten thousand (Chinese groups digits in fours: 10,000 is one unit).
-If a place is empty in the middle, say 零 (líng): 101 = 一百零一 (yìbǎi líng yī) (otherwise 一百一 means 110).
-两 (liǎng) is the "two" before a measure word and in 两百 (liǎngbǎi): 两个老师 (liǎng ge lǎoshī), not 二个.
+If a place is empty in the middle, say 零 (líng): 101 = 一百零一 (yìbǎi líng yī) (otherwise 一百一 yìbǎi yī means 110).
+两 (liǎng) is the "two" before a measure word and in 两百 (liǎngbǎi): 两个老师 (liǎng ge lǎoshī), not 二个 (èr ge).
 一 (yī) changes tone: yì before 1st, 2nd and 3rd tones (一百 yìbǎi), yí before the 4th (一万 yíwàn, 一个 yí ge).`,
         zh:`只要背0到10，其余按逻辑组合。百、千、万（四位一组）。中间空位读「零」：一百零一。量词前用「两」：两个老师。「一」的变调。`},
      ex:[["十一","shíyī","11","11"],["二十五","èrshíwǔ","25","25"],["九十九","jiǔshíjiǔ","99","99"],["一百零一","yìbǎi líng yī","101","101"],["一百二十三","yìbǎi èrshísān","123","123"],["两百","liǎngbǎi","200","200"],["一万","yíwàn","10.000","10,000"]]},
@@ -430,7 +430,7 @@ ese gato → 那只猫 (nà zhī māo)
 unos gatos → 一些猫 (yìxiē māo)
 los gatos / estos gatos → 这些猫 (zhèxiē māo)
 esos gatos → 那些猫 (nàxiē māo)
-En plural, 些 (xiē) reemplaza al clasificador: 这些只猫 ✗. Y 们 (men) es solo para personas: 猫们 ✗.`,
+En plural, 些 (xiē) reemplaza al clasificador: 这些只猫 (zhèxiē zhī māo) ✗. Y 们 (men) es solo para personas: 猫们 (māo men) ✗.`,
         en:`There's no "the" or "a". They're built like this:
 a cat → 一只猫 (yì zhī māo) (one + measure word)
 the cat / this cat → 这只猫 (zhè zhī māo) (this + measure word)
@@ -438,7 +438,7 @@ that cat → 那只猫 (nà zhī māo)
 some cats → 一些猫 (yìxiē māo)
 the cats / these cats → 这些猫 (zhèxiē māo)
 those cats → 那些猫 (nàxiē māo)
-In the plural, 些 (xiē) replaces the measure word: 这些只猫 ✗. And 们 (men) is only for people: 猫们 ✗.`,
+In the plural, 些 (xiē) replaces the measure word: 这些只猫 (zhèxiē zhī māo) ✗. And 们 (men) is only for people: 猫们 (māo men) ✗.`,
         zh:`没有冠词：一只猫、这只猫、那只猫、一些猫、这些猫、那些猫。复数用「些」代替量词；「们」只用于人。`},
      ex:[["这只猫","zhè zhī māo","el gato / este gato","the cat / this cat"],["那只猫","nà zhī māo","ese gato","that cat"],["一些猫","yìxiē māo","unos gatos","some cats"],["这些猫","zhèxiē māo","los gatos / estos gatos","the cats / these cats"],["那些老师","nàxiē lǎoshī","esos profesores","those teachers"]]},
 
@@ -472,13 +472,13 @@ New animals: 马 (mǎ) horse, 老鼠 (lǎoshǔ) mouse, 老虎 (lǎohǔ) tiger, �
      p:{es:`Cuatro oraciones cortas que juntan todo:
 我有一只猫。 (wǒ yǒu yì zhī māo) Tengo un gato.
 我的猫叫 Oliver。 (wǒ de māo jiào Oliver) Mi gato se llama Oliver.
-它是橘色的。 (tā shì júsè de) Es naranja. (El sujeto no se puede sacar: hay que decir 它, tā. Y 是 + color + 的 = «es de color…».)
+它是橘色的。 (tā shì júsè de) Es naranja. (El sujeto no se puede sacar: hay que decir 它, tā. Y 是 shì + color + 的 de = «es de color…».)
 这只猫今天早上吃一条鱼。 (zhè zhī māo jīntiān zǎoshang chī yì tiáo yú) El gato comió un pescado esta mañana.
 Orden: sujeto → tiempo → verbo → objeto. El tiempo va después del sujeto, no al final. El verbo no cambia: el pasado lo da 今天早上 (jīntiān zǎoshang).`,
         en:`Four short sentences that pull it all together:
 我有一只猫。 (wǒ yǒu yì zhī māo) I have a cat.
 我的猫叫 Oliver。 (wǒ de māo jiào Oliver) My cat is called Oliver.
-它是橘色的。 (tā shì júsè de) It's orange. (The subject can't be dropped: you must say 它, tā. And 是 + color + 的 = "is … colored".)
+它是橘色的。 (tā shì júsè de) It's orange. (The subject can't be dropped: you must say 它, tā. And 是 shì + color + 的 de = "is … colored".)
 这只猫今天早上吃一条鱼。 (zhè zhī māo jīntiān zǎoshang chī yì tiáo yú) The cat ate a fish this morning.
 Order: subject → time → verb → object. Time goes after the subject, not at the end. The verb doesn't change: 今天早上 (jīntiān zǎoshang) gives the past.`,
         zh:`我有一只猫。我的猫叫 Oliver。它是橘色的。这只猫今天早上吃一条鱼。语序：主语→时间→动词→宾语；主语不能省。`},

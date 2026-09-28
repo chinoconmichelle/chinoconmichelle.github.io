@@ -109,12 +109,12 @@ const TONES = {
         ["次","cì — plana, con aire","vez"],
         ["是","shì — atrás","ser"],
         ["四","sì — plana","cuatro"],
-        ["十","shí — atrás","diez (no confundir con 四)"]
+        ["十","shí — atrás","diez (no confundir con 四 sì)"]
       ]},
       {h:"j · q · x", p:"La lengua plana y hacia adelante, tocando los dientes de abajo. x es como una s suave, más cerca de «sh» pero sin curvar la lengua.", items:[
         ["叫","jiào","llamarse"],
         ["七","qī — con aire","siete"],
-        ["校","xiào","escuela (no confundir con 叫)"],
+        ["校","xiào","escuela (no confundir con 叫 jiào)"],
         ["谢谢","xièxie","gracias"]
       ]},
       {h:"Vocales con trampa", p:"ü es la u francesa: labios en u, lengua en i. iu suena con un poco de o: «liou». La r china se parece a la r del inglés americano.", items:[
@@ -125,10 +125,10 @@ const TONES = {
       ]},
       {h:"Tonos que cambian", p:"Algunos tonos cambian según lo que viene después.", items:[
         ["你好","nǐ hǎo → ní hǎo","Dos terceros tonos seguidos: el primero pasa a 2.º."],
-        ["不客气","bù → bú kèqi","不 antes de un 4.º tono pasa a 2.º."],
-        ["不好","bù hǎo","Antes de otros tonos, 不 queda en 4.º."],
-        ["一个","yī → yí ge","一 antes de un 4.º tono pasa a 2.º."],
-        ["一百","yī → yìbǎi","一 antes de 1.º, 2.º o 3.º tono pasa a 4.º."]
+        ["不客气","bù → bú kèqi","不 (bù) antes de un 4.º tono pasa a 2.º."],
+        ["不好","bù hǎo","Antes de otros tonos, 不 (bù) queda en 4.º."],
+        ["一个","yī → yí ge","一 (yī) antes de un 4.º tono pasa a 2.º."],
+        ["一百","yī → yìbǎi","一 (yī) antes de 1.º, 2.º o 3.º tono pasa a 4.º."]
       ]}
     ]
   },
@@ -158,12 +158,12 @@ const TONES = {
         ["次","cì — flat, with air","time (occurrence)"],
         ["是","shì — back","to be"],
         ["四","sì — flat","four"],
-        ["十","shí — back","ten (don't mix up with 四)"]
+        ["十","shí — back","ten (don't mix up with 四 sì)"]
       ]},
       {h:"j · q · x", p:"Tongue flat and forward, touching the lower teeth. x is a soft hiss, close to \"sh\" but without curling the tongue.", items:[
         ["叫","jiào","to be called"],
         ["七","qī — with air","seven"],
-        ["校","xiào","school (don't mix up with 叫)"],
+        ["校","xiào","school (don't mix up with 叫 jiào)"],
         ["谢谢","xièxie","thank you"]
       ]},
       {h:"Tricky vowels", p:"ü is the French u: lips rounded, tongue as for i. iu sounds with a bit of o: \"liou\". Chinese r is close to an American r.", items:[
@@ -174,10 +174,10 @@ const TONES = {
       ]},
       {h:"Tone changes", p:"Some tones change depending on what follows.", items:[
         ["你好","nǐ hǎo → ní hǎo","Two 3rd tones in a row: the first becomes 2nd."],
-        ["不客气","bù → bú kèqi","不 before a 4th tone becomes 2nd."],
-        ["不好","bù hǎo","Before other tones, 不 stays 4th."],
-        ["一个","yī → yí ge","一 before a 4th tone becomes 2nd."],
-        ["一百","yī → yìbǎi","一 before a 1st, 2nd or 3rd tone becomes 4th."]
+        ["不客气","bù → bú kèqi","不 (bù) before a 4th tone becomes 2nd."],
+        ["不好","bù hǎo","Before other tones, 不 (bù) stays 4th."],
+        ["一个","yī → yí ge","一 (yī) before a 4th tone becomes 2nd."],
+        ["一百","yī → yìbǎi","一 (yī) before a 1st, 2nd or 3rd tone becomes 4th."]
       ]}
     ]
   },

@@ -562,8 +562,8 @@ function numToZh(n){
 function drillNote(n, r){
   const lines = r.parts.map(p => `${p[0]}  ${p[1]}  = ${p[2]}`);
   const tips = {
-    es:{teen:"Del 11 al 19: 十 + unidad, sin 一 adelante.", hund:"Con 百 el uno es obligatorio: 一百.", two:"200 se dice 两百 (también se oye 二百).", zero:"零 marca que falta la decena.", yishi:"Después de 百, el diez lleva su uno: 一十.", yi:"一 antes de 百 se pronuncia yì."},
-    en:{teen:"11–19: 十 + unit, no 一 in front.", hund:"With 百 the one is required: 一百.", two:"200 is 两百 (二百 is also heard).", zero:"零 marks the missing tens.", yishi:"After 百, ten keeps its one: 一十.", yi:"一 before 百 is pronounced yì."},
+    es:{teen:"Del 11 al 19: 十 (shí) + unidad, sin 一 (yī) adelante.", hund:"Con 百 (bǎi) el uno es obligatorio: 一百 (yìbǎi).", two:"200 se dice 两百 (liǎngbǎi); también se oye 二百 (èrbǎi).", zero:"零 (líng) marca que falta la decena.", yishi:"Después de 百 (bǎi), el diez lleva su uno: 一十 (yīshí).", yi:"一 (yī) antes de 百 (bǎi) se pronuncia yì."},
+    en:{teen:"11–19: 十 (shí) + unit, no 一 (yī) in front.", hund:"With 百 (bǎi) the one is required: 一百 (yìbǎi).", two:"200 is 两百 (liǎngbǎi); 二百 (èrbǎi) is also heard.", zero:"零 (líng) marks the missing tens.", yishi:"After 百 (bǎi), ten keeps its one: 一十 (yīshí).", yi:"一 (yī) before 百 (bǎi) is pronounced yì."},
     zh:{teen:"11–19：十 + 个位数，前面不加一。", hund:"百前面一定要说一：一百。", two:"200 说两百（也可以说二百）。", zero:"零表示十位是空的。", yishi:"百后面的十要说一十。", yi:"一在百前面读 yì。"}
   }[S().lang];
   const h=Math.floor(n/100), t=Math.floor(n%100/10), u=n%10;
