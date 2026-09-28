@@ -3,6 +3,7 @@ to x:{es,en,zh} and class tags). Keeps field order stable and uses template lite
 import json, sys, os
 HEAD = ("/* Card fields: id (permanent, never reuse), s simplified, t traditional (only if different),\n"
         "   py pinyin, es / en meanings, cl class tag (see CLASSES in assets/app.js), say optional TTS text,\n"
+        "   w optional writing tip {es, en, zh} (shown on the stroke-order page),\n"
         "   x character explanation {es, en, zh}: as deep as possible, self-contained. */\n")
 def tl(s): return "`" + s.replace("\\","\\\\").replace("`","\\`").replace("${","\\${") + "`"
 def js(v): return json.dumps(v, ensure_ascii=False)
@@ -16,6 +17,7 @@ def write(t, root):
         f += [f"py:{js(c['py'])}", f"es:{js(c['es'])}", f"en:{js(c['en'])}"]
         if c.get('cl'): f.append(f"cl:{js(c['cl'])}")
         if c.get('say'): f.append(f"say:{js(c['say'])}")
+        if c.get('w'): f.append(f"w:{js(c['w'])}")
         x = c['x']
         out.append("  {" + ",".join(f) + ",\n   x:{\nes:" + tl(x['es']) + ",\nen:" + tl(x['en']) + ",\nzh:" + tl(x['zh']) + "}}" + ("," if i < len(t['cards'])-1 else "") + "\n")
     out.append("  ]\n});\n")

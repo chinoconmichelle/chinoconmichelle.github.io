@@ -90,6 +90,7 @@
       <button id="pinyinBtn" data-i18n="pinyin"></button>
       <button id="shuffleBtn" data-i18n="shuffle"></button>
       <button id="quizBtn" data-i18n="quiz"></button>
+      <button id="strokesBtn" data-i18n="strokesBtn"></button>
       <button id="recapBtn" class="hidden" data-i18n="recapBtn"></button>
     </div>
     <div class="countbar">
@@ -156,6 +157,26 @@
     <div id="recapBody"></div>
   </section>
 
+  <!-- STROKE ORDER -->
+  <section id="strokesView" class="hidden">
+    <div class="studyhead">
+      <button class="ghost" id="strokesBack" data-i18n="backTopic"></button>
+      <h2><span data-i18n="strokesTitle"></span> · <span id="strokesCard"></span></h2>
+    </div>
+    <div class="row stabs" id="strokeTabs"></div>
+    <div class="wwrap"><div class="writer" id="writerBox"></div></div>
+    <div class="scount" id="strokeCount"></div>
+    <div class="row sbtns">
+      <button id="strokeAnim" class="on" data-i18n="animate"></button>
+      <button id="strokePractice" data-i18n="practice"></button>
+      <button id="strokeSay">🔊</button>
+    </div>
+    <div class="smsg" id="strokeMsg"></div>
+    <section class="rsec hidden" id="strokeTip"></section>
+    <section class="rsec hidden" id="strokeEvo"></section>
+    <details class="rsec snames" id="strokeNames"></details>
+  </section>
+
   <!-- LISTENING QUIZ -->
   <section id="quizView" class="hidden">
     <div class="studyhead">
@@ -220,9 +241,12 @@
 <script src="data/genero.js"></script>
 <script src="data/frases.js"></script>
 <script src="data/radicales.js"></script>
+<script src="data/hanzi.js"></script>
 <script src="data/classes.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/extras.js"></script>
 <script src="assets/recap.js"></script>
+<script src="assets/hanzi-writer.min.js"></script>
+<script src="assets/strokes.js"></script>
 </body>
 </html>
