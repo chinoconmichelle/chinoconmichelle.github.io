@@ -418,8 +418,12 @@ function renderCard(){
   const c = card(curId);
   const front = document.getElementById("front"), back = document.getElementById("back");
   front.innerHTML = ""; back.innerHTML = "";
-  if(S().mode===1){ faceChinese(front, c, S().pinyin); faceMeaning(back, c); }
-  else            { faceMeaning(front, c); faceChinese(back, c, true); }
+  if(S().mode===1) faceChinese(front, c, S().pinyin);
+  else             faceMeaning(front, c);
+  // The back always shows the whole card: characters, pinyin and both meanings
+  faceChinese(back, c, true);
+  const sep = document.createElement("div"); sep.className = "sep"; back.appendChild(sep);
+  faceMeaning(back, c);
   document.getElementById("explainText").textContent = xText(c);
   document.getElementById("clTag").textContent = cardTag(c);
 }

@@ -234,3 +234,13 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 .snames summary{cursor:pointer;font-weight:600;color:var(--accent)}
 .sname{display:flex;gap:8px;align-items:baseline;font-size:.88rem;margin-top:6px}
 .sname b{font-size:1.1rem}
+
+/* Card back: characters + pinyin + meanings together */
+.face.back .zh{font-size:calc(2.1rem * var(--fs))}
+.face.back .zh.long{font-size:calc(1.45rem * var(--fs))}
+.face.back .py{margin-top:4px}
+.face.back .sep{width:40%;height:1px;background:var(--border);margin:12px auto}
+.face.back .mean{font-size:calc(1.3rem * var(--fs))}
+.face.back .mean + .mean{font-size:calc(1.05rem * var(--fs));margin-top:4px}
+.zh.long .dot{display:none}
+.zh.long .trad{display:block;font-size:.8em;margin-top:2px}
