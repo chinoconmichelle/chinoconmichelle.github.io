@@ -4,7 +4,7 @@
 const UI = {
   es:{
     appTitle:"Chino con Michelle",
-    appSub:"Elegí un tema. Tu progreso se guarda por tema.",
+    appSub:"Estudiá por tema o por clase. Tu progreso es el mismo en las dos vistas.",
     light:"Claro",sepia:"Sepia",dark:"Noche",
     back:"← Temas",backStudy:"← Volver",
     mode1:"Chino primero",mode2:"Significado primero",
@@ -14,13 +14,13 @@ const UI = {
     understand:"Entender los caracteres",
     hear:"🔊 Escuchar en chino",prev:"← Anterior",next:"Siguiente →",
     notYet:"Todavía no",gotIt:"¡La sé!",
-    restart:"Volver al inicio",resetTopic:"Reiniciar este tema",
-    allDone:"¡Aprendiste todas las tarjetas de este tema!\nPodés repasarlas en «Ver aprendidas» o reiniciar el tema.",
+    restart:"Volver al inicio",resetTopic:"Reiniciar estas tarjetas",
+    allDone:"¡Aprendiste todas estas tarjetas!\nPodés repasarlas en «Ver aprendidas» o reiniciarlas.",
     knownTitle:"Aprendidas",moveBack:"Volver a repasar",noKnown:"Todavía no marcaste ninguna tarjeta como aprendida.",
-    learned:"aprendidas",cards:"tarjetas",soon:"Próximamente",
+    learned:"aprendidas",cards:"tarjetas",soon:"Próximamente",byTopic:"Por tema",byClass:"Por clase",
     export:"⬇ Exportar progreso",import:"⬆ Importar progreso",
     importOk:"Progreso importado.",importFail:"Ese archivo no es un progreso válido.",
-    confirmReset:"¿Reiniciar el progreso de este tema?",
+    confirmReset:"¿Reiniciar estas tarjetas? También vuelven a «por repasar» en su tema y en su clase.",
     noTTS:"Este navegador no puede leer en voz alta.",
     storageNote:"Tu progreso se guarda en tu cuenta y te sigue a cualquier dispositivo donde entres.",
     show:"Mostrar",hide:"Ocultar",password2:"Repetí la contraseña",newPassword:"Nueva contraseña",
@@ -44,7 +44,7 @@ const UI = {
   },
   en:{
     appTitle:"Mandarin with Michelle",
-    appSub:"Pick a topic. Progress is saved per topic.",
+    appSub:"Study by topic or by class. Your progress is shared between both views.",
     light:"Light",sepia:"Sepia",dark:"Dark",
     back:"← Topics",backStudy:"← Back",
     mode1:"Chinese first",mode2:"Meaning first",
@@ -54,13 +54,13 @@ const UI = {
     understand:"Understand the characters",
     hear:"🔊 Hear in Chinese",prev:"← Previous",next:"Next →",
     notYet:"Not yet",gotIt:"I know it!",
-    restart:"Back to start",resetTopic:"Reset this topic",
-    allDone:"You've learned every card in this topic!\nReview them under “View learned” or reset the topic.",
+    restart:"Back to start",resetTopic:"Reset these cards",
+    allDone:"You've learned all these cards!\nReview them under “View learned” or reset them.",
     knownTitle:"Learned",moveBack:"Review again",noKnown:"You haven't marked any card as learned yet.",
-    learned:"learned",cards:"cards",soon:"Coming soon",
+    learned:"learned",cards:"cards",soon:"Coming soon",byTopic:"By topic",byClass:"By class",
     export:"⬇ Export progress",import:"⬆ Import progress",
     importOk:"Progress imported.",importFail:"That file isn't valid progress data.",
-    confirmReset:"Reset progress for this topic?",
+    confirmReset:"Reset these cards? They also go back to “to review” in their topic and class.",
     noTTS:"This browser can't read text aloud.",
     storageNote:"Your progress is saved to your account and follows you to any device where you sign in.",
     show:"Show",hide:"Hide",password2:"Repeat password",newPassword:"New password",
@@ -84,7 +84,7 @@ const UI = {
   },
   zh:{
     appTitle:"中文学习卡片",
-    appSub:"选择一个主题。每个主题分别记录进度。",
+    appSub:"按主题或按课程学习，两种方式的进度是共用的。",
     light:"浅色",sepia:"米色",dark:"夜间",
     back:"← 主题",backStudy:"← 返回",
     mode1:"先看中文",mode2:"先看意思",
@@ -94,13 +94,13 @@ const UI = {
     understand:"理解汉字",
     hear:"🔊 朗读中文",prev:"← 上一张",next:"下一张 →",
     notYet:"还不会",gotIt:"我会了",
-    restart:"从头开始",resetTopic:"重置本主题",
-    allDone:"本主题的卡片全部掌握了！\n可以在【查看已掌握】复习，或重置本主题。",
+    restart:"从头开始",resetTopic:"重置这些卡片",
+    allDone:"这些卡片全部掌握了！\n可以在【查看已掌握】复习，或重置。",
     knownTitle:"已掌握",moveBack:"移回待复习",noKnown:"还没有已掌握的卡片。",
-    learned:"已掌握",cards:"张",soon:"即将推出",
+    learned:"已掌握",cards:"张",soon:"即将推出",byTopic:"按主题",byClass:"按课程",
     export:"⬇ 导出进度",import:"⬆ 导入进度",
     importOk:"进度已导入。",importFail:"这个文件不是有效的进度数据。",
-    confirmReset:"确定要重置本主题的进度吗？",
+    confirmReset:"确定要重置这些卡片吗？它们在所属主题和课程中也会恢复为未掌握。",
     noTTS:"当前浏览器不支持语音朗读。",
     storageNote:"进度保存在你的账号里，在任何设备登录都能继续。",
     show:"显示",hide:"隐藏",password2:"再输入一次密码",newPassword:"新密码",
@@ -141,7 +141,7 @@ const TOPICS = window.TOPICS;
    ========================================================= */
 const OLD_KEY = "mzhApp.v1";                 // Phase 1 (before accounts)
 const cacheKey = uid => "mzhApp.v2." + uid;  // local copy per user
-const DEFAULT_SETTINGS = {lang:"es", theme:"dark", font:1, mode:1, pinyin:true, shuffle:false, drange:"0-100", dmode:1, dorder:false};
+const DEFAULT_SETTINGS = {lang:"es", theme:"dark", font:1, mode:1, pinyin:true, shuffle:false, drange:"0-100", dmode:1, dorder:false, homeBy:"topic"};
 let state = {settings:{...DEFAULT_SETTINGS}, topics:{}};
 let topic = null;        // current topic object
 let order = [];          // card ids in study order
@@ -252,7 +252,7 @@ function applyUI(){
   const ae=document.getElementById("authErr"); if(ae && ae.dataset.k) ae.textContent=T(ae.dataset.k);
   const ao=document.getElementById("authOk"); if(ao && ao.dataset.k) ao.textContent=T(ao.dataset.k);
   const pm=document.getElementById("pwMatch"); if(pm && pm.dataset.k) pm.textContent=T(pm.dataset.k);
-  if(topic && curId && !document.getElementById("studyView").classList.contains("hidden")){ const c=card(curId); if(c){ document.getElementById("explainText").textContent = xText(c); document.getElementById("clTag").textContent = clLabel(c, topic); } }
+  if(topic && curId && !document.getElementById("studyView").classList.contains("hidden")){ const c=card(curId); if(c){ document.getElementById("explainText").textContent = xText(c); document.getElementById("clTag").textContent = cardTag(c); } }
   renderTiles();
   if(!document.getElementById("drillView").classList.contains("hidden")) renderDrill();
   if(!document.getElementById("knownView").classList.contains("hidden")) renderKnown();
@@ -271,7 +271,30 @@ const CLASSES = {
   fc:{es:"Tarjetas de Michelle", en:"Michelle's flashcards", zh:"Michelle 老师的卡片"},
   ex:{es:"Extra", en:"Extra", zh:"补充"}
 };
+const CLASS_GLYPH = {c1:"一", c2:"二", c3:"三", fc:"卡", ex:"补"};
 function clOf(c, t){ return c.cl || (t && t.cl) || ""; }
+/* Each card's own topic (progress is stored there, so topic and class views share it) */
+let CARD_HOME = null;
+function homeOf(id){
+  if(!CARD_HOME){ CARD_HOME = {}; TOPICS.forEach(t => t.cards.forEach(c => { CARD_HOME[c.id] = t; })); }
+  return CARD_HOME[id];
+}
+function isKnown(id){ const h = homeOf(id); return !!h && tstate(h.id).known.includes(id); }
+function setKnown(id, on){
+  const h = homeOf(id); if(!h) return;
+  const ts = tstate(h.id);
+  ts.known = ts.known.filter(x => x!==id);
+  if(on) ts.known.push(id);
+  ts.u = Date.now();
+}
+/* A class deck: every card taught in that class, across topics, in topic order */
+function classDeck(k){
+  const cards = [], from = [];
+  TOPICS.forEach(t => { if(t.soon) return; const cs = t.cards.filter(c => clOf(c,t)===k); if(cs.length){ cards.push(...cs); from.push(t); } });
+  return {id:"class-"+k, cl:k, virtual:true, glyph:CLASS_GLYPH[k]||"课", name:CLASSES[k], cards, from};
+}
+/* Tag shown on a card: its class in a topic deck, its topic in a class deck */
+function cardTag(c){ return topic && topic.virtual ? homeOf(c.id).name[S().lang] : clLabel(c, topic); }
 function clLabel(c, t){ const k = clOf(c,t); return k && CLASSES[k] ? CLASSES[k][S().lang] : ""; }
 function setSetting(k,v){ state.settings[k]=v; state.settings.u=Date.now(); save(); applyUI(); }
 
@@ -281,11 +304,13 @@ function setSetting(k,v){ state.settings[k]=v; state.settings.u=Date.now(); save
 function renderTiles(){
   const box = document.getElementById("tiles");
   box.innerHTML = "";
+  document.querySelectorAll("#homeBySeg button").forEach(b => b.classList.toggle("on", b.dataset.by===(S().homeBy||"topic")));
+  if(S().homeBy==="class"){ renderClassTiles(box); return; }
   TOPICS.forEach(tp => {
     const b = document.createElement("button");
     b.className = "tile" + (tp.soon ? " soon" : "");
     const n = tp.cards.length;
-    const k = tp.soon ? 0 : tstate(tp.id).known.filter(id => tp.cards.some(c=>c.id===id)).length;
+    const k = tp.soon ? 0 : tp.cards.filter(c => isKnown(c.id)).length;
     const pct = n ? Math.round(k/n*100) : 0;
     b.innerHTML = `<span class="glyph">${tp.glyph}</span>
       <span class="name"></span>
@@ -307,6 +332,26 @@ function renderTiles(){
   });
 }
 
+function renderClassTiles(box){
+  Object.keys(CLASSES).forEach(k => {
+    const d = classDeck(k); if(!d.cards.length) return;
+    const n = d.cards.length, kn = d.cards.filter(c => isKnown(c.id)).length;
+    const pct = Math.round(kn/n*100);
+    const b = document.createElement("button");
+    b.className = "tile cltile";
+    b.innerHTML = `<span class="glyph">${d.glyph}</span>
+      <span class="name"></span>
+      <span class="clfrom"></span>
+      <span class="meta"></span>
+      <span class="bar"><i style="width:${pct}%"></i></span>`;
+    b.querySelector(".name").textContent = CLASSES[k][S().lang];
+    b.querySelector(".clfrom").textContent = d.from.map(t => t.name[S().lang]).join(" · ");
+    b.querySelector(".meta").textContent = `${kn} / ${n} ${T("learned")}`;
+    b.onclick = () => openClass(k);
+    box.appendChild(b);
+  });
+}
+
 /* =========================================================
    STUDY
    ========================================================= */
@@ -315,11 +360,13 @@ function buildOrder(){
   order = topic.cards.map(c=>c.id);
   if(S().shuffle) shuffleArr(order);
 }
-function queue(){ const k = new Set(tstate(topic.id).known); return order.filter(id => !k.has(id)); }
+function queue(){ return order.filter(id => !isKnown(id)); }
 function card(id){ return topic.cards.find(c=>c.id===id); }
 
-function openTopic(id){
-  topic = TOPICS.find(t=>t.id===id);
+function openClass(k){ openDeck(classDeck(k)); }
+function openTopic(id){ openDeck(TOPICS.find(t=>t.id===id)); }
+function openDeck(d){
+  topic = d; const id = d.id;
   buildOrder();
   const saved = tstate(id).cur;
   const q = queue();
@@ -374,7 +421,7 @@ function renderCard(){
   if(S().mode===1){ faceChinese(front, c, S().pinyin); faceMeaning(back, c); }
   else            { faceMeaning(front, c); faceChinese(back, c, true); }
   document.getElementById("explainText").textContent = xText(c);
-  document.getElementById("clTag").textContent = clLabel(c, topic);
+  document.getElementById("clTag").textContent = cardTag(c);
 }
 
 function flip(){
@@ -391,9 +438,8 @@ function go(d){
   renderCard();
 }
 function markKnown(){
-  const ts = tstate(topic.id);
   const q = queue(); const i = q.indexOf(curId);
-  if(!ts.known.includes(curId)) ts.known.push(curId);
+  setKnown(curId, true);
   const q2 = queue();
   curId = q2.length ? q2[Math.min(i, q2.length-1)] : null;
   save(); renderCard();
@@ -421,8 +467,7 @@ if("speechSynthesis" in window){ pickVoice(); speechSynthesis.onvoiceschanged = 
 /* ---------- Learned list ---------- */
 function renderKnown(){
   const list = document.getElementById("knownList"); list.innerHTML = "";
-  const ts = tstate(topic.id);
-  const items = topic.cards.filter(c => ts.known.includes(c.id));
+  const items = topic.cards.filter(c => isKnown(c.id));
   document.getElementById("knownCount").textContent = items.length;
   if(!items.length){ list.innerHTML = `<div class="empty"></div>`; list.firstChild.textContent = T("noKnown"); return; }
   items.forEach(c => {
@@ -433,7 +478,7 @@ function renderKnown(){
     const m = document.createElement("div"); m.className="kes"; m.textContent = c.es + " · " + c.en;
     w.append(z,p,m);
     const b = document.createElement("button"); b.textContent = T("moveBack");
-    b.onclick = () => { ts.known = ts.known.filter(x=>x!==c.id); save(); renderKnown(); };
+    b.onclick = () => { setKnown(c.id, false); save(); renderKnown(); };
     row.append(w,b); list.appendChild(row);
   });
 }
@@ -446,6 +491,7 @@ document.querySelectorAll("#themeSeg button").forEach(b => b.onclick = () => set
 document.getElementById("fontUp").onclick   = () => setSetting("font", Math.min(1.6, Math.round((S().font+0.1)*10)/10));
 document.getElementById("fontDown").onclick = () => setSetting("font", Math.max(0.8, Math.round((S().font-0.1)*10)/10));
 document.getElementById("homeBtn").onclick = () => show("home");
+document.querySelectorAll("#homeBySeg button").forEach(b => b.onclick = () => setSetting("homeBy", b.dataset.by));
 document.getElementById("mode1").onclick = () => { setSetting("mode",1); renderCard(); };
 document.getElementById("mode2").onclick = () => { setSetting("mode",2); renderCard(); };
 document.getElementById("pinyinBtn").onclick = () => { setSetting("pinyin", !S().pinyin); renderCard(); };
@@ -459,7 +505,7 @@ document.getElementById("unknownBtn").onclick = markUnknown;
 document.getElementById("restartBtn").onclick = () => { buildOrder(); const q=queue(); curId=q[0]||null; renderCard(); };
 document.getElementById("resetBtn").onclick = () => {
   if(!confirm(T("confirmReset"))) return;
-  state.topics[topic.id] = {known:[], cur:null}; save(); buildOrder(); curId=queue()[0]||null; renderCard();
+  topic.cards.forEach(c => setKnown(c.id, false)); tstate(topic.id).cur = null; save(); buildOrder(); curId=queue()[0]||null; renderCard();
 };
 document.getElementById("viewKnownBtn").onclick = () => { show("known"); renderKnown(); };
 document.getElementById("backToStudy").onclick = () => { show("study"); renderCard(); };

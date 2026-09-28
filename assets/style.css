@@ -187,3 +187,8 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 .pwmatch.no{color:var(--bad)}
 .cltag{display:inline-block;margin-left:6px;padding:1px 8px;border:1px solid var(--border);border-radius:8px;font-size:.7rem}
 .cltag:empty{display:none}
+
+/* Home: topic / class switch and class tiles */
+.seg.homeby{width:max-content;margin:0 auto 14px}
+.seg.homeby button{font-size:.9rem;padding:7px 16px}
+.tile .clfrom{font-size:.78rem;opacity:.75;line-height:1.35}

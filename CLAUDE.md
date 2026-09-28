@@ -9,6 +9,7 @@ directly from disk (file://), so data is loaded with <script> tags, not fetch().
 - Card content never gets translated by the interface switch.
 - Card fields: id, s (simplified), t (traditional, only when different), py, es, en, cl (class tag, optional override of the topic's cl), say (optional TTS text), x = {es, en, zh}.
 - Class tags (CLASSES in assets/app.js): c1 = 31 Aug, c2 = 7 Sep, c3 = 14 Sep, fc = Michelle's flashcards, ex = extra. Add c4, c5… for new classes.
+- Home has a "Por tema / Por clase" switch (setting `homeBy`). A class deck (classDeck(k)) is a virtual topic with every card tagged k, in topic order. "Known" is always stored in the card's own topic (isKnown/setKnown via homeOf), so both views share progress; a new class only needs its CLASSES entry (+ CLASS_GLYPH) and tagged cards.
 - Card ids are permanent (progress is keyed by them). Prefix per topic, e.g. `num-12`. Never renumber; append new ids.
 - `x` holds all three languages in the card itself. Vladimir learns orally with no textbook, so every explanation must be
   self-contained: what each character means and how it is built, why the word or sentence is formed that way, the grammar
