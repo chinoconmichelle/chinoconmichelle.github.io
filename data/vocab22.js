@@ -53,18 +53,58 @@ On the right 加 (to add: 力 strength + 口) and 非 (not: two opposing wings).
 zh:`从英文 coffee 音译。两个字左边都有 口，表示只借读音。右边的 加 和 非 的意思在这里都不算。`}},
   {id:"voc-06",s:"茶",py:"chá",es:"té",en:"tea",
    x:{
-es:`艹 (dos brotes de hierba, todo lo vegetal) + 人 (una persona) + 木 (un árbol).
-La persona entre la hierba y el arbusto, recogiendo hojas. Segundo tono: chá sube.`,
-en:`艹 (two sprouts of grass, anything plant-like) + 人 (a person) + 木 (a tree).
-The person between the grass and the bush, picking leaves. 2nd tone: chá rises.`,
-zh:`艹 + 人 + 木：人在草木之间采叶子。第二声。`}},
+es:`QUÉ ES: «té». Una de las palabras que ya conocías de Duolingo; en clase se te escapó el tono (Michelle: «segundo, chá»).
+
+EL CARÁCTER, de arriba abajo:
+艹: dos brotes de hierba. Marca todo lo que es planta: 苹 manzana, 苗 brote, 苔 musgo.
+人: una persona.
+木: un árbol (tronco, ramas y raíces).
+La imagen: una persona entre la hierba y el arbusto, recogiendo hojas. El té es la hoja de un arbusto.
+
+DATO: la palabra «té» en español viene del sur de China (Fujian: tê), y «chai» en otros idiomas viene del mandarín chá. El mismo carácter viajó por dos caminos.
+
+EN USO: 喝茶 tomar té · 一杯茶 una taza de té · 绿茶 té verde.
+
+PRONUNCIACIÓN: chá, SEGUNDO tono, sube como una pregunta. ch con la lengua curvada atrás y con aire.`,
+en:`WHAT IT IS: "tea". One of the words you knew from Duolingo; in class the tone slipped (Michelle: "second, chá").
+
+THE CHARACTER, top to bottom:
+艹: two sprouts of grass. It marks anything plant-like: 苹 apple, 苗 sprout, 苔 moss.
+人: a person.
+木: a tree (trunk, branches and roots).
+The picture: a person between the grass and the bush, picking leaves. Tea is the leaf of a shrub.
+
+NOTE: English "tea" comes from southern China (Fujian: tê), while "chai" in other languages comes from Mandarin chá. The same character travelled two routes.
+
+IN USE: 喝茶 to drink tea · 一杯茶 a cup of tea · 绿茶 green tea.
+
+PRONUNCIATION: chá, SECOND tone, rising like a question. ch with the tongue curled back, aspirated.`,
+zh:`是什么："茶"。字形：艹 + 人 + 木，人在草木之间采叶子。英文 tea 来自闽南语，chai 来自普通话。喝茶、一杯茶、绿茶。第二声。`}},
   {id:"voc-07",s:"饭",t:"飯",py:"fàn",es:"arroz cocido / comida",en:"cooked rice / meal",
    x:{
-es:`饣 es 食 (comer: una vasija con tapa y comida) aplastado; marca lo comestible.
-反 fǎn está por el sonido: 厂 (un acantilado) + 又 (la mano derecha).`,
-en:`饣 is 食 (to eat: a covered pot with food), squeezed; it marks anything edible.
-反 fǎn is there for the sound: 厂 (a cliff) + 又 (the right hand).`,
-zh:`饣 是 食（有盖的食器）的偏旁写法，表示和吃有关。反 表音：厂（山崖）+ 又（右手）。`}},
+es:`QUÉ ES: «arroz cocido», y por extensión «comida». En China y Taiwán el arroz es LA comida, así que 饭 terminó significando cualquier comida.
+吃饭 = comer (literalmente «comer arroz») · 早饭 desayuno · 晚饭 cena · 米饭 arroz blanco.
+
+EL CARÁCTER:
+饣 a la izquierda: es 食 (comer, comida) aplastado. 食 es el dibujo de una vasija con tapa y comida adentro. Todo lo que se come lleva este radical: 饭, 饺 (empanadita china), 饼 (panqueque).
+反 a la derecha: solo por el sonido (fǎn / fàn). 反 solo significa «dar vuelta, al revés»: 厂 (un acantilado, un borde) + 又 (la mano derecha).
+En tradicional 飯, con el radical 飠 más completo.
+
+DIFERENCIA CON 米: 米 mǐ es el grano crudo (el dibujo de granos desparramados); 饭 es el arroz ya cocido, servido.
+
+PRONUNCIACIÓN: fàn, cuarto tono (cae).`,
+en:`WHAT IT IS: "cooked rice", and by extension "meal". In China and Taiwan rice is THE food, so 饭 came to mean any meal.
+吃饭 = to eat (literally "eat rice") · 早饭 breakfast · 晚饭 dinner · 米饭 plain rice.
+
+THE CHARACTER:
+饣 on the left: 食 (to eat, food), squeezed. 食 is the drawing of a covered pot with food inside. Everything edible carries this radical: 饭, 饺 (dumpling), 饼 (pancake).
+反 on the right: only for the sound (fǎn / fàn). On its own 反 means "to turn over, reverse": 厂 (a cliff, an edge) + 又 (the right hand).
+Traditional 飯, with the fuller radical 飠.
+
+VS 米: 米 mǐ is the raw grain (drawn as scattered grains); 饭 is rice already cooked and served.
+
+PRONUNCIATION: fàn, 4th tone (falling).`,
+zh:`是什么："饭"，本义是煮熟的米，引申为一餐：吃饭、早饭、晚饭。饣 是 食 的偏旁（有盖的食器）；反 表音。米 是生米，饭 是煮熟的。`}},
   {id:"voc-08",s:"面包",t:"麵包",py:"miànbāo",es:"pan",en:"bread",
    x:{
 es:`面 harina (originalmente «cara, superficie») + 包 envolver.
@@ -188,13 +228,25 @@ en:`汽 steam: 氵 (water) + 气 (lines of vapour rising).
 zh:`汽：氵 + 气（往上冒的蒸汽）。车：从上往下看的车，车轴和车轮；繁体 車 两个轮子都画全了。`}},
   {id:"voc-21",s:"房子",py:"fángzi",es:"casa",en:"house",
    x:{
-es:`房 cuarto: 户 (una puerta de una sola hoja) + 方 (sonido).
-子 el bebé, usado como sufijo sin significado.
-Segunda sílaba en tono neutro: fángzi.`,
-en:`房 room: 户 (a single-leaf door) + 方 (sound).
-子 the baby, used as a suffix with no meaning.
-Second syllable in the neutral tone: fángzi.`,
-zh:`房：户（单扇门）+ 方（表音）。子 是没有意思的词尾，读轻声。`}},
+es:`QUÉ ES: «casa», el edificio donde vivís.
+
+LOS CARACTERES:
+房 cuarto, casa: 户 arriba (una puerta de una sola hoja; media 门) + 方 abajo (solo por el sonido). Un espacio con su puerta: una habitación, y por extensión la casa.
+子: el bebé con la cabeza grande. Acá NO significa niño: es un sufijo vacío que se agrega a muchos sustantivos (房子, 桌子 mesa, 椅子 silla). Por eso se pronuncia suave.
+
+DIFERENCIA CON 家 jiā: 房子 es el edificio (casa como construcción). 家 es el hogar, la familia: 我家 mi casa / mi familia, 回家 volver a casa. 家 = 宀 (techo) + 豕 (un cerdo): antiguamente, un cerdo bajo el techo era la señal de una familia.
+
+PRONUNCIACIÓN: fángzi. La segunda sílaba en tono neutro, muy corta. Michelle: «esta es semisílaba».`,
+en:`WHAT IT IS: "house", the building you live in.
+
+THE CHARACTERS:
+房 room, house: 户 on top (a single-leaf door; half of 门) + 方 below (only for the sound). A space with its door: a room, and by extension the house.
+子: the big-headed baby. Here it does NOT mean child: it's an empty suffix added to many nouns (房子, 桌子 table, 椅子 chair). That's why it's pronounced softly.
+
+VS 家 jiā: 房子 is the building (house as a structure). 家 is home, family: 我家 my home / my family, 回家 go home. 家 = 宀 (roof) + 豕 (a pig): in ancient times, a pig under the roof was the sign of a household.
+
+PRONUNCIATION: fángzi. Second syllable neutral tone, very short. Michelle: "this is a half-syllable".`,
+zh:`是什么："房子"，指建筑物。房：户（单扇门）+ 方（表音）。子 是没有意思的词尾，读轻声。家 是家庭、家里：宀 + 豕，屋里养猪就是一个家。`}},
   {id:"voc-22",s:"超市",py:"chāoshì",es:"supermercado",en:"supermarket",
    x:{
 es:`超 sobrepasar: 走 (caminar: una figura inclinada sobre 止, la huella de un pie) + 召 (sonido: 刀 cuchillo sobre 口 boca).
