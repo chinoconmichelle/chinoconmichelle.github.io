@@ -502,6 +502,33 @@ es:`Un caballo de perfil: la crin arriba, las patas abajo (las cuatro en tradici
 Como componente de sonido: 妈 mā, 吗 ma, 骂 mà. Los cuatro solo se diferencian por el tono y el radical.`,
 en:`A horse in profile: mane on top, legs below (all four in traditional 馬 mǎ).
 As a sound component: 妈 mā, 吗 ma, 骂 mà. The four differ only in tone and radical.`,
-zh:`侧面的马。作表音部件：妈、吗、骂，只有声调和部首不同。`}}
+zh:`侧面的马。作表音部件：妈、吗、骂，只有声调和部首不同。`}},
+  {id:"rad-29",s:"胀",t:"脹",py:"zhàng",es:"hincharse, hinchado",en:"to swell, swollen",cl:"c4",
+   x:{
+es:`QUÉ ES: «hincharse, estar hinchado». Michelle lo usó para mostrar que los radicales ayudan a adivinar: «si decís que tu mano está hinchada, en chino se dice 胀 (zhàng)».
+
+EL CARÁCTER:
+月 (yuè) a la izquierda NO es la luna: es 肉 (ròu), carne. Michelle: «este es 月, la luna, pero también es el carácter de carne». Hace unos 2000 años, cuando la escritura se hizo más rápida y recta, «carne» y «luna» terminaron dibujándose igual. Regla: si el carácter habla del cuerpo, 月 es carne.
+长 a la derecha: se lee zhǎng, «crecer» (y también cháng, «largo»). Da el sonido (zhǎng → zhàng) y el sentido.
+Como lo resumió Michelle: «la carne que creció: hinchar».
+
+LA FAMILIA DEL 月 (yuè)-CARNE: 脸 (liǎn) cara · 腿 (tuǐ) pierna · 脑 (nǎo) cerebro, el de 电脑 (diànnǎo) · 肚 (dù) panza · 胞 (bāo), el de 双胞胎 (shuāngbāotāi) mellizos.
+
+胀 O 肿: 胀 (zhàng) es sobre todo la sensación de presión o de estar lleno desde adentro: 肚子胀 (dùzi zhàng), «panza hinchada». 肿 (zhǒng) es la hinchazón visible, por un golpe o inflamación: 我的脚肿了 (wǒ de jiǎo zhǒng le). Juntos: 肿胀 (zhǒngzhàng), hinchazón. Y 膨胀 (péngzhàng), expandirse; 通货膨胀 (tōnghuò péngzhàng), inflación.
+
+PRONUNCIACIÓN: zhàng, 4.º tono (cae). zh con la lengua curvada atrás, sin aire.`,
+en:`WHAT IT IS: "to swell, to be swollen". Michelle used it to show that radicals help you guess: "if you say your hand is swollen, in Chinese it's 胀 (zhàng)".
+
+THE CHARACTER:
+月 (yuè) on the left is NOT the moon: it's 肉 (ròu), flesh. Michelle: "this is 月, the moon, but it's also the character for meat". About 2,000 years ago, when writing became faster and straighter, "flesh" and "moon" ended up drawn the same. Rule: if the character is about the body, 月 is flesh.
+长 on the right: read zhǎng, "to grow" (also cháng, "long"). It gives the sound (zhǎng → zhàng) and the meaning.
+As Michelle summed it up: "flesh that has grown: to swell".
+
+THE FLESH-月 (yuè) FAMILY: 脸 (liǎn) face · 腿 (tuǐ) leg · 脑 (nǎo) brain, as in 电脑 (diànnǎo) · 肚 (dù) belly · 胞 (bāo), as in 双胞胎 (shuāngbāotāi) twins.
+
+胀 OR 肿: 胀 (zhàng) is mostly the feeling of pressure or fullness from inside: 肚子胀 (dùzi zhàng), "bloated belly". 肿 (zhǒng) is visible swelling, from a knock or inflammation: 我的脚肿了 (wǒ de jiǎo zhǒng le). Together: 肿胀 (zhǒngzhàng), swelling. And 膨胀 (péngzhàng), to expand; 通货膨胀 (tōnghuò péngzhàng), inflation.
+
+PRONUNCIATION: zhàng, 4th tone (falling). zh with the tongue curled back, no air.`,
+zh:`胀：膨胀、发胀。老师用它说明部首的帮助：左边的月是"肉"（肉月），不是月亮；右边长（zhǎng，生长）表音也表意：肉长大了就是胀。肉月的字：脸、腿、脑、肚、胞。胀多指内部的胀满感（肚子胀），肿指看得见的肿（脚肿了）；肿胀、膨胀、通货膨胀。`}}
   ]
 });

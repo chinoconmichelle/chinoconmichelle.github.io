@@ -505,5 +505,210 @@ Order: subject → time → verb → object. Time goes after the subject, not at
     {q:{es:"«El señor Martínez»",en:"\"Mr. Martinez\""},a:"Martinez 先生",py:"Martinez xiānsheng"},
     {q:{es:"«El gato comió un pescado esta mañana»",en:"\"The cat ate a fish this morning\""},a:"这只猫今天早上吃一条鱼。",py:"zhè zhī māo jīntiān zǎoshang chī yì tiáo yú"}
   ]
+},
+
+/* =====================================================================
+   CLASE 4 · 28 SEP
+   ===================================================================== */
+c4: {
+  intro:{
+    es:"La cuarta clase: repaso de saludos, los números del 0 al 100 con la tabla de columnas, los días de la semana (tres formas), los meses, la fecha, «ayer», y cómo preguntar y desear feliz cumpleaños.",
+    en:"The fourth class: greetings review, numbers from 0 to 100 with the column table, the days of the week (three ways), the months, the date, \"yesterday\", and how to ask about birthdays and wish a happy one.",
+    zh:"第四课：复习问候语，用数位表学0到100，星期的三种说法，月份，日期，昨天，以及问生日和祝生日快乐。"},
+  source:{
+    es:"Armado con la transcripción de la clase y el apunte en PDF de Michelle (Notas de la Clase, 2026-09-28).",
+    en:"Built from the class transcript and Michelle's PDF notes (Notas de la Clase, 2026-09-28).",
+    zh:"根据课堂录音文字稿和老师的 PDF 笔记（2026-09-28）整理。"},
+  parts:[
+    {h:{es:"1. El plan: un poco de todo, con caracteres", en:"1. The plan: a bit of everything, with characters", zh:"1. 学习计划：词汇、会话、汉字都学一点"},
+     p:{es:`Como tenés poco tiempo para memorizar vocabulario, Michelle propuso mezclar en cada clase un poco de vocabulario, un poco de conversación y un poco de caracteres. Los caracteres tienen «cuentos atrás y un poquito de filosofía», y ayudan a acordarse de las palabras.
+Los números que dio: con 3.000 a 4.000 caracteres se lee el 90–95 % de un texto común (películas, subtítulos, libros, textos legales); con 5.000, el 98–99 %. Más allá es chino antiguo.
+Sus tarjetas traen cada carácter principal con dos combinaciones: lo importante es conocer las combinaciones, porque casi todas las palabras chinas son caracteres combinados, como 新年 (xīnnián), «nuevo + año». Y no hace falta escribirlos: por ahora, solo reconocerlos.
+Los proverbios importan mucho (los chinos describen con proverbios, y el mismo puede alabar o insultar según el contexto), pero eso es para más adelante.`,
+        en:`Since you have little time to memorise vocabulary, Michelle suggested mixing a bit of vocabulary, a bit of conversation and a bit of characters in each class. Characters have "stories behind them and a little philosophy", and they help you remember words.
+Her figures: with 3,000 to 4,000 characters you can read 90–95% of ordinary text (films, subtitles, books, legal texts); with 5,000, 98–99%. Beyond that is classical Chinese.
+Her flashcards show each main character with two combinations: what matters is knowing the combinations, because almost every Chinese word is a combination of characters, like 新年 (xīnnián), "new + year". And you don't need to write them: for now, just recognise them.
+Proverbs matter a lot (Chinese people describe things with proverbs, and the same one can praise or insult depending on context), but that's for later.`,
+        zh:`时间不多，所以每节课学一点词汇、一点会话、一点汉字。汉字背后有故事和哲理，能帮助记词。认识三四千字能看懂百分之九十到九十五，五千字能看懂百分之九十八、九十九。重要的是字的组合。先认字，不必写。成语很重要，同一个成语可褒可贬，以后再学。`},
+     ex:[["新年","xīnnián","año nuevo («nuevo + año»)","new year (\"new + year\")"]]},
+
+    {h:{es:"2. Repaso de saludos", en:"2. Greetings review", zh:"2. 复习问候语"},
+     p:{es:`Dos series. La de 安 (ān, paz): 早安 (zǎo'ān), 午安 (wǔ'ān), 晚安 (wǎn'ān). Y la de 好 (hǎo, bueno, bien): 早上好 (zǎoshang hǎo), 下午好 (xiàwǔ hǎo), 晚上好 (wǎnshang hǎo).
+Preguntaste si 你好 (nǐ hǎo) se pronuncia «ní hǎo». Michelle: ella marca cada tono despacio y fuerte para que los distingas; hablando rápido, con su familia, suena ní hǎo. Los manuales lo presentan como regla (dos terceros tonos seguidos: el primero sube, como un 2.º); en la página de Tonos está explicada.
+También: 谢谢 (xièxie) gracias → 不客气 (bú kèqi) de nada.`,
+        en:`Two series. The 安 (ān, peace) one: 早安 (zǎo'ān), 午安 (wǔ'ān), 晚安 (wǎn'ān). And the 好 (hǎo, good, well) one: 早上好 (zǎoshang hǎo), 下午好 (xiàwǔ hǎo), 晚上好 (wǎnshang hǎo).
+You asked whether 你好 (nǐ hǎo) is pronounced "ní hǎo". Michelle: she marks each tone slowly and strongly so you can tell them apart; speaking fast, with her family, it sounds ní hǎo. Textbooks present it as a rule (two 3rd tones in a row: the first rises, like a 2nd); it's on the Tones page.
+Also: 谢谢 (xièxie) thank you → 不客气 (bú kèqi) you're welcome.`,
+        zh:`早安、午安、晚安（安＝平安）；早上好、下午好、晚上好（好＝好）。你好快说时像 ní hǎo，老师为了让学生听清楚，故意慢慢地把声调念清楚（课本称为三声变调）。谢谢→不客气。`},
+     ex:[["早安","zǎo'ān","buen día","good morning"],["晚上好","wǎnshang hǎo","buenas noches (al llegar)","good evening (arriving)"],["你好","nǐ hǎo","hola (rápido: ní hǎo)","hello (fast: ní hǎo)"],["不客气","bú kèqi","de nada","you're welcome"]]},
+
+    {h:{es:"3. Los números del 0 al 10", en:"3. Numbers 0 to 10", zh:"3. 数字0到10"},
+     p:{es:`Michelle: «solo tenés que acordarte de 10 sonidos; sabiendo los números, la mitad de tu problema se resuelve», porque todo va con números: teléfono, precios, fechas.
+零 (líng) 0 · 一 (yī) 1 · 二 (èr) 2 · 三 (sān) 3 · 四 (sì) 4 · 五 (wǔ) 5 · 六 (liù) 6 · 七 (qī) 7 · 八 (bā) 8 · 九 (jiǔ) 9 · 十 (shí) 10.
+Sus trucos:
+• 九 (jiǔ) «se pronuncia como George».
+• 八 (bā): «pa, sin aspirar; no como papá». Y para acordarte: en Taiwán el 8 de agosto es el día del padre, porque 八八 (bābā) suena como 爸爸 (bàba).
+• Los primeros tonos se alargan: hacé como si fueran dos o tres vocales.
+• 十 (shí) es diez solo, sin 一 (yī) delante.
+Contó que su hermano menor, que nació en Argentina y nunca vivió en Asia, igual hace las cuentas en chino, porque los números chinos son muy cortos.`,
+        en:`Michelle: "you only need to remember 10 sounds; once you know the numbers, half your problem is solved", because everything runs on numbers: phone numbers, prices, dates.
+零 (líng) 0 · 一 (yī) 1 · 二 (èr) 2 · 三 (sān) 3 · 四 (sì) 4 · 五 (wǔ) 5 · 六 (liù) 6 · 七 (qī) 7 · 八 (bā) 8 · 九 (jiǔ) 9 · 十 (shí) 10.
+Her tricks:
+• 九 (jiǔ) "is pronounced like George".
+• 八 (bā): "pa, unaspirated; not like papá". And to remember it: in Taiwan August 8 is Father's Day, because 八八 (bābā) sounds like 爸爸 (bàba).
+• First tones are drawn out: treat them as two or three vowels.
+• 十 (shí) is ten on its own, with no 一 (yī) in front.
+She told us her younger brother, born in Argentina and never having lived in Asia, still does arithmetic in Chinese, because Chinese numbers are so short.`,
+        zh:`只要记住十个音。零、一、二、三、四、五、六、七、八、九、十。九像英语 George；八不送气；台湾8月8日父亲节（八八≈爸爸）；一声要拉长；十前面不加一。`},
+     ex:[["零","líng","cero","zero"],["四","sì","cuatro","four"],["七","qī","siete","seven"],["八","bā","ocho","eight"],["九","jiǔ","nueve («George»)","nine (\"George\")"],["十","shí","diez","ten"]]},
+
+    {h:{es:"4. La tabla de columnas: hasta 100", en:"4. The column table: up to 100", zh:"4. 数位表：数到一百"},
+     p:{es:`Michelle armó una tabla con las columnas, de derecha a izquierda: 个 (gè) unidad · 十 (shí) decena · 百 (bǎi) centena · 千 (qiān) mil · 万 (wàn) diez mil · 十万 (shíwàn) · 百万 (bǎiwàn) · 千万 (qiānwàn) · 亿 (yì) cien millones. Aclaró que acá 个 no es el clasificador: es «unidad».
+Cómo se arma: se lee cada cifra con su columna.
+• 11 a 19: 十 + unidad: 十一 (shíyī), 十五 (shíwǔ).
+• 20: 二十 (èrshí). El cero al final no se lee.
+• 21 a 99: 二十一 (èrshíyī) … 九十九 (jiǔshíjiǔ).
+• 100: 一百 (yìbǎi). «En el cien sí se dice el uno, pero no en el diez».
+Contaste de 1 a 100 dos veces. Michelle: «de lógica son muy rápidos; lo que falta es memoria de vocabulario». Y un dato práctico: en China casi nada cuesta más de 10.000; sabiendo hasta mil, ya te arreglás. La próxima clase: números más grandes.`,
+        en:`Michelle built a table of columns, right to left: 个 (gè) units · 十 (shí) tens · 百 (bǎi) hundreds · 千 (qiān) thousands · 万 (wàn) ten thousand · 十万 (shíwàn) · 百万 (bǎiwàn) · 千万 (qiānwàn) · 亿 (yì) a hundred million. She pointed out that here 个 isn't the measure word: it means "units".
+How it works: read each digit with its column.
+• 11 to 19: 十 + unit: 十一 (shíyī), 十五 (shíwǔ).
+• 20: 二十 (èrshí). A zero at the end isn't read.
+• 21 to 99: 二十一 (èrshíyī) … 九十九 (jiǔshíjiǔ).
+• 100: 一百 (yìbǎi). "In a hundred you do say the one, but not in ten".
+You counted from 1 to 100 twice. Michelle: "you're very quick with logic; what's missing is vocabulary memory". And a practical note: in China almost nothing costs more than 10,000; if you know up to a thousand, you'll get by. Next class: bigger numbers.`,
+        zh:`数位：个、十、百、千、万、十万、百万、千万、亿；这里的"个"是个位，不是量词。十一到十九：十＋个位；二十，末尾的零不读；一百要说"一"，十不说"一十"。数了两遍1到100。在中国很少花一万以上，会说到一千就够用。下节课学更大的数。`},
+     ex:[["十一","shíyī","11","11"],["二十","èrshí","20","20"],["二十八","èrshíbā","28","28"],["九十九","jiǔshíjiǔ","99","99"],["一百","yìbǎi","100","100"],["亿","yì","cien millones","a hundred million"]]},
+
+    {h:{es:"5. Los días de la semana: 星期 (xīngqī), 礼拜 (lǐbài), 周 (zhōu)", en:"5. Days of the week: 星期 (xīngqī), 礼拜 (lǐbài), 周 (zhōu)", zh:"5. 星期、礼拜、周"},
+     p:{es:`Tres formas de decir la semana, y todas se forman con números: «la base es el número».
+• 星期 (xīngqī): la de los manuales. 星 (xīng) estrella + 期 (qī) período: «período de estrellas».
+• 礼拜 (lǐbài): «prosternarse». Michelle: «yo digo más 礼拜; creo que es más fácil de pronunciar».
+• 周 (zhōu): «como un período»; más formal, «más en las empresas».
+Lunes a sábado: palabra + 1 a 6: 星期一 (xīngqīyī) lunes, 星期二 (xīngqī'èr) martes … 星期六 (xīngqīliù) sábado.
+El domingo es distinto: 星期日 (xīngqīrì) o 星期天 (xīngqītiān). 日 (rì) es el sol («antiguamente un redondo con un puntito adentro»); 天 (tiān) es cielo o día: el día de descanso. Con 礼拜: 礼拜天 (lǐbàitiān). Con 周, SOLO 周日 (zhōurì), nunca 周天 (zhōutiān): según Michelle, dos primeros tonos seguidos no se pronuncian bien.
+Práctica: miércoles = 礼拜三 (lǐbàisān); sábado = 礼拜六 (lǐbàiliù); martes = 礼拜二 (lǐbài'èr), no 三.`,
+        en:`Three ways to say week, and all of them are built with numbers: "the base is the number".
+• 星期 (xīngqī): the textbook one. 星 (xīng) star + 期 (qī) period: "star period".
+• 礼拜 (lǐbài): "to prostrate oneself". Michelle: "I say 礼拜 more; I think it's easier to pronounce".
+• 周 (zhōu): "like a period"; more formal, "more in companies".
+Monday to Saturday: word + 1 to 6: 星期一 (xīngqīyī) Monday, 星期二 (xīngqī'èr) Tuesday … 星期六 (xīngqīliù) Saturday.
+Sunday is different: 星期日 (xīngqīrì) or 星期天 (xīngqītiān). 日 (rì) is the sun ("in ancient times a circle with a little dot inside"); 天 (tiān) is sky or day: the day of rest. With 礼拜: 礼拜天 (lǐbàitiān). With 周, ONLY 周日 (zhōurì), never 周天 (zhōutiān): according to Michelle, two first tones in a row don't come out well.
+Practice: Wednesday = 礼拜三 (lǐbàisān); Saturday = 礼拜六 (lǐbàiliù); Tuesday = 礼拜二 (lǐbài'èr), not 三.`,
+        zh:`星期（课本用；星＋期）、礼拜（老师较常用，比较好念）、周（较正式，公司常用）。星期一到星期六用数字；星期日／星期天（日是太阳，古字是圆圈加一点；天是天空、一天）；礼拜天；周只说周日，不说周天（老师说两个一声连读不好念）。`},
+     ex:[["星期一","xīngqīyī","lunes","Monday"],["礼拜三","lǐbàisān","miércoles","Wednesday"],["周五","zhōuwǔ","viernes","Friday"],["星期天","xīngqītiān","domingo","Sunday"],["星期日","xīngqīrì","domingo (escrito)","Sunday (written)"],["周日","zhōurì","domingo (con 周)","Sunday (with 周)"]]},
+
+    {h:{es:"6. Los meses: 月 (yuè), la luna", en:"6. The months: 月 (yuè), the moon", zh:"6. 月份：月亮的月"},
+     p:{es:`月 (yuè) es mes, y el carácter es una luna: «antiguamente era así, era una luna». Michelle lo comparó con 日 (rì), el sol, «un redondo con un puntito adentro». La luna del cielo es 月亮 (yuèliang): 亮 (liàng) es brillar.
+Los meses son número + 月: 一月 (yīyuè) enero, 二月 (èryuè) febrero, 三月 (sānyuè) marzo … 十月 (shíyuè) octubre, 十一月 (shíyīyuè) noviembre, 十二月 (shí'èryuè) diciembre.
+Práctica: agosto = 八月 (bāyuè); noviembre = 十一月 (shíyīyuè); junio = 六月 (liùyuè), no 五月 (wǔyuè), que es mayo.`,
+        en:`月 (yuè) is month, and the character is a moon: "in ancient times it was like this, it was a moon". Michelle compared it with 日 (rì), the sun, "a circle with a little dot inside". The moon in the sky is 月亮 (yuèliang): 亮 (liàng) is to shine.
+Months are number + 月: 一月 (yīyuè) January, 二月 (èryuè) February, 三月 (sānyuè) March … 十月 (shíyuè) October, 十一月 (shíyīyuè) November, 十二月 (shí'èryuè) December.
+Practice: August = 八月 (bāyuè); November = 十一月 (shíyīyuè); June = 六月 (liùyuè), not 五月 (wǔyuè), which is May.`,
+        zh:`月是月份，字形是月亮（老师：古字就是月亮）；日是太阳，圆圈中间一点。天上的月亮叫月亮，亮是发光。月份：数字＋月，一月到十二月。`},
+     ex:[["月亮","yuèliang","la luna","the moon"],["一月","yīyuè","enero","January"],["六月","liùyuè","junio","June"],["八月","bāyuè","agosto","August"],["十一月","shíyīyuè","noviembre","November"],["十二月","shí'èryuè","diciembre","December"]]},
+
+    {h:{es:"7. La fecha: año, mes, día", en:"7. The date: year, month, day", zh:"7. 日期：年、月、日"},
+     p:{es:`Primero el año, después el mes, al final el día: de lo más grande a lo más chico, al revés que en español.
+年 (nián) año · 月 (yuè) mes · 日 (rì) día. Michelle: «escrito o en las noticias se dice 日; coloquialmente la mayoría dice 号 (hào). 号 significa número: número 17».
+El año se lee cifra por cifra, con 零 (líng) para el cero: 2020 = 二〇二〇 (èr líng èr líng). Te extrañó el «líng» en el medio: es el cero.
+Ejemplos: 2020年二月十七日 (èr líng èr líng nián èryuè shíqī rì) · 2026年9月28号 (èr líng èr liù nián jiǔyuè èrshíbā hào), el día de la clase.
+Y una palabra para mostrar cómo se combinan los caracteres: 新年 (xīnnián), año nuevo: 新 (xīn) nuevo («con una n al final») + 年 (nián).`,
+        en:`Year first, then month, day last: biggest to smallest, the reverse of Spanish.
+年 (nián) year · 月 (yuè) month · 日 (rì) day. Michelle: "written or on the news it's 日; colloquially most people say 号 (hào). 号 means number: number 17".
+The year is read digit by digit, with 零 (líng) for zero: 2020 = 二〇二〇 (èr líng èr líng). The "líng" in the middle surprised you: it's the zero.
+Examples: 2020年二月十七日 (èr líng èr líng nián èryuè shíqī rì) · 2026年9月28号 (èr líng èr liù nián jiǔyuè èrshíbā hào), the day of the class.
+And a word to show how characters combine: 新年 (xīnnián), new year: 新 (xīn) new ("with an n at the end") + 年 (nián).`,
+        zh:`日期顺序：年、月、日，从大到小，和西班牙语相反。书面、新闻用日，口语多用号（号就是号码）。年份逐个数字读，零要读出来：二〇二〇年。新年：新＋年。`},
+     ex:[["2020年2月17日","èr líng èr líng nián èr yuè shíqī rì","17 de febrero de 2020","February 17, 2020"],["2026年9月28号","èr líng èr liù nián jiǔ yuè èrshíbā hào","28 de septiembre de 2026","September 28, 2026"],["新年","xīnnián","año nuevo","new year"]]},
+
+    {h:{es:"8. Preguntar la fecha", en:"8. Asking the date", zh:"8. 问日期"},
+     p:{es:`Dos formas:
+• 今天是几月几号？ (jīntiān shì jǐ yuè jǐ hào?) Literalmente, «¿hoy es cuántos meses, cuántos días?». 今天 (jīntiān) es hoy: 今 (jīn) «ahora, en el mismo momento» + 天 (tiān) día. 是 (shì) es el verbo ser. Por escrito puede ir 日 en vez de 号 (hào).
+• 今天的日期是多少？ (jīntiān de rìqī shì duōshǎo?) «¿La fecha de hoy es cuánto?». 日期 (rìqī) es fecha y 多少 (duōshǎo) es cuánto: el mismo que usás para preguntar un precio.
+Preguntaste por el 的 (de): es el posesivo, «la fecha de hoy». Michelle lo repasó con «el libro de María»: María 的书 (María de shū). Y lo comparó con la schwa del inglés: una e floja y corta.
+La respuesta es la misma frase con los números: 今天是九月二十八号。(jīntiān shì jiǔyuè èrshíbā hào)`,
+        en:`Two ways:
+• 今天是几月几号？ (jīntiān shì jǐ yuè jǐ hào?) Literally, "today is how many months, how many days?". 今天 (jīntiān) is today: 今 (jīn) "now, this very moment" + 天 (tiān) day. 是 (shì) is the verb to be. In writing 日 can replace 号 (hào).
+• 今天的日期是多少？ (jīntiān de rìqī shì duōshǎo?) "Today's date is how much?". 日期 (rìqī) is date and 多少 (duōshǎo) is how much: the same one you use to ask a price.
+You asked about 的 (de): it's the possessive, "today's date". Michelle reviewed it with "María's book": María 的书 (María de shū). And she compared it to the English schwa: a short, lazy e.
+The answer is the same sentence with the numbers: 今天是九月二十八号。(jīntiān shì jiǔyuè èrshíbā hào)`,
+        zh:`今天是几月几号？（书面可用几日）今天的日期是多少？多少也用来问价钱。的是所有格，读轻声，像英语的 schwa：María的书。回答：今天是九月二十八号。`},
+     ex:[["今天是几月几号？","jīntiān shì jǐ yuè jǐ hào?","¿qué fecha es hoy?","what's the date today?"],["今天的日期是多少？","jīntiān de rìqī shì duōshǎo?","¿cuál es la fecha de hoy?","what is today's date?"],["多少","duōshǎo","¿cuánto?","how much?"],["María 的书","María de shū","el libro de María","María's book"]]},
+
+    {h:{es:"9. Ayer: 昨天 (zuótiān)", en:"9. Yesterday: 昨天 (zuótiān)", zh:"9. 昨天"},
+     p:{es:`«¿Qué fecha fue ayer?»: 昨天是几月几号？ (zuótiān shì jǐ yuè jǐ hào?), o más corto 昨天几号？ (zuótiān jǐ hào?), o 昨天的日期是多少？ (zuótiān de rìqī shì duōshǎo?).
+Preguntaste cuál es la diferencia entre 今天 (jīntiān) y 昨天 (zuótiān), y qué significa cada símbolo. Michelle lo buscó: 今 (jīn) es «ahora, en el mismo momento»; 昨 (zuó) tiene el sol 日 (rì) a la izquierda y a la derecha 乍 (zhà), «de repente»: «el sol que acaba de desaparecer». (En el origen, 乍 está sobre todo por el sonido; la imagen de Michelle es una buena forma de recordarlo.)
+En el apunte anotó que la j de 几 (jǐ) suena como la de «Gill».`,
+        en:`"What date was yesterday?": 昨天是几月几号？ (zuótiān shì jǐ yuè jǐ hào?), or shorter 昨天几号？ (zuótiān jǐ hào?), or 昨天的日期是多少？ (zuótiān de rìqī shì duōshǎo?).
+You asked what the difference is between 今天 (jīntiān) and 昨天 (zuótiān), and what each symbol means. Michelle looked it up: 今 (jīn) is "now, this very moment"; 昨 (zuó) has the sun 日 (rì) on the left and on the right 乍 (zhà), "suddenly": "the sun that has just disappeared". (Originally, 乍 is there mostly for the sound; Michelle's image is a good way to remember it.)
+In her notes she wrote that the j in 几 (jǐ) sounds like the one in "Gill".`,
+        zh:`昨天是几月几号？昨天几号？昨天的日期是多少？今：现在、当下；昨：日＋乍（突然），老师说是刚刚落下的太阳（乍主要表音）。几的 j 像英语 Gill 的 g。`},
+     ex:[["昨天","zuótiān","ayer","yesterday"],["昨天几号？","zuótiān jǐ hào?","¿qué día fue ayer?","what was the date yesterday?"],["今天","jīntiān","hoy","today"]]},
+
+    {h:{es:"10. El 月 (yuè) que es carne: 胀 (zhàng)", en:"10. The 月 (yuè) that is flesh: 胀 (zhàng)", zh:"10. 肉月：胀"},
+     p:{es:`Michelle mostró cómo los radicales ayudan a entender: «este es 月 (yuè), la luna, pero también es el carácter de carne». Ejemplo: «mi mano está hinchada»: hinchar se dice 胀 (zhàng). A la izquierda, carne; a la derecha, 长 (zhǎng), crecer: «la carne que creció es hinchar».
+Luna y carne no tienen relación: eran dos dibujos distintos que la escritura igualó hace unos 2000 años. Si el carácter habla del cuerpo, es carne: 脸 (liǎn) cara, 腿 (tuǐ) pierna, 脑 (nǎo) cerebro.
+Michelle: «aunque no sepas la combinación, mirando los caracteres a veces encontrás la lógica y sabés el significado». Contó de un alumno que estudió arquitectura, aprendió los caracteres dibujándolos a mano durante casi tres años, y después traducía textos del chino casi al instante.`,
+        en:`Michelle showed how radicals help you understand: "this is 月 (yuè), the moon, but it's also the character for meat". Example: "my hand is swollen": to swell is 胀 (zhàng). On the left, flesh; on the right, 长 (zhǎng), to grow: "flesh that has grown is swelling".
+Moon and flesh aren't related: they were two different drawings that writing made identical about 2,000 years ago. If the character is about the body, it's flesh: 脸 (liǎn) face, 腿 (tuǐ) leg, 脑 (nǎo) brain.
+Michelle: "even if you don't know the combination, looking at the characters you sometimes find the logic and know the meaning". She told of a student who studied architecture, learned characters by drawing them by hand for almost three years, and then translated Chinese texts almost instantly.`,
+        zh:`月也是"肉"（肉月）。胀：左边肉，右边长（生长），肉长大了就是胀。月亮和肉本来是两个不同的字形，隶变后写成一样。与身体有关的是肉：脸、腿、脑。老师提到一位学建筑的学生，自学汉字近三年，后来能即时翻译。`},
+     ex:[["胀","zhàng","hincharse","to swell"],["脸","liǎn","cara","face"],["电脑","diànnǎo","computadora («cerebro eléctrico»)","computer (\"electric brain\")"]]},
+
+    {h:{es:"11. El cumpleaños", en:"11. Birthdays", zh:"11. 生日"},
+     p:{es:`生日 (shēngrì) es cumpleaños: 生 (shēng) es el verbo nacer, 日 (rì) es día: «el día de nacer».
+Para preguntar:
+• 你的生日是什么时候？ (nǐ de shēngrì shì shénme shíhòu?) 什么时候 (shénme shíhòu) es «cuándo»; literalmente «qué tiempo».
+• 你的生日是几月几号？ (nǐ de shēngrì shì jǐ yuè jǐ hào?)
+Practicaron con la familia: 我的爸爸的生日是一九五九年九月四号 (wǒ de bàba de shēngrì shì yī jiǔ wǔ jiǔ nián jiǔ yuè sì hào) y 我的妹妹的生日是一九九〇年三月十号 (wǒ de mèimei de shēngrì shì yī jiǔ jiǔ líng nián sān yuè shí hào). Lo que costó: el año cifra por cifra, el mes ANTES que el día, y que 10 es 十 (shí) y nada más.
+Feliz cumpleaños: 祝你生日快乐！ (zhù nǐ shēngrì kuàilè!) 祝 (zhù) desear, «como wish»; 你 (nǐ) vos; 生日 (shēngrì) cumpleaños; 快乐 (kuàilè) feliz, contento.`,
+        en:`生日 (shēngrì) is birthday: 生 (shēng) is the verb to be born, 日 (rì) is day: "the day of being born".
+To ask:
+• 你的生日是什么时候？ (nǐ de shēngrì shì shénme shíhòu?) 什么时候 (shénme shíhòu) is "when"; literally "what time".
+• 你的生日是几月几号？ (nǐ de shēngrì shì jǐ yuè jǐ hào?)
+You practised with the family: 我的爸爸的生日是一九五九年九月四号 (wǒ de bàba de shēngrì shì yī jiǔ wǔ jiǔ nián jiǔ yuè sì hào) and 我的妹妹的生日是一九九〇年三月十号 (wǒ de mèimei de shēngrì shì yī jiǔ jiǔ líng nián sān yuè shí hào). The hard parts: the year digit by digit, the month BEFORE the day, and 10 being just 十 (shí).
+Happy birthday: 祝你生日快乐！ (zhù nǐ shēngrì kuàilè!) 祝 (zhù) to wish, "like wish"; 你 (nǐ) you; 生日 (shēngrì) birthday; 快乐 (kuàilè) happy, glad.`,
+        zh:`生日：生是出生，日是日子。你的生日是什么时候？你的生日是几月几号？练习：我的爸爸的生日是一九五九年九月四号；我的妹妹的生日是一九九〇年三月十号。难点：年份逐个数字读，月在日前，十就是十。祝你生日快乐！祝（wish）、你、生日、快乐。`},
+     ex:[["生日","shēngrì","cumpleaños","birthday"],["什么时候","shénme shíhòu","¿cuándo?","when?"],["你的生日是几月几号？","nǐ de shēngrì shì jǐ yuè jǐ hào?","¿cuándo es tu cumpleaños?","when is your birthday?"],["祝你生日快乐！","zhù nǐ shēngrì kuàilè!","¡feliz cumpleaños!","happy birthday!"]]},
+
+    {h:{es:"12. 我 (wǒ), el arma", en:"12. 我 (wǒ), the weapon", zh:"12. 我字的来历"},
+     p:{es:`Mirando la tarjeta de 我 (wǒ) en el sitio, Michelle mostró cómo se formó: la parte de la derecha es un arma antigua; arriba ve el casco del soldado y a la izquierda la mano que la agarra. Su explicación: decir «yo» es ponerse en oposición a los otros (vos, él), marcar una frontera; el yo se defiende, por eso es un arma. «Atrás tiene mucha filosofía».
+Los estudiosos coinciden en que el dibujo antiguo era un arma dentada; por qué pasó a significar «yo» no se sabe con seguridad (lo más aceptado es que se tomó prestado por el sonido). La lectura de Michelle es una buena manera de recordarlo.`,
+        en:`Looking at the 我 (wǒ) card on the site, Michelle showed how it was formed: the right side is an ancient weapon; on top she sees the soldier's helmet, and on the left the hand gripping it. Her explanation: saying "I" sets you against others (you, him), drawing a border; the self defends itself, so it's a weapon. "There's a lot of philosophy behind it".
+Scholars agree the ancient drawing was a toothed weapon; why it came to mean "I" isn't known for sure (the most accepted view is that it was borrowed for its sound). Michelle's reading is a good way to remember it.`,
+        zh:`老师看网站上的"我"字卡片讲解：右边是古代兵器，上面像士兵的头盔，左边是握着兵器的手；说"我"就是和别人（你、他）划清界线，自我防卫，所以是兵器。学者认为古字是带齿的兵器，为何借作"我"尚无定论（多认为是借音）。`}}
+  ],
+  tips:{
+    es:["Sabiendo los 10 números, «la mitad de tu problema se resuelve»: el resto de los números, los días, los meses y las fechas es pura lógica.",
+        "Aprendé algunos caracteres aunque no los escribas: tienen historias que ayudan a recordar el vocabulario, y a vos te sirve la memoria visual.",
+        "Si querés practicar la escritura, usá hojas cuadriculadas o dibujá recuadros de nueve cuadraditos; Michelle puede pasarte planillas para imprimir.",
+        "Ella habla despacio y marca cada tono para que los distingas; los nativos hablan mucho más rápido.",
+        "Lo más importante es hablar y que alguien te corrija: práctica oral intensiva, preguntas y respuestas.",
+        "Enseñale a tu familia a cantar 祝你生日快乐 (zhù nǐ shēngrì kuàilè), con los tonos bien."],
+    en:["Once you know the 10 numbers, \"half your problem is solved\": the rest of the numbers, the days, the months and dates are pure logic.",
+        "Learn some characters even if you don't write them: their stories help you remember vocabulary, and visual memory works for you.",
+        "If you want to practise writing, use squared paper or draw boxes of nine little squares; Michelle can send you printable sheets.",
+        "She speaks slowly and marks every tone so you can tell them apart; native speakers are much faster.",
+        "What matters most is speaking and having someone correct you: intensive oral practice, questions and answers.",
+        "Teach your family to sing 祝你生日快乐 (zhù nǐ shēngrì kuàilè), with the tones right."],
+    zh:["会了十个数字，一半的问题就解决了；其余的数字、星期、月份、日期都是逻辑。","不写也可以认一些字，字的故事能帮助记词。","想练写字可以用方格纸或九宫格，老师可以提供练习纸。","老师说得慢、声调念得清楚，母语者说得快多了。","最重要的是开口说、有人纠正。","教家人用中文唱生日歌，声调要准。"]},
+  homework:{
+    es:"Memorizar bien los 10 números (Michelle: «esta semana, practicalos») y contar de 1 a 100. Decir la fecha de hoy y de ayer, y los cumpleaños de tu familia. La semana que viene no hay clase (el cumpleaños 80 de la mamá de Michelle); en la próxima: números más grandes.",
+    en:"Memorise the 10 numbers well (Michelle: \"practise them this week\") and count from 1 to 100. Say today's and yesterday's date, and your family's birthdays. No class next week (Michelle's mother's 80th birthday); next time: bigger numbers.",
+    zh:"熟记十个数字，从一数到一百。说出今天和昨天的日期，以及家人的生日。下周停课（老师母亲八十大寿）；下节课学更大的数字。"},
+  check:[
+    {q:{es:"«Ocho» y «nueve» (el truco de George)",en:"\"Eight\" and \"nine\" (the George trick)"},a:"八 · 九",py:"bā · jiǔ"},
+    {q:{es:"«Veintiocho» y «cien»",en:"\"Twenty-eight\" and \"a hundred\""},a:"二十八 · 一百",py:"èrshíbā · yìbǎi"},
+    {q:{es:"«Miércoles» (con 星期 xīngqī y con 礼拜 lǐbài)",en:"\"Wednesday\" (with 星期 xīngqī and with 礼拜 lǐbài)"},a:"星期三 · 礼拜三",py:"xīngqīsān · lǐbàisān"},
+    {q:{es:"«Domingo» (las tres formas)",en:"\"Sunday\" (all three ways)"},a:"星期天 · 礼拜天 · 周日",py:"xīngqītiān · lǐbàitiān · zhōurì"},
+    {q:{es:"«Agosto» y «noviembre»",en:"\"August\" and \"November\""},a:"八月 · 十一月",py:"bāyuè · shíyīyuè"},
+    {q:{es:"«¿Qué fecha es hoy?»",en:"\"What's the date today?\""},a:"今天是几月几号？",py:"jīntiān shì jǐ yuè jǐ hào?"},
+    {q:{es:"«28 de septiembre de 2026»",en:"\"September 28, 2026\""},a:"2026年9月28号",py:"èr líng èr liù nián jiǔ yuè èrshíbā hào"},
+    {q:{es:"«¿Qué día fue ayer?» (la forma corta)",en:"\"What was the date yesterday?\" (short form)"},a:"昨天几号？",py:"zuótiān jǐ hào?"},
+    {q:{es:"«¿Cuándo es tu cumpleaños?»",en:"\"When is your birthday?\""},a:"你的生日是什么时候？",py:"nǐ de shēngrì shì shénme shíhòu?"},
+    {q:{es:"«¡Feliz cumpleaños!»",en:"\"Happy birthday!\""},a:"祝你生日快乐！",py:"zhù nǐ shēngrì kuàilè!"},
+    {q:{es:"«Hincharse» (el 月 yuè que es carne)",en:"\"To swell\" (the 月 yuè that is flesh)"},a:"胀",py:"zhàng"}
+  ]
 }
 };

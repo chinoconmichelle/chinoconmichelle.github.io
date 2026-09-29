@@ -219,7 +219,9 @@ Esa idea se conserva en otros caracteres que lo llevan arriba:
 
 DATO: el 8 es EL número de la suerte en China, porque bā suena parecido a 发 fā «prosperar, hacerse rico». Los Juegos Olímpicos de Beijing empezaron el 8/8/2008 a las 8:08.
 
-PRONUNCIACIÓN: bā, primer tono, alto y plano. b sin aire (como la p de «speak»).`,
+DATO DE MICHELLE (clase 4): en Taiwán el 8 de agosto es el día del padre, 父亲节 (Fùqīnjié), porque 八八 (bābā) suena como 爸爸 (bàba), papá. «Acordate de papá».
+
+PRONUNCIACIÓN: bā, primer tono, alto y plano. b sin aire (como la p de «speak»). Michelle: «pa, sin aspirar; no como papá».`,
 en:`WHAT IT IS: "eight".
 
 THE CHARACTER: two strokes moving apart, like two things dividing. The original meaning was "to divide, to separate".
@@ -229,8 +231,10 @@ That idea survives in other characters that carry it on top:
 
 NOTE: 8 is THE lucky number in China, because bā sounds like 发 fā "to prosper, get rich". The Beijing Olympics opened on 8/8/2008 at 8:08.
 
+MICHELLE'S TIP (class 4): in Taiwan August 8 is Father's Day, 父亲节 (Fùqīnjié), because 八八 (bābā) sounds like 爸爸 (bàba), dad. "Remember dad".
+
 PRONUNCIATION: bā, 1st tone, high and flat. Unaspirated b (like the p in "speak").`,
-zh:`是什么："八"。两笔分开，本义是"分"：分（八 + 刀）、公（八 + 厶）。八 和 发 音近，是最吉利的数字，北京奥运 2008 年 8 月 8 日 8 点 8 分开幕。`}},
+zh:`是什么："八"。两笔分开，本义是"分"：分（八 + 刀）、公（八 + 厶）。八 和 发 音近，是最吉利的数字，台湾8月8日是父亲节（八八≈爸爸）。北京奥运 2008 年 8 月 8 日 8 点 8 分开幕。`}},
   {id:"num-10",s:"九",py:"jiǔ",es:"nueve",en:"nine",
    x:{
 es:`QUÉ ES: «nueve».
@@ -241,7 +245,7 @@ DATO: 九 jiǔ suena igual que 久 jiǔ «mucho tiempo, duradero». Por eso es u
 
 EN USO: 十九 (shíjiǔ, 19), 九十 (jiǔshí, 90), 九十九 (jiǔshíjiǔ, 99, el número más alto que se arma solo con los diez primeros).
 
-PRONUNCIACIÓN: jiǔ, tercer tono. Como 六 (liù), el «iu» suena «iou»: jiou. La j es suave, con la lengua plana adelante.`,
+PRONUNCIACIÓN: jiǔ, tercer tono. Michelle (clase 4): «se pronuncia como George». Como 六 (liù), el «iu» suena «iou»: jiou. La j es suave, con la lengua plana adelante.`,
 en:`WHAT IT IS: "nine".
 
 THE CHARACTER: disputed origin. A bent arm or a hook have been suggested. Neither is certain, so it's best learned as a picture.
@@ -250,8 +254,8 @@ NOTE: 九 jiǔ sounds the same as 久 jiǔ "a long time, lasting". That's why it
 
 IN USE: 十九 (shíjiǔ, 19), 九十 (jiǔshí, 90), 九十九 (jiǔshíjiǔ, 99, the highest number built from the first ten alone).
 
-PRONUNCIATION: jiǔ, 3rd tone. As with 六 (liù), "iu" sounds "iou": jiou. j is soft, tongue flat and forward.`,
-zh:`是什么："九"。字形来源有争议（弯曲的手臂或钩子）。九 和 久 同音，婚礼上表示长长久久。发音：jiǔ，iu 读 iou。`}},
+PRONUNCIATION (Michelle, class 4: "it's pronounced like George"): jiǔ, 3rd tone. As with 六 (liù), "iu" sounds "iou": jiou. j is soft, tongue flat and forward.`,
+zh:`是什么："九"。字形来源有争议（弯曲的手臂或钩子）。九 和 久 同音，婚礼上表示长长久久。发音：jiǔ，iu 读 iou（老师说像英语的 George）。`}},
   {id:"num-11",s:"十",py:"shí",es:"diez",en:"ten",
    x:{
 es:`QUÉ ES: «diez», y la BASE de todo el sistema. Michelle: «solamente tenés que estudiar estos 10», el resto se combina.
@@ -664,6 +668,33 @@ Trick for converting: split the digits into groups of four from the right. 1234|
 THE CHARACTER 万 (wàn): traditional 萬 (wàn) was a scorpion, borrowed for its sound.
 
 PRONUNCIATION: yíwàn. 一 (yī) is yí because 万 (wàn) is a 4th tone.`,
-zh:`是什么："一万"。中文以万为单位：一万、十万、一百万。转换技巧：从右往左四位一组。一万 读 yíwàn。`}}
+zh:`是什么："一万"。中文以万为单位：一万、十万、一百万。转换技巧：从右往左四位一组。一万 读 yíwàn。`}},
+  {id:"num-28",s:"亿",t:"億",py:"yì",es:"cien millones",en:"a hundred million",cl:"c4",
+   x:{
+es:`QUÉ ES: «cien millones» (100.000.000). Estaba en la tabla de columnas de Michelle, en rojo junto con 万 (wàn), porque son las dos grandes unidades del chino.
+
+POR QUÉ ES UNA UNIDAD: el chino agrupa las cifras de a cuatro, no de a tres como el español. Por eso tiene una palabra para 10.000 (万 wàn) y otra para 10.000 × 10.000 = 100.000.000 (亿 yì). La tabla de Michelle, de derecha a izquierda:
+个 (gè) unidad · 十 (shí) decena · 百 (bǎi) centena · 千 (qiān) mil · 万 (wàn) diez mil · 十万 (shíwàn) cien mil · 百万 (bǎiwàn) un millón · 千万 (qiānwàn) diez millones · 亿 (yì) cien millones · 十亿 (shíyì) mil millones.
+Michelle aclaró que acá 个 no es el clasificador sino «unidad».
+
+EL CARÁCTER: 亻 (rén, persona) + 乙 (yǐ), que da el sonido. En la forma tradicional 億, a la derecha está 意 (yì, idea, intención): también por el sonido.
+
+EJEMPLO: China tiene unos 十四亿 (shísì yì) habitantes: 14 × 100 millones = 1.400 millones.
+Un millón = 一百万 (yìbǎi wàn), «cien diez-miles». Esa es la trampa: no hay palabra suelta para «millón».
+
+PRONUNCIACIÓN: yì, 4.º tono (cae). No lo confundas con 一 (yī, uno): 一亿 (yí yì) = cien millones.`,
+en:`WHAT IT IS: "a hundred million" (100,000,000). It was in Michelle's column table, in red with 万 (wàn), because they're the two big units of Chinese.
+
+WHY IT'S A UNIT: Chinese groups digits in fours, not threes as in Spanish or English. So it has a word for 10,000 (万 wàn) and another for 10,000 × 10,000 = 100,000,000 (亿 yì). Michelle's table, right to left:
+个 (gè) units · 十 (shí) tens · 百 (bǎi) hundreds · 千 (qiān) thousands · 万 (wàn) ten thousand · 十万 (shíwàn) a hundred thousand · 百万 (bǎiwàn) a million · 千万 (qiānwàn) ten million · 亿 (yì) a hundred million · 十亿 (shíyì) a billion.
+Michelle pointed out that here 个 isn't the measure word but "units".
+
+THE CHARACTER: 亻 (rén, person) + 乙 (yǐ), giving the sound. In the traditional form 億, the right side is 意 (yì, idea, intention): also for the sound.
+
+EXAMPLE: China has about 十四亿 (shísì yì) people: 14 × 100 million = 1.4 billion.
+One million = 一百万 (yìbǎi wàn), "a hundred ten-thousands". That's the trap: there's no single word for "million".
+
+PRONUNCIATION: yì, 4th tone (falling). Don't confuse it with 一 (yī, one): 一亿 (yí yì) = a hundred million.`,
+zh:`亿：一万万。老师的数位表：个、十、百、千、万、十万、百万、千万、亿、十亿。汉语四位一组，所以有万和亿。这里的"个"是个位。亻＋乙（声旁）；繁体億。中国约有十四亿人。一百万＝一个"百万"。`}}
   ]
 });

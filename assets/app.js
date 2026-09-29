@@ -268,10 +268,11 @@ const CLASSES = {
   c1:{es:"Clase 1 · 31 ago", en:"Class 1 · Aug 31", zh:"第1课 · 8月31日"},
   c2:{es:"Clase 2 · 7 sep",  en:"Class 2 · Sep 7",  zh:"第2课 · 9月7日"},
   c3:{es:"Clase 3 · 14 sep", en:"Class 3 · Sep 14", zh:"第3课 · 9月14日"},
+  c4:{es:"Clase 4 · 28 sep", en:"Class 4 · Sep 28", zh:"第4课 · 9月28日"},
   fc:{es:"Tarjetas de Michelle", en:"Michelle's flashcards", zh:"Michelle 老师的卡片"},
   ex:{es:"Extra", en:"Extra", zh:"补充"}
 };
-const CLASS_GLYPH = {c1:"一", c2:"二", c3:"三", fc:"卡", ex:"补"};
+const CLASS_GLYPH = {c1:"一", c2:"二", c3:"三", c4:"四", fc:"卡", ex:"补"};
 function clOf(c, t){ return c.cl || (t && t.cl) || ""; }
 /* Each card's own topic (progress is stored there, so topic and class views share it) */
 let CARD_HOME = null;

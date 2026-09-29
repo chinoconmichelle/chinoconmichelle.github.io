@@ -312,7 +312,7 @@ zh:`是什么："学校"，第三课的句子：在这个学校有……
 es:`QUÉ ES: «hoy». Parte de 今天早上 (jīntiān zǎoshang, esta mañana), en la oración del gato.
 
 LOS CARACTERES:
-今 (jīn) ahora: un techo triangular 亼 (jí) con un trazo debajo. Cubrir, encerrar el momento presente: «ahora».
+今 (jīn) ahora: un techo triangular 亼 (jí) con un trazo debajo. Una lectura habitual es «cubrir, encerrar el momento presente», pero el origen del dibujo se discute. Michelle (clase 4): 今 es «ahora, en el mismo momento».
 天 (tiān) cielo, día: 大 (dà, una persona vista de frente con los brazos abiertos) con 一 (yī) encima de la cabeza. Lo que está arriba de la persona: el cielo. Y como el cielo marca los días, también «día».
 今天 (jīntiān) = «el día de ahora».
 
@@ -325,7 +325,7 @@ PRONUNCIACIÓN: jīntiān, dos primeros tonos: planos y altos, como la bocina. t
 en:`WHAT IT IS: "today". Part of 今天早上 (jīntiān zǎoshang, this morning), in the cat sentence.
 
 THE CHARACTERS:
-今 (jīn) now: a triangular roof 亼 (jí) with a stroke underneath. Covering, enclosing the present moment: "now".
+今 (jīn) now (Michelle, class 4: "now, this very moment"; the origin of the drawing is disputed): a triangular roof 亼 (jí) with a stroke underneath. Covering, enclosing the present moment: "now".
 天 (tiān) sky, day: 大 (dà, a person seen from the front with arms spread) with 一 (yī) above the head. What's above the person: the sky. And since the sky marks the days, also "day".
 今天 (jīntiān) = "the day of now".
 

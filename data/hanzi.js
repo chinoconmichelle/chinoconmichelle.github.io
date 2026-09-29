@@ -57,6 +57,7 @@ es:`QUÉ ES: «Yo». Con 们 (men) hace el plural 我们 (wǒmen, nosotros) y co
 EL CARÁCTER:
 Originalmente era el dibujo de un arma: una especie de alabarda con la hoja dentada y un mango largo. Hoy parece 手 (shǒu, mano) a la izquierda y 戈 (gē, alabarda) a la derecha, pero en su origen era un solo dibujo.
 Por qué un arma pasó a significar «yo» no se sabe con seguridad: lo más aceptado es que se tomó prestada por el sonido. La historia de Michelle («el soldado que la sostiene dice: yo soy quien la lleva») es una forma linda de recordarlo, no un dato comprobado.
+En la clase 4 la amplió: arriba ve el casco del soldado, a la izquierda la mano que agarra el arma, y la idea filosófica: decir «yo» es marcar una frontera frente a los otros (vos, él); el yo se defiende, por eso lleva un arma.
 
 PALABRAS:
 • 我们 (wǒmen): nosotros
@@ -77,6 +78,7 @@ en:`WHAT IT IS: "I, me". With 们 (men) it makes the plural 我们 (wǒmen, we) 
 THE CHARACTER:
 Originally it was a drawing of a weapon: a kind of halberd with a serrated blade and a long handle. Today it looks like 手 (shǒu, hand) on the left and 戈 (gē, halberd) on the right, but it started as a single drawing.
 Why a weapon came to mean "I" isn't known for sure: the accepted view is that it was borrowed for its sound. Michelle's story ("the soldier holding it says: I'm the one who carries it") is a nice way to remember it, not a proven fact.
+In class 4 she expanded it: on top she sees the soldier's helmet, on the left the hand gripping the weapon, and the philosophical idea: saying "I" draws a border against the others (you, him); the self defends itself, so it carries a weapon.
 
 WORDS:
 • 我们 (wǒmen): we
