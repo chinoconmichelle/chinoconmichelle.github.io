@@ -710,5 +710,133 @@ Scholars agree the ancient drawing was a toothed weapon; why it came to mean "I"
     {q:{es:"«¡Feliz cumpleaños!»",en:"\"Happy birthday!\""},a:"祝你生日快乐！",py:"zhù nǐ shēngrì kuàilè!"},
     {q:{es:"«Hincharse» (el 月 yuè que es carne)",en:"\"To swell\" (the 月 yuè that is flesh)"},a:"胀",py:"zhàng"}
   ]
+},
+
+/* =====================================================================
+   CLASE 5 · 19 OCT
+   ===================================================================== */
+c5: {
+  intro:{
+    es:"La quinta clase: repaso de los días, los meses, la fecha y los números, y después algo nuevo: cómo se forman en chino los nombres de los países, las nacionalidades y los idiomas, con las historias que hay detrás.",
+    en:"The fifth class: review of days, months, the date and numbers, then something new: how Chinese forms the names of countries, nationalities and languages, with the stories behind them.",
+    zh:"第五课：复习星期、月份、日期和数字，然后学国名、国籍和语言的构成，以及背后的故事。"},
+  source:{
+    es:"Armado con la transcripción de la clase (sin apunte en PDF esta vez). La clase terminó 15 minutos antes.",
+    en:"Built from the class transcript (no PDF notes this time). The class ended 15 minutes early.",
+    zh:"根据课堂录音文字稿整理（这次没有 PDF 笔记）。这节课提早十五分钟结束。"},
+  parts:[
+    {h:{es:"1. Repaso: días, meses y fecha", en:"1. Review: days, months and the date", zh:"1. 复习：星期、月份、日期"},
+     p:{es:`Las tres formas de la semana: 星期 (xīngqī) — «星期 es semana» —, 礼拜 (lǐbài) y 周 (zhōu), la más formal: 星期一 (xīngqīyī), 礼拜二 (lǐbài'èr), 周三 (zhōusān)… El domingo con 周 es solo 周日 (zhōurì).
+Los meses: 一月 (yīyuè), 二月 (èryuè), 三月 (sānyuè)… «月 (yuè) es luna: cuando se da una vuelta a la luna es un mes».
+La fecha va al revés que en español: año, mes y día. Y el año se dice cifra por cifra: 2020 no es «veinte veinte» sino 二〇二〇 (èr líng èr líng).
+Michelle notó que los números los recordabas bien, pero los días de la semana y los meses, no tanto. Es justo lo que hay en el tema «Días, meses y fechas».`,
+        en:`The three ways to say week: 星期 (xīngqī) — "星期 is week" —, 礼拜 (lǐbài) and 周 (zhōu), the most formal: 星期一 (xīngqīyī), 礼拜二 (lǐbài'èr), 周三 (zhōusān)… Sunday with 周 is only 周日 (zhōurì).
+The months: 一月 (yīyuè), 二月 (èryuè), 三月 (sānyuè)… "月 (yuè) is moon: one turn of the moon is a month".
+The date goes the opposite way from Spanish: year, month, day. And the year is said digit by digit: 2020 isn't "twenty twenty" but 二〇二〇 (èr líng èr líng).
+Michelle noticed you remembered the numbers well, but the weekdays and months less so. That's exactly what the "Days, months & dates" topic covers.`,
+        zh:`星期、礼拜、周（最正式）；周日。一月、二月……月是月亮，月亮转一圈是一个月。日期顺序：年、月、日，和西班牙语相反；年份逐个数字读：二〇二〇。数字记得不错，星期和月份要多复习。`},
+     ex:[["星期三","xīngqīsān","miércoles","Wednesday"],["周日","zhōurì","domingo","Sunday"],["三月","sānyuè","marzo","March"],["二〇二〇年","èr líng èr líng nián","el año 2020","the year 2020"]]},
+
+    {h:{es:"2. Los números, otra vez", en:"2. Numbers, again", zh:"2. 复习数字"},
+     p:{es:`Contaste de 0 a 10, después de 11 a 20 (se te escapó el 19: 十九 shíjiǔ), y de a decenas hasta 100: 二十一 (èrshíyī), 三十一 (sānshíyī), 四十 (sìshí), 九十八 (jiǔshíbā). Michelle: «más o menos todavía te acordás».`,
+        en:`You counted 0 to 10, then 11 to 20 (19 slipped away: 十九 shíjiǔ), and by tens up to 100: 二十一 (èrshíyī), 三十一 (sānshíyī), 四十 (sìshí), 九十八 (jiǔshíbā). Michelle: "you still more or less remember".`,
+        zh:`从0数到10，11到20（十九忘了），再数到一百。老师：大致还记得。`},
+     ex:[["十九","shíjiǔ","19","19"],["四十","sìshí","40","40"],["九十八","jiǔshíbā","98","98"]]},
+
+    {h:{es:"3. Menos vocabulario, más caracteres", en:"3. Less vocabulary, more characters", zh:"3. 少背生词，多认汉字"},
+     p:{es:`Como estuviste con la mudanza y mucho trabajo, Michelle cambió el plan para que no se te acumule vocabulario: un poco de caracteres y de conversación, «porque una vez que sabés esto, cuando mirás otros caracteres de a poquito vas a poder asociar, y también la parte filosófica».
+Contó que hizo una app para el vocabulario, tipo Anki, con repetición espaciada: lo que más les cuesta a todos los alumnos es acordarse de las palabras, y la estructura la entienden.`,
+        en:`Since you'd been busy with the move and lots of work, Michelle changed the plan so vocabulary doesn't pile up: some characters and conversation, "because once you know this, when you look at other characters you'll gradually be able to connect them, and the philosophical side too".
+She mentioned she made a vocabulary app, like Anki, with spaced repetition: what every student finds hardest is remembering words; they understand the structure.`,
+        zh:`因为搬家和工作忙，老师调整计划：少背生词，多学一点汉字和会话，学会了就能慢慢联想。她做了一个类似 Anki 的间隔重复背单词应用。`}},
+
+    {h:{es:"4. 人 (rén) y la escritura más antigua", en:"4. 人 (rén) and the oldest writing", zh:"4. 人和甲骨文"},
+     p:{es:`Empezó por 人 (rén), «persona»: en la forma más antigua se ve una persona con los brazos. Esa etapa se llama 甲骨文 (jiǎgǔwén), la escritura de los huesos oraculares, la más antigua de China.
+Y explicó el 文 (wén) de 甲骨文: «este 文 significa letra, escritura». Es la pieza que va a servir para los idiomas.`,
+        en:`She started with 人 (rén), "person": in the oldest form you can see a person with arms. That stage is called 甲骨文 (jiǎgǔwén), oracle-bone script, the oldest writing in China.
+And she explained the 文 (wén) in 甲骨文: "this 文 means letter, writing". It's the piece that will be used for languages.`,
+        zh:`从"人"开始：甲骨文里是一个有手臂的人。甲骨文是中国最古老的文字。文就是文字，后面用来说语言。`},
+     ex:[["人","rén","persona","person"],["甲骨文","jiǎgǔwén","escritura de los huesos oraculares","oracle-bone script"],["文","wén","escritura, letra","writing"]]},
+
+    {h:{es:"5. Los países se nombran por el sonido", en:"5. Countries are named by sound", zh:"5. 国名多是音译"},
+     p:{es:`«Casi todos los nombres de países son una traducción de la pronunciación»: se buscan caracteres que suenen parecido. Como el chino no tiene ciertos sonidos, se adaptan:
+• No hay r al final de sílaba ni r vibrante: «Ar-gentina» → 阿根廷 (Āgēntíng).
+• No hay «br» ni l final: «Brasil» → 巴西 (Bāxī). La b china es la p sin aire.
+• No hay s suelta: se le agrega una vocal: «España» → 西班牙 (Xībānyá).
+Para los países importantes se acortó el nombre y se le agregó 国 (guó), país: 英国 (Yīngguó), 法国 (Fǎguó), 德国 (Déguó), 俄国 (Éguó), 美国 (Měiguó).`,
+        en:`"Almost all country names are a translation of the pronunciation": characters that sound similar are chosen. Since Chinese lacks some sounds, they're adapted:
+• No r at the end of a syllable and no rolled r: "Ar-gentina" → 阿根廷 (Āgēntíng).
+• No "br" and no final l: "Brasil" → 巴西 (Bāxī). Chinese b is an unaspirated p.
+• No bare s: a vowel is added: "España" → 西班牙 (Xībānyá).
+For the important countries the name was shortened and 国 (guó), country, added: 英国 (Yīngguó), 法国 (Fǎguó), 德国 (Déguó), 俄国 (Éguó), 美国 (Měiguó).`,
+        zh:`国名大多是音译，选读音相近的字。汉语没有的音要调整：阿根廷、巴西、西班牙。重要国家缩短后加"国"：英国、法国、德国、俄国、美国。`},
+     ex:[["阿根廷","Āgēntíng","Argentina","Argentina"],["巴西","Bāxī","Brasil","Brazil"],["西班牙","Xībānyá","España","Spain"],["国","guó","país","country"]]},
+
+    {h:{es:"6. Los grandes países y sus historias", en:"6. The big countries and their stories", zh:"6. 几个大国的名字"},
+     p:{es:`• 英国 (Yīngguó), Inglaterra: «England es muy largo en chino, entonces usaron la parte de adelante».
+• 德国 (Déguó), Alemania: «viene del alemán, no del inglés: de Deutsch».
+• 法国 (Fǎguó), Francia: de «Francis», 法兰西 (Fǎlánxī), abreviado.
+• 俄国 (Éguó), Rusia: el nombre llegó como «Oros»; el largo es 俄罗斯 (Éluósī).
+• 美国 (Měiguó), Estados Unidos: 美 (měi) viene de «América» y además significa «hermoso». Según Michelle, para los chinos que emigraron a trabajar en las minas de oro era el país rico y sin guerra, «el país hermoso», y todavía hay mucha gente en China fascinada con Estados Unidos.
+• 日本 (Rìběn), Japón, «está fuera de esta regla»: los japoneses escriben su país con los mismos caracteres; en japonés se lee Nihon y en chino Rìběn.
+Michelle lo relacionó con las potencias que estuvieron en China durante la Segunda Guerra Mundial. Para ubicarlo en el tiempo: estos nombres cortos ya se usaban en el siglo XIX (la época de las guerras del Opio y de la Alianza de las Ocho Naciones, en 1900), y la fiebre del oro de California fue en 1849: por eso San Francisco se llama 旧金山 (Jiùjīnshān), «la vieja montaña de oro».`,
+        en:`• 英国 (Yīngguó), England: "England is very long in Chinese, so they used the front part".
+• 德国 (Déguó), Germany: "it comes from German, not English: from Deutsch".
+• 法国 (Fǎguó), France: from "Francis", 法兰西 (Fǎlánxī), shortened.
+• 俄国 (Éguó), Russia: the name came in as "Oros"; the long one is 俄罗斯 (Éluósī).
+• 美国 (Měiguó), United States: 美 (měi) comes from "America" and also means "beautiful". According to Michelle, for the Chinese who emigrated to work in the gold mines it was the rich country without war, "the beautiful country", and many people in China are still fascinated by the US.
+• 日本 (Rìběn), Japan, "is outside this rule": the Japanese write their country with the same characters; in Japanese it's Nihon, in Chinese Rìběn.
+Michelle linked these to the powers present in China during World War II. To place it in time: these short names were already in use in the 19th century (the era of the Opium Wars and the Eight-Nation Alliance of 1900), and the California gold rush was in 1849: that's why San Francisco is 旧金山 (Jiùjīnshān), "the old gold mountain".`,
+        zh:`英国（England 太长，取前面）、德国（来自德语 Deutsch）、法国（法兰西）、俄国（Oros，全称俄罗斯）、美国（来自 America，美也是美丽）、日本（日本人用汉字写国名，例外）。老师把这些和二战时在中国的列强联系起来；其实这些简称十九世纪就已使用，加州淘金热是1849年，所以旧金山叫旧金山。`},
+     ex:[["英国","Yīngguó","Inglaterra","England"],["德国","Déguó","Alemania","Germany"],["法国","Fǎguó","Francia","France"],["俄国","Éguó","Rusia","Russia"],["美国","Měiguó","Estados Unidos","United States"],["日本","Rìběn","Japón","Japan"]]},
+
+    {h:{es:"7. Nacionalidad e idioma: la regla", en:"7. Nationality and language: the rule", zh:"7. 国籍和语言的规则"},
+     p:{es:`Michelle: «solamente tenés que saber esta regla».
+• Nacionalidad = país + 人 (rén): 英国人 (Yīngguórén), 德国人 (Déguórén), 法国人 (Fǎguórén), 美国人 (Měiguórén), 日本人 (Rìběnrén), 西班牙人 (Xībānyárén), 阿根廷人 (Āgēntíngrén). «Cuando ves 人, es de la nacionalidad o algo que tiene que ver con persona». Vale para hombre y mujer.
+• Idioma = el primer carácter del país + 文 (wén, escritura) o 语 (yǔ, habla): 英文 / 英语 (Yīngwén / Yīngyǔ), 德文 / 德语 (Déwén / Déyǔ), 法语 (Fǎyǔ), 日语 (Rìyǔ). Si el país no lleva 国 (guó), va entero: 西班牙语 (Xībānyáyǔ).
+Preguntaste si 国 (guó) y 文 (wén) son lo mismo: no, 国 es país y 文 es escritura. En Estados Unidos se habla 英语 (Yīngyǔ); 美语 (Měiyǔ) se usa a veces para el inglés americano, por la pronunciación. «Esa u de 语 es la u francesa».`,
+        en:`Michelle: "you only need to know this rule".
+• Nationality = country + 人 (rén): 英国人 (Yīngguórén), 德国人 (Déguórén), 法国人 (Fǎguórén), 美国人 (Měiguórén), 日本人 (Rìběnrén), 西班牙人 (Xībānyárén), 阿根廷人 (Āgēntíngrén). "When you see 人, it's nationality or something to do with a person". It's the same for men and women.
+• Language = the country's first character + 文 (wén, writing) or 语 (yǔ, speech): 英文 / 英语 (Yīngwén / Yīngyǔ), 德文 / 德语 (Déwén / Déyǔ), 法语 (Fǎyǔ), 日语 (Rìyǔ). If the country has no 国 (guó), it goes whole: 西班牙语 (Xībānyáyǔ).
+You asked whether 国 (guó) and 文 (wén) are the same: no, 国 is country and 文 is writing. The US speaks 英语 (Yīngyǔ); 美语 (Měiyǔ) is sometimes used for American English, for the accent. "That u in 语 is the French u".`,
+        zh:`国名＋人＝国籍：英国人、德国人、法国人、美国人、日本人、西班牙人、阿根廷人。国名第一个字＋文／语＝语言：英文／英语、德文／德语、法语、日语；不带"国"的整个用：西班牙语。国是国家，文是文字。美国说英语（美语指美式发音）。`},
+     ex:[["英国人","Yīngguórén","inglés, inglesa","English person"],["西班牙人","Xībānyárén","español, española","Spanish person"],["英语","Yīngyǔ","inglés (idioma)","English (language)"],["法语","Fǎyǔ","francés (idioma)","French (language)"],["日语","Rìyǔ","japonés (idioma)","Japanese (language)"],["西班牙语","Xībānyáyǔ","español (idioma)","Spanish (language)"]]},
+
+    {h:{es:"8. España, Holanda y Taiwán", en:"8. Spain, Holland and Taiwan", zh:"8. 西班牙、荷兰和台湾"},
+     p:{es:`Michelle contó que España, Portugal y Holanda fueron los primeros occidentales en tener mucho contacto con China y con Taiwán. Los portugueses llamaron a la isla Ilha Formosa, «isla hermosa»; España tuvo un fuerte en el norte (1626–1642) y Holanda una colonia en el sur (1624–1662), hasta que la expulsó 郑成功 (Zhèng Chénggōng, Koxinga), un general leal a la dinastía Ming; en 1683 la isla pasó a la dinastía Qing. Después llegaron muchísimos inmigrantes del sur de China (hokkien y hakka), y hoy la gran mayoría de los taiwaneses desciende de ellos, junto con los pueblos aborígenes.
+Michelle contó que esta historia es parte de por qué en Taiwán hay opiniones distintas sobre su relación con China.
+Y terminó con el español: «es la tercera lengua más grande del mundo, y hay un montón de negocios con China».`,
+        en:`Michelle told how Spain, Portugal and Holland were the first Westerners to have a lot of contact with China and Taiwan. The Portuguese called the island Ilha Formosa, "beautiful island"; Spain had a fort in the north (1626–1642) and Holland a colony in the south (1624–1662), until it was driven out by 郑成功 (Zhèng Chénggōng, Koxinga), a general loyal to the Ming dynasty; in 1683 the island passed to the Qing dynasty. Huge numbers of immigrants from southern China (Hokkien and Hakka) followed, and today most Taiwanese descend from them, together with the Indigenous peoples.
+Michelle said this history is part of why opinions differ in Taiwan about its relationship with China.
+And she ended with Spanish: "it's the third biggest language in the world, and there's a lot of business with China".`,
+        zh:`西班牙、葡萄牙、荷兰是最早和中国、台湾大量接触的西方国家。葡萄牙人称台湾为福尔摩沙（美丽岛）；西班牙在北部（1626–1642）、荷兰在南部（1624–1662）殖民，郑成功赶走荷兰人，1683年归清朝。之后大量闽南人、客家人移民。老师说这段历史也是台湾人对两岸关系看法不同的原因之一。西班牙语是世界第三大语言。`},
+     ex:[["郑成功","Zhèng Chénggōng","Koxinga, general Ming","Koxinga, Ming general"],["台湾","Táiwān","Taiwán","Taiwan"]]}
+  ],
+  tips:{
+    es:["Aprendé la regla, no la lista: país + 人 (rén) = la persona; país + 文 (wén) o 语 (yǔ) = el idioma.",
+        "Si un nombre de país no tiene sentido, es porque está por el sonido: decilo en voz alta y buscá el parecido.",
+        "No acumules vocabulario: mejor poco y repasado seguido. Michelle armó una app de repetición espaciada justamente para eso.",
+        "Repasá los días de la semana y los meses: son números + 星期 (xīngqī) o 月 (yuè)."],
+    en:["Learn the rule, not the list: country + 人 (rén) = the person; country + 文 (wén) or 语 (yǔ) = the language.",
+        "If a country name makes no sense, it's there for the sound: say it aloud and find the resemblance.",
+        "Don't let vocabulary pile up: a little, reviewed often. Michelle built a spaced-repetition app for exactly that.",
+        "Review the weekdays and months: they're numbers + 星期 (xīngqī) or 月 (yuè)."],
+    zh:["记规则，不记清单：国名＋人＝国籍；国名＋文／语＝语言。","国名看不出意思，多半是音译：念出来找相似的音。","生词别累积，少量多复习。","复习星期和月份：数字＋星期／月。"]},
+  homework:{
+    es:"Repasar los días de la semana y los meses (tema «Días, meses y fechas»), y la regla de países, nacionalidades e idiomas: poder decir de dónde sos y qué idiomas hablás.",
+    en:"Review the weekdays and months (\"Days, months & dates\" topic), and the rule for countries, nationalities and languages: be able to say where you're from and which languages you speak.",
+    zh:"复习星期和月份，以及国名、国籍、语言的规则：会说自己是哪国人、会说什么语言。"},
+  check:[
+    {q:{es:"«Jueves» y «agosto»",en:"\"Thursday\" and \"August\""},a:"星期四 · 八月",py:"xīngqīsì · bāyuè"},
+    {q:{es:"«País»",en:"\"Country\""},a:"国",py:"guó"},
+    {q:{es:"«Inglaterra», «inglés» (la persona) y «el idioma inglés»",en:"\"England\", \"English person\" and \"the English language\""},a:"英国 · 英国人 · 英语",py:"Yīngguó · Yīngguórén · Yīngyǔ"},
+    {q:{es:"«Alemania» (y de dónde sale el nombre)",en:"\"Germany\" (and where the name comes from)"},a:"德国 (Deutsch)",py:"Déguó"},
+    {q:{es:"«Francés» (el idioma)",en:"\"French\" (the language)"},a:"法语 · 法文",py:"Fǎyǔ · Fǎwén"},
+    {q:{es:"«Estados Unidos» (el «país hermoso»)",en:"\"United States\" (the \"beautiful country\")"},a:"美国",py:"Měiguó"},
+    {q:{es:"«Japón» y «japonés» (el idioma)",en:"\"Japan\" and \"Japanese\" (the language)"},a:"日本 · 日语",py:"Rìběn · Rìyǔ"},
+    {q:{es:"«España» y «español» (el idioma)",en:"\"Spain\" and \"Spanish\" (the language)"},a:"西班牙 · 西班牙语",py:"Xībānyá · Xībānyáyǔ"},
+    {q:{es:"«Soy argentino»",en:"\"I'm Argentinian\""},a:"我是阿根廷人。",py:"wǒ shì Āgēntíngrén."},
+    {q:{es:"«Brasil»",en:"\"Brazil\""},a:"巴西",py:"Bāxī"}
+  ]
 }
 };
