@@ -244,3 +244,21 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 .face.back .mean + .mean{font-size:calc(1.05rem * var(--fs));margin-top:4px}
 .zh.long .dot{display:none}
 .zh.long .trad{display:block;font-size:.8em;margin-top:2px}
+
+/* "Para estudiar" page and its pinned home tile */
+.tile.pin{border:2px solid var(--accent);grid-column:1 / -1}
+.tile.pin .glyph{font-size:1.6rem}
+.stbtns{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stbtns .rstudy{flex:1 1 auto;margin:0}
+.stgroup{margin:22px 0 4px;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--sub)}
+.sthead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.sthead h3{margin:0;flex:1 1 auto}
+.stglyph{font-size:1.5rem;color:var(--accent)}
+.stk{font-size:.8rem;color:var(--sub)}
+.rrow.stknown{opacity:.6}
+.rrow.sttoday{border:1px solid var(--accent)}
+.stlab{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+#studyBody .stsec .rex{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:6px}
+#studyBody .stsec .rex .rrow{margin:0;padding:8px 10px}
+#studyBody .stsec .rex .rrow.stwide{grid-column:1 / -1}
+#studyBody .stsec .rex .rmean{font-size:.8rem}
