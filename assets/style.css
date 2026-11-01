@@ -262,3 +262,25 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 #studyBody .stsec .rex .rrow{margin:0;padding:8px 10px}
 #studyBody .stsec .rex .rrow.stwide{grid-column:1 / -1}
 #studyBody .stsec .rex .rmean{font-size:.8rem}
+/* "Para estudiar": theory blocks, tools, table of contents */
+.sttoc{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0 4px;font-size:.85rem;color:var(--sub)}
+.sttoc button{padding:6px 10px;font-size:.85rem}
+.sttheory{margin:12px 0;border:1px solid var(--border);border-radius:12px;padding:6px 12px 12px}
+.sttheory>summary{cursor:pointer;font-weight:700;padding:6px 0;color:var(--accent)}
+.stblock{margin:12px 0 0}
+.stblock h4,.sttool h4,.stmemo{margin:14px 0 6px;font-size:1rem}
+.stblock .rp{white-space:pre-line}
+.stwarn{border-left:3px solid var(--bad);padding-left:10px}
+.sttool{margin-top:14px;padding-top:4px;border-top:1px dashed var(--border)}
+.stinput{width:100%;padding:10px;font-size:1.05rem;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);margin:6px 0}
+.stlabel{display:block;font-size:.9rem;color:var(--sub)}
+.stout .rrow{width:100%}
+.ststeps{white-space:pre-line;font-size:.85rem;color:var(--sub);margin:6px 2px;line-height:1.6}
+.stparts{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.stpart{display:flex;flex-direction:column;padding:6px 10px;border-radius:8px;background:var(--btn);font-size:.95rem}
+.stpart small{color:var(--sub);font-size:.75rem}
+#studyBody .sttheory .rex{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:6px}
+#studyBody .sttheory .rex .rrow{margin:0;padding:8px 10px}
+#studyBody .sttheory .rex .rrow.stwide{grid-column:1 / -1}
+#studyBody .sttheory .rmean{font-size:.8rem}
+.styear{margin-top:6px;color:var(--accent)}
