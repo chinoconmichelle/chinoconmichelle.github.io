@@ -838,5 +838,170 @@ And she ended with Spanish: "it's the third biggest language in the world, and t
     {q:{es:"«Soy argentino»",en:"\"I'm Argentinian\""},a:"我是阿根廷人。",py:"wǒ shì Āgēntíngrén."},
     {q:{es:"«Brasil»",en:"\"Brazil\""},a:"巴西",py:"Bāxī"}
   ]
+},
+c6: {
+  intro:{
+    es:"La sexta clase: un repaso rápido (números, días, meses, fecha y clasificadores) y un cambio de enfoque. Michelle propuso aprender primero la estructura de las oraciones, para entender por qué se dicen así y poder armarlas buscando las palabras en el diccionario. En la misma clase ya armaste dos párrafos en chino.",
+    en:"The sixth class: a quick review (numbers, days, months, the date and measure words) and a change of approach. Michelle proposed learning sentence structure first, so you understand why things are said that way and can build sentences by looking words up in a dictionary. In that same class you already built two paragraphs in Chinese.",
+    zh:"第六课：先快速复习数字、星期、月份、日期和量词，然后换一种学法：先学句子结构，明白为什么这样说，再查词典自己造句。这节课就造了两个段落。"},
+  source:{
+    es:"Armado con la transcripción de la clase y el apunte en PDF de Michelle (Clase 2026-11-02). Una oración del PDF tiene un descuido (我读书数学 wǒ dúshū shùxué); acá va corregida según lo que ella explicó en clase.",
+    en:"Built from the class transcript and Michelle's PDF notes (Clase 2026-11-02). One sentence in the PDF has a slip (我读书数学 wǒ dúshū shùxué); here it's corrected following what she explained in class.",
+    zh:"根据课堂录音文字稿和老师的 PDF 笔记（Clase 2026-11-02）整理。笔记里的「我读书数学」按老师课上的讲解改为「我读数学」。"},
+  parts:[
+    {h:{es:"1. Repaso: semana, mes y fecha", en:"1. Review: week, month and date", zh:"1. 复习：星期、月份、日期"},
+     p:{es:`Contaste de 0 a 10 sin problema. Después Michelle preguntó 星期三 (xīngqīsān): miércoles, «semana + tres». Repasó las tres formas de la semana: 星期 (xīngqī), 周 (zhōu) y 礼拜 (lǐbài).
+El mes es 月 (yuè), la luna: 七月 (qīyuè) es julio. Michelle: «si no te acordás 七月, nunca te vas a acordar que es julio»: con los números ya tenés los doce meses.
+La fecha: 2026年07月06号 (èr líng èr liù nián qīyuè liù hào). El año se dice cifra por cifra, y siempre «de grande a chico»: año, mes, día.
+Michelle lo relacionó con la cultura: al presentar a un grupo se va del cargo más alto al más bajo, y en una familia (por ejemplo en un funeral) también se ordena de mayor a menor. Por eso en chino cada pariente tiene su palabra.`,
+        en:`You counted 0 to 10 with no trouble. Then Michelle asked 星期三 (xīngqīsān): Wednesday, "week + three". She reviewed the three forms of "week": 星期 (xīngqī), 周 (zhōu) and 礼拜 (lǐbài).
+Month is 月 (yuè), the moon: 七月 (qīyuè) is July. Michelle: "if you don't remember 七月, you'll never remember it's July": with the numbers you already have all twelve months.
+The date: 2026年07月06号 (èr líng èr liù nián qīyuè liù hào). The year is said digit by digit, and always "from big to small": year, month, day.
+Michelle tied it to culture: when a group is introduced you go from the highest rank to the lowest, and a family (at a funeral, for instance) is also ordered from eldest to youngest. That's why every relative has their own word in Chinese.`,
+        zh:`从0数到10。星期三：星期、周、礼拜三种说法。月是月亮：七月。日期：2026年07月06号，年份逐个数字读，顺序从大到小：年、月、日。中国文化里很多事都从大到小：介绍职位、家族排序。`},
+     ex:[["星期三","xīngqīsān","miércoles","Wednesday"],["七月","qīyuè","julio","July"],["2026年7月6号","èr líng èr liù nián qīyuè liù hào","6 de julio de 2026","July 6, 2026"]]},
+
+    {h:{es:"2. 1285, 两 (liǎng) y los clasificadores", en:"2. 1285, 两 (liǎng) and measure words", zh:"2. 1285、两和量词"},
+     p:{es:`Leíste 1285: 一千两百八十五 (yìqiān liǎngbǎi bāshíwǔ). Michelle: «el dos se pronuncia 两 (liǎng); solamente en la unidad se pronuncia 二 (èr)». (En las decenas también es 二: 二十 èrshí; y con 百 bǎi también se oye 二百 èrbǎi.)
+Cuando contás cosas (dos casas, dos autos, dos personas) también es 两: 两个人 (liǎng ge rén). «Este 两 no es como un número: es como un adjetivo que describe el sustantivo».
+Los clasificadores: «palabras que clasifican a qué grupo pertenece el sustantivo». 个 (gè) para personas y lo general; 位 (wèi) para personas, más formal; 本 (běn) para lo que tiene encuadernación: 一本书 (yì běn shū) un libro.
+Michelle reconoció que al principio muchas cosas se aprenden de memoria, igual que les pasa a los chinos con el español.`,
+        en:`You read 1285: 一千两百八十五 (yìqiān liǎngbǎi bāshíwǔ). Michelle: "two is pronounced 两 (liǎng); only in the units is it pronounced 二 (èr)". (The tens also take 二: 二十 èrshí; and with 百 bǎi you also hear 二百 èrbǎi.)
+When you count things (two houses, two cars, two people) it's also 两: 两个人 (liǎng ge rén). "This 两 isn't like a number: it's like an adjective describing the noun".
+Measure words: "words that classify which group the noun belongs to". 个 (gè) for people and things in general; 位 (wèi) for people, more formal; 本 (běn) for anything bound: 一本书 (yì běn shū) a book.
+Michelle admitted that at the start a lot has to be memorised, just as Chinese speakers have to with Spanish.`,
+        zh:`1285：一千两百八十五。老师：二在个位读"二"，其他读"两"（十位也用"二"：二十；百前也可以说二百）。数东西用两：两个人，这个"两"像形容词。量词说明名词属于哪一类：个、位（正式）、本（有装订的）：一本书。`},
+     ex:[["一千两百八十五","yìqiān liǎngbǎi bāshíwǔ","1285","1,285"],["两个人","liǎng ge rén","dos personas","two people"],["一位老师","yí wèi lǎoshī","un profesor (formal)","a teacher (polite)"],["一本书","yì běn shū","un libro","a book"]]},
+
+    {h:{es:"3. Otra forma de estudiar", en:"3. A different way to study", zh:"3. 换一种学法"},
+     p:{es:`Como tenés poco tiempo para memorizar vocabulario, Michelle propuso cambiar el enfoque:
+• Primero, reconocer los sonidos: «una película corta de un minuto, si captás dos palabras, con las imágenes podés deducir».
+• El vocabulario, «si te acordás, te acordás; si no, no pasa nada»: va a venir con el tiempo.
+• Lo nuevo: la estructura de las oraciones y de las preguntas. «Con la ayuda de Google, buscando los vocabularios por separado, muy rápido vas a poder armar frases», y vas a saber por qué se dicen así en lugar de repetir de memoria.
+Vladimir pidió llegar a conversaciones simples que se puedan repetir; Michelle respondió que justamente para eso primero hace falta la estructura de oraciones y preguntas. Después ella va a escribir párrafos cortos para que busques las palabras y armes oraciones.
+Su conclusión: la gramática china se aprende mucho más rápido que la del español o el inglés; lo difícil son los caracteres, los tonos y acordarse del vocabulario.`,
+        en:`Since you have little time to memorise vocabulary, Michelle proposed a new approach:
+• First, recognise the sounds: "a one-minute short film: if you catch two words, the images let you work it out".
+• Vocabulary: "if you remember it, fine; if not, no problem": it will come with time.
+• What's new: the structure of sentences and questions. "With Google's help, looking the words up one by one, you'll very soon be able to build sentences", and you'll know why they're said that way instead of repeating them from memory.
+Vladimir asked to work towards simple conversations that can be repeated; Michelle answered that this is exactly why sentence and question structure come first. Then she'll write short paragraphs for you to look up the words and build sentences.
+Her conclusion: Chinese grammar is learnt much faster than Spanish or English grammar; the hard parts are the characters, the tones and remembering vocabulary.`,
+        zh:`时间少就不硬背生词：先学会听出声音；生词慢慢来。新的重点是句子和问句的结构：查词典就能很快造句，也知道为什么这样说。以后老师会写短文让你查词造句。老师认为汉语语法比西班牙语、英语容易，难的是汉字、声调和记生词。`}},
+
+    {h:{es:"4. El orden de la oración", en:"4. Sentence word order", zh:"4. 汉语的语序"},
+     p:{es:`Michelle comparó con el español: «Él compró una torta para su mamá en la panadería ayer» = sujeto, verbo, objeto directo, objeto indirecto, lugar, tiempo.
+En chino: SUJETO + TIEMPO + LUGAR + VERBO + OBJETO. El tiempo y el lugar pasan adelante del verbo: «él ayer en la panadería compró una torta para su mamá».
+• El tiempo va después del sujeto; para destacarlo puede ir adelante de todo.
+• El lugar va antes del verbo, salvo con los verbos de movimiento (ir, caminar, correr): ahí va después: 我去学校 (wǒ qù xuéxiào).
+• El sujeto siempre tiene que estar: «en chino no tenés conjugación verbal». 我 (wǒ) no se puede omitir como el «yo» de «estudio».
+• «La gramática es muy fija».`,
+        en:`Michelle compared it with Spanish: "Él compró una torta para su mamá en la panadería ayer" (He bought a cake for his mom at the bakery yesterday) = subject, verb, direct object, indirect object, place, time.
+In Chinese: SUBJECT + TIME + PLACE + VERB + OBJECT. Time and place move before the verb: "he yesterday at the bakery bought a cake for his mom".
+• Time goes after the subject; to stress it, it can go first.
+• Place goes before the verb, except with movement verbs (go, walk, run): then it goes after: 我去学校 (wǒ qù xuéxiào).
+• The subject must always be there: "Chinese has no verb conjugation". 我 (wǒ) can't be dropped like the "yo" in Spanish "estudio".
+• "The grammar is very fixed".`,
+        zh:`西班牙语：主语、动词、直接宾语、间接宾语、地点、时间。汉语：主语＋时间＋地点＋动词＋宾语。时间在主语后（强调时可放句首）；地点在动词前，移动动词例外（我去学校）；主语一定要说，因为没有动词变位。语法很固定。`},
+     ex:[["他昨天在面包店买了一个蛋糕给他妈妈。","tā zuótiān zài miànbāodiàn mǎi le yí ge dàngāo gěi tā māma","él ayer en la panadería compró una torta para su mamá","he bought a cake for his mom at the bakery yesterday"],["我去学校。","wǒ qù xuéxiào","voy a la escuela (movimiento: lugar después)","I go to school (movement: place after)"]]},
+
+    {h:{es:"5. Las primeras oraciones", en:"5. The first sentences", zh:"5. 第一批句子"},
+     p:{es:`Vladimir propuso «El gato se comió el ratón ayer» y la armó buscando cada palabra: 猫 (māo), 吃 (chī), 老鼠 (lǎoshǔ), 昨天 (zuótiān). Con el tiempo después del sujeto: 猫昨天吃老鼠 (māo zuótiān chī lǎoshǔ).
+Después, «El alumno estudia para el examen de mañana»: 学生为了明天的考试读书 (xuéshēng wèile míngtiān de kǎoshì dúshū).
+• 为了 (wèile) marca un propósito; «funciona como un adverbio, y los adverbios van después del sujeto».
+• 明天的考试 (míngtiān de kǎoshì), «el examen de mañana», usa el posesivo 的 (de), como «el libro de María».
+(En estas oraciones el verbo no cambia; el pasado lo da 昨天 zuótiān. Más adelante aparecerá 了 le, la marca de acción terminada.)`,
+        en:`Vladimir suggested "The cat ate the mouse yesterday" and built it by looking up each word: 猫 (māo), 吃 (chī), 老鼠 (lǎoshǔ), 昨天 (zuótiān). With time after the subject: 猫昨天吃老鼠 (māo zuótiān chī lǎoshǔ).
+Then "The student studies for tomorrow's exam": 学生为了明天的考试读书 (xuéshēng wèile míngtiān de kǎoshì dúshū).
+• 为了 (wèile) marks a purpose; "it works like an adverb, and adverbs go after the subject".
+• 明天的考试 (míngtiān de kǎoshì), "tomorrow's exam", uses the possessive 的 (de), like "María's book".
+(In these sentences the verb doesn't change; 昨天 zuótiān gives the past. Later 了 le, the marker of a finished action, will come up.)`,
+        zh:`猫昨天吃老鼠：时间在主语后。学生为了明天的考试读书：为了表示目的，像副词，放在主语后；明天的考试用"的"。动词不变，过去由时间词表示；以后会学"了"。`},
+     ex:[["猫昨天吃老鼠。","māo zuótiān chī lǎoshǔ","el gato se comió el ratón ayer","the cat ate the mouse yesterday"],["学生为了明天的考试读书。","xuéshēng wèile míngtiān de kǎoshì dúshū","el alumno estudia para el examen de mañana","the student studies for tomorrow's exam"]]},
+
+    {h:{es:"6. Los verbos compuestos (verbo + objeto)", en:"6. Verb-object compounds", zh:"6. 动宾式动词"},
+     p:{es:`«En chino hay un montón de verbos compuestos»: el verbo ya trae su objeto adentro. 读书 (dúshū) estudiar = leer + libro; 吃饭 (chīfàn) comer = comer + arroz; 跳舞 (tiàowǔ) bailar = saltar + danza; 下雨 (xiàyǔ) llover = caer + lluvia.
+La regla: «cuando hay un objeto directo, hay que omitir el objeto del verbo; cuando no hay, hay que ponerlo».
+• 我读数学 (wǒ dú shùxué) estudio matemáticas; 我的哥哥每天读书 (wǒ de gēge měitiān dúshū) mi hermano estudia todos los días. (El PDF dice 我读书数学 wǒ dúshū shùxué, pero en clase Michelle explicó que ese 书 shū se saca porque está 数学 shùxué.)
+• 她吃苹果 (tā chī píngguǒ) ella come manzana; 他在我家吃饭 (tā zài wǒ jiā chīfàn) él come en mi casa.
+• 我的朋友在公园跳 Tango (wǒ de péngyǒu zài gōngyuán tiào Tango); 每个礼拜我的妹妹和我去跳舞 (měi ge lǐbài wǒ de mèimei hé wǒ qù tiàowǔ).
+Y una regla más: si hay cantidad (mucho, poco, un poquito), va ENTRE las dos partes: 下很多雨 (xià hěn duō yǔ) llueve mucho.`,
+        en:`"Chinese has loads of compound verbs": the verb carries its object inside. 读书 (dúshū) to study = read + book; 吃饭 (chīfàn) to eat = eat + rice; 跳舞 (tiàowǔ) to dance = jump + dance; 下雨 (xiàyǔ) to rain = fall + rain.
+The rule: "when there's a direct object, drop the verb's object; when there isn't, keep it".
+• 我读数学 (wǒ dú shùxué) I study maths; 我的哥哥每天读书 (wǒ de gēge měitiān dúshū) my brother studies every day. (The PDF has 我读书数学 wǒ dúshū shùxué, but in class Michelle explained that the 书 shū goes because 数学 shùxué is there.)
+• 她吃苹果 (tā chī píngguǒ) she eats apples; 他在我家吃饭 (tā zài wǒ jiā chīfàn) he eats at my house.
+• 我的朋友在公园跳 Tango (wǒ de péngyǒu zài gōngyuán tiào Tango); 每个礼拜我的妹妹和我去跳舞 (měi ge lǐbài wǒ de mèimei hé wǒ qù tiàowǔ).
+One more rule: an amount (a lot, a little, a bit) goes BETWEEN the two parts: 下很多雨 (xià hěn duō yǔ) it rains a lot.`,
+        zh:`汉语有很多动宾式动词：读书、吃饭、跳舞、下雨。规则：有宾语时去掉动词里的宾语，没有宾语时要保留：我读数学／我的哥哥每天读书；她吃苹果／他在我家吃饭；跳 Tango／去跳舞。数量放在中间：下很多雨。`},
+     ex:[["读书","dúshū","estudiar","to study"],["我读数学。","wǒ dú shùxué","estudio matemáticas","I study maths"],["他在我家吃饭。","tā zài wǒ jiā chīfàn","él come en mi casa","he eats at my house"],["她吃苹果。","tā chī píngguǒ","ella come manzana","she eats apples"],["下很多雨","xià hěn duō yǔ","llueve mucho","it rains a lot"]]},
+
+    {h:{es:"7. El primer párrafo", en:"7. The first paragraph", zh:"7. 第一段"},
+     p:{es:`«Ayer llovía mucho. Estuve en casa. Limpié la casa y cociné. Comí una hamburguesa y bebí un vaso de té.» Primero cada oración por separado y después todas juntas.
+• 在 (zài) es verbo y también preposición: «como preposición es "en", como verbo es "estar"»: 我在家里 (wǒ zài jiālǐ).
+• 杯 (bēi) es vaso o taza: «en chino no se divide».
+Michelle: «¿viste que ya armaste un párrafo?».
+(Un detalle de estilo: 和 hé une sobre todo sustantivos; entre dos acciones un nativo suele usar coma: 我吃了一个汉堡，喝了一杯茶 wǒ chī le yí ge hànbǎo, hē le yì bēi chá.)`,
+        en:`"Yesterday it rained a lot. I was at home. I cleaned the house and cooked. I ate a hamburger and drank a glass of tea." First each sentence on its own, then all together.
+• 在 (zài) is a verb and also a preposition: "as a preposition it's 'at', as a verb it's 'to be'": 我在家里 (wǒ zài jiālǐ).
+• 杯 (bēi) is a glass or a cup: "Chinese doesn't split them".
+Michelle: "see, you've already built a paragraph?".
+(A style note: 和 hé mainly links nouns; between two actions a native usually uses a comma: 我吃了一个汉堡，喝了一杯茶 wǒ chī le yí ge hànbǎo, hē le yì bēi chá.)`,
+        zh:`昨天下很多雨。我在家里。我打扫房子和煮饭。我吃一个汉堡和喝一杯茶。"在"既是动词也是介词；杯子、玻璃杯都是杯。（"和"一般连接名词，两个动作之间更常用逗号：我吃了一个汉堡，喝了一杯茶。）`},
+     ex:[["昨天下很多雨。","zuótiān xià hěn duō yǔ","ayer llovió mucho","it rained a lot yesterday"],["我在家里。","wǒ zài jiālǐ","estuve en casa","I was at home"],["我打扫房子和煮饭。","wǒ dǎsǎo fángzi hé zhǔfàn","limpié la casa y cociné","I cleaned the house and cooked"],["我吃一个汉堡和喝一杯茶。","wǒ chī yí ge hànbǎo hé hē yì bēi chá","comí una hamburguesa y tomé un vaso de té","I ate a hamburger and drank a glass of tea"]]},
+
+    {h:{es:"8. El segundo párrafo: fútbol", en:"8. The second paragraph: football", zh:"8. 第二段：踢足球"},
+     p:{es:`Vladimir inventó: «Hoy voy a jugar al fútbol cerca de mi escuela. Hace mucho que no jugaba. Encontré un grupo en internet.»
+• «En chino no se dice jugar al fútbol»: es 踢足球 (tī zúqiú), patear la pelota de pie. «El fútbol es el único deporte de pelota» con 踢 (tī), que tiene el radical de pie; el resto va con 打 (dǎ, pegar), que tiene el de mano: 打篮球 (dǎ lánqiú).
+• 去 (qù) es un verbo de movimiento, así que el lugar va después: 我要去我的学校附近踢足球 (wǒ yào qù wǒ de xuéxiào fùjìn tī zúqiú). «Cerca de donde vivo» quedó para más adelante (es una oración relativa): por eso «cerca de mi escuela».
+• «Hace mucho» es duración, o sea tiempo: va después del sujeto. Y «no en el pasado es 没有 (méiyǒu)»: 我很久没有玩 (wǒ hěn jiǔ méiyǒu wán): sujeto, tiempo, negación, verbo.
+• 找到 (zhǎodào), encontrar, ya es pasado: «si lo encontraste, fue en el pasado». En internet: 在互联网上 (zài hùliánwǎng shàng), o más corto 网上 (wǎngshàng).`,
+        en:`Vladimir made up: "Today I'm going to play football near my school. I hadn't played for a long time. I found a group on the internet."
+• "In Chinese you don't say 'play' football": it's 踢足球 (tī zúqiú), kick the foot-ball. "Football is the only ball sport" with 踢 (tī), which has the foot radical; the rest take 打 (dǎ, hit), which has the hand radical: 打篮球 (dǎ lánqiú).
+• 去 (qù) is a movement verb, so the place comes after: 我要去我的学校附近踢足球 (wǒ yào qù wǒ de xuéxiào fùjìn tī zúqiú). "Near where I live" was left for later (it's a relative clause): hence "near my school".
+• "A long time" is duration, i.e. time: it goes after the subject. And "'no' in the past is 没有 (méiyǒu)": 我很久没有玩 (wǒ hěn jiǔ méiyǒu wán): subject, time, negation, verb.
+• 找到 (zhǎodào), to find, is already past: "if you found it, it was in the past". On the internet: 在互联网上 (zài hùliánwǎng shàng), or shorter 网上 (wǎngshàng).`,
+        zh:`今天，我要去我的学校附近踢足球。我很久没有玩。我在互联网上找到一个群。足球用"踢"（足字旁），其他球类用"打"（提手旁）。去是移动动词，地点在后。很久是时间，放在主语后；过去的否定用没有。找到表示已经找到；也可以说网上。`},
+     ex:[["踢足球","tī zúqiú","jugar al fútbol","to play football"],["今天，我要去我的学校附近踢足球。","jīntiān, wǒ yào qù wǒ de xuéxiào fùjìn tī zúqiú","hoy voy a jugar al fútbol cerca de mi escuela","today I'm playing football near my school"],["我很久没有玩。","wǒ hěn jiǔ méiyǒu wán","hace mucho que no juego","I haven't played for a long time"],["我在互联网上找到一个群。","wǒ zài hùliánwǎng shàng zhǎodào yí ge qún","encontré un grupo en internet","I found a group on the internet"]]},
+
+    {h:{es:"9. Las palabras de posición van después", en:"9. Position words go after", zh:"9. 方位词在后"},
+     p:{es:`Última oración: «El perro está debajo de la mesa» = 狗在桌子下面 (gǒu zài zhuōzi xiàmiàn).
+Michelle: «en español la posición va adelante del objeto: en el medio de, al lado de. En chino es al revés: primero el objeto y después la posición». 桌子 (zhuōzi) mesa + 下面 (xiàmiàn) debajo.
+Y se despidieron con 下个礼拜见 (xià ge lǐbài jiàn), «nos vemos la semana que viene».`,
+        en:`Last sentence: "The dog is under the table" = 狗在桌子下面 (gǒu zài zhuōzi xiàmiàn).
+Michelle: "in Spanish the position goes before the object: in the middle of, next to. In Chinese it's the reverse: first the object, then the position". 桌子 (zhuōzi) table + 下面 (xiàmiàn) under.
+And you said goodbye with 下个礼拜见 (xià ge lǐbài jiàn), "see you next week".`,
+        zh:`狗在桌子下面。西班牙语方位词在前，汉语先说名词再说方位：桌子下面。下个礼拜见！`},
+     ex:[["狗在桌子下面。","gǒu zài zhuōzi xiàmiàn","el perro está debajo de la mesa","the dog is under the table"],["下个礼拜见！","xià ge lǐbài jiàn","¡nos vemos la semana que viene!","see you next week!"]]}
+  ],
+  tips:{
+    es:["Siempre: SUJETO + TIEMPO + LUGAR + VERBO + OBJETO. Con verbos de movimiento como 去 (qù), el lugar va después.",
+        "Nunca omitas el sujeto: el verbo chino no dice quién.",
+        "Verbos compuestos: con objeto se saca el de adentro (我读数学 wǒ dú shùxué); sin objeto se deja (我读书 wǒ dúshū). La cantidad va en el medio: 下很多雨 (xià hěn duō yǔ).",
+        "Palabras de posición y 附近 (fùjìn) van DESPUÉS del lugar: 桌子下面 (zhuōzi xiàmiàn), 学校附近 (xuéxiào fùjìn).",
+        "No en pasado = 没有 (méiyǒu); en presente o futuro = 不 (bù).",
+        "Escuchá primero, sin leer: alcanza con captar dos palabras para ir entendiendo."],
+    en:["Always: SUBJECT + TIME + PLACE + VERB + OBJECT. With movement verbs like 去 (qù), the place goes after.",
+        "Never drop the subject: the Chinese verb doesn't say who.",
+        "Compound verbs: with an object, drop the built-in one (我读数学 wǒ dú shùxué); without one, keep it (我读书 wǒ dúshū). An amount goes in the middle: 下很多雨 (xià hěn duō yǔ).",
+        "Position words and 附近 (fùjìn) go AFTER the place: 桌子下面 (zhuōzi xiàmiàn), 学校附近 (xuéxiào fùjìn).",
+        "'Not' in the past = 没有 (méiyǒu); present or future = 不 (bù).",
+        "Listen first, without reading: catching two words is enough to start understanding."],
+    zh:["主语＋时间＋地点＋动词＋宾语；移动动词（去）地点在后。","主语不能省略。","动宾式动词：有宾语去掉内部宾语（我读数学），没有就保留（我读书）；数量放中间（下很多雨）。","方位词和附近放在地点后：桌子下面、学校附近。","过去的否定用没有，现在和将来用不。","先听，不看字：抓住两个词就能慢慢听懂。"]},
+  homework:{
+    es:"Para la próxima clase, si tenés ganas y tiempo: armar todas las oraciones que quieras con la estructura (sujeto, tiempo, lugar, verbo, objeto), buscando las palabras en el diccionario. Y si querés un desafío, armar un párrafo.",
+    en:"For next class, if you feel like it and have time: build as many sentences as you want with the structure (subject, time, place, verb, object), looking words up in a dictionary. And for a challenge, build a paragraph.",
+    zh:"下次上课前，有时间的话用「主语＋时间＋地点＋动词＋宾语」的结构查词典造句，想挑战的话写一段短文。"},
+  check:[
+    {q:{es:"«Miércoles» y «julio»",en:"\"Wednesday\" and \"July\""},a:"星期三 · 七月",py:"xīngqīsān · qīyuè"},
+    {q:{es:"«1285»",en:"\"1,285\""},a:"一千两百八十五",py:"yìqiān liǎngbǎi bāshíwǔ"},
+    {q:{es:"«Dos personas» y «un libro»",en:"\"Two people\" and \"a book\""},a:"两个人 · 一本书",py:"liǎng ge rén · yì běn shū"},
+    {q:{es:"El orden de la oración china",en:"Chinese sentence order"},a:"主语 + 时间 + 地点 + 动词 + 宾语",py:"sujeto + tiempo + lugar + verbo + objeto"},
+    {q:{es:"«El gato se comió el ratón ayer»",en:"\"The cat ate the mouse yesterday\""},a:"猫昨天吃老鼠。",py:"māo zuótiān chī lǎoshǔ"},
+    {q:{es:"«Estudio matemáticas» (¿va 书?)",en:"\"I study maths\" (does 书 stay?)"},a:"我读数学。",py:"wǒ dú shùxué"},
+    {q:{es:"«Él come en mi casa»",en:"\"He eats at my house\""},a:"他在我家吃饭。",py:"tā zài wǒ jiā chīfàn"},
+    {q:{es:"«Ayer llovió mucho»",en:"\"It rained a lot yesterday\""},a:"昨天下很多雨。",py:"zuótiān xià hěn duō yǔ"},
+    {q:{es:"«Jugar al fútbol» y «jugar al básquet»",en:"\"Play football\" and \"play basketball\""},a:"踢足球 · 打篮球",py:"tī zúqiú · dǎ lánqiú"},
+    {q:{es:"«Hace mucho que no juego»",en:"\"I haven't played for a long time\""},a:"我很久没有玩。",py:"wǒ hěn jiǔ méiyǒu wán"},
+    {q:{es:"«El perro está debajo de la mesa»",en:"\"The dog is under the table\""},a:"狗在桌子下面。",py:"gǒu zài zhuōzi xiàmiàn"}
+  ]
 }
 };

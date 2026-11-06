@@ -284,3 +284,14 @@ header p{font-size:.85rem;color:var(--sub);margin-top:4px;line-height:1.5}
 #studyBody .sttheory .rex .rrow.stwide{grid-column:1 / -1}
 #studyBody .sttheory .rmean{font-size:.8rem}
 .styear{margin-top:6px;color:var(--accent)}
+/* "Armar oraciones" exercise */
+.stprompt{font-size:1.05rem;font-weight:600;margin:8px 0}
+.stans{min-height:58px;display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start;padding:8px;border:2px dashed var(--border);border-radius:12px;margin:6px 0}
+.stans.ok{border:2px solid var(--good);background:var(--good-bg)}
+.stans.no{border:2px solid var(--bad);background:var(--bad-bg)}
+.stchips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.stchip{display:inline-flex;flex-direction:column;align-items:center;gap:2px;padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;min-width:52px}
+.stchip b{font-size:1.25rem;font-weight:600}
+.stchip small{font-size:.75rem;color:var(--sub)}
+.stchip em{font-style:normal;font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:.04em}
+.stresh{font-weight:700;margin:6px 0}

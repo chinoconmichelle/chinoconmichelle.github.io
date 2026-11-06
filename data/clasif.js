@@ -839,6 +839,108 @@ THE PIECES:
 PRONUNCIATION: yì tiáo gǒu. gǒu is 3rd tone: dips and rises.`,
 zh:`是什么："一条狗"。狗可以用两个量词：一只狗 / 一条狗，都对。
 但猫不行：一条猫 ✗，只能说 一只猫。量词有规律（动物用 只，长的用 条），但也有例外要一个一个记。
-狗：犭（犬）+ 句（表音）。`}}
+狗：犭（犬）+ 句（表音）。`}},
+  {id:"cla-25",s:"本",py:"běn",es:"clasificador de libros (lo encuadernado)",en:"measure word for books (bound things)",cl:"c6",
+   x:{
+es:`QUÉ ES: el clasificador para lo que está encuadernado: libros, cuadernos, revistas. Michelle: «本 (běn): tiene encuadernación». 一本书 (yì běn shū) un libro · 两本杂志 (liǎng běn zázhì) dos revistas · 这本书 (zhè běn shū) este libro.
+
+EL CARÁCTER: 木 (mù, árbol) con una rayita en la RAÍZ: un signo indicativo que señala la base del árbol, «raíz, origen». De «raíz» pasó a «lo fundamental», «el texto original», y de ahí a contar libros, volúmenes. También forma palabras: 日本 (Rìběn, Japón: «el origen del sol»), 本来 (běnlái, originalmente).
+
+CONTRASTE: 末 (mò) tiene la raya ARRIBA: «la punta, el final». 本 (běn) y 末 (mò) son la raíz y la copa.
+
+PRONUNCIACIÓN: běn, tercer tono. 一本 se dice yì běn: 一 (yī) pasa a cuarto tono delante de un tercero.`,
+en:`WHAT IT IS: the measure word for bound things: books, notebooks, magazines. Michelle: "本 (běn): it has a binding". 一本书 (yì běn shū) a book · 两本杂志 (liǎng běn zázhì) two magazines · 这本书 (zhè běn shū) this book.
+
+THE CHARACTER: 木 (mù, tree) with a small stroke at the ROOT: an indicative sign pointing at the base of the tree, "root, origin". From "root" it went to "the essential", "the original text", and from there to counting books, volumes. It also forms words: 日本 (Rìběn, Japan: "origin of the sun"), 本来 (běnlái, originally).
+
+CONTRAST: 末 (mò) has the stroke at the TOP: "the tip, the end". 本 (běn) and 末 (mò) are root and crown.
+
+PRONUNCIATION: běn, 3rd tone. 一本 is said yì běn: 一 (yī) becomes 4th tone before a 3rd.`,
+zh:`是什么：书本类（有装订的东西）的量词：一本书、两本杂志、这本书。老师：本＝有装订的。
+
+字形：木的下面加一横，指树根，本义是根本，引申为书本。日本、本来。对比：末（上面一横，树梢）。
+
+发音：一本 yì běn。`}},
+  {id:"cla-26",s:"一本书",t:"一本書",py:"yì běn shū",es:"un libro",en:"a book",cl:"c6",
+   x:{
+es:`QUÉ ES: número + clasificador + sustantivo, con el clasificador de lo encuadernado: 一 (yī) + 本 (běn) + 书 (shū, libro).
+
+POR QUÉ 本 (běn) Y NO 个 (gè): Michelle: «clasificador quiere decir que son palabras que clasifican a qué grupo pertenece el sustantivo». El libro pertenece al grupo de las cosas encuadernadas → 本 (běn). Con libros no se usa 个 (gè): «一个书» (yí ge shū) suena mal.
+
+书 (shū), tradicional 書 (shū): arriba 聿 (yù, una mano con un pincel); abajo, antiguamente, 者 (zhě), solo por el sonido. Lo escrito con pincel.
+
+MÁS: 两本书 (liǎng běn shū) dos libros · 这本书 (zhè běn shū) este libro · 那本书 (nà běn shū) ese libro.
+
+PRONUNCIACIÓN: yì běn shū.`,
+en:`WHAT IT IS: number + measure word + noun, with the measure word for bound things: 一 (yī) + 本 (běn) + 书 (shū, book).
+
+WHY 本 (běn) AND NOT 个 (gè): Michelle: "measure words are words that classify which group the noun belongs to". A book belongs to the group of bound things → 本 (běn). With books you don't use 个 (gè): "一个书" (yí ge shū) sounds wrong.
+
+书 (shū), traditional 書 (shū): on top 聿 (yù, a hand holding a brush); below, originally, 者 (zhě), just for the sound. What's written with a brush.
+
+MORE: 两本书 (liǎng běn shū) two books · 这本书 (zhè běn shū) this book · 那本书 (nà běn shū) that book.
+
+PRONUNCIATION: yì běn shū.`,
+zh:`是什么：数词＋量词＋名词：一本书。
+
+老师：量词说明名词属于哪一类。书是有装订的东西，用"本"，不说"一个书"。
+
+更多：两本书、这本书、那本书。`}},
+  {id:"cla-27",s:"杯",py:"bēi",es:"vaso, taza (y su clasificador)",en:"glass, cup (and its measure word)",cl:"c6",
+   x:{
+es:`QUÉ ES: «vaso, taza», y también el clasificador de las bebidas: 一杯茶 (yì bēi chá) un vaso o una taza de té. Michelle: «杯 es taza o vaso, lo mismo; en chino no se divide».
+
+CLASIFICADOR DE RECIPIENTE: como en español «un vaso de agua»: el recipiente mide la cantidad. 一杯水 (yì bēi shuǐ) un vaso de agua · 两杯咖啡 (liǎng bēi kāfēi) dos cafés.
+
+EL CARÁCTER: 木 (mù, madera) + 不 (bù), que da el sonido (bēi / bù). Las primeras tazas eran de madera laqueada.
+
+COMO OBJETO: 杯子 (bēizi) el vaso, la taza: 一个杯子 (yí ge bēizi) un vaso (vacío, el objeto).
+
+PRONUNCIACIÓN: bēi, primer tono. 一杯 se dice yì bēi.`,
+en:`WHAT IT IS: "glass, cup", and also the measure word for drinks: 一杯茶 (yì bēi chá) a glass or a cup of tea. Michelle: "杯 is cup or glass, the same; Chinese doesn't split them".
+
+CONTAINER MEASURE WORD: like English "a glass of water": the container measures the amount. 一杯水 (yì bēi shuǐ) a glass of water · 两杯咖啡 (liǎng bēi kāfēi) two coffees.
+
+THE CHARACTER: 木 (mù, wood) + 不 (bù), which gives the sound (bēi / bù). The first cups were made of lacquered wood.
+
+AS AN OBJECT: 杯子 (bēizi) the glass, the cup: 一个杯子 (yí ge bēizi) a glass (empty, the object).
+
+PRONUNCIATION: bēi, 1st tone. 一杯 is said yì bēi.`,
+zh:`是什么：杯子；也是饮料的量词：一杯茶。老师：杯子、玻璃杯都叫杯。
+
+容器量词：一杯水、两杯咖啡。
+
+字形：木＋不（声旁），古代的杯多为木制漆器。
+
+物品：杯子，一个杯子。`}},
+  {id:"cla-28",s:"两个人",t:"兩個人",py:"liǎng ge rén",es:"dos personas",en:"two people",cl:"c6",
+   x:{
+es:`QUÉ ES: el ejemplo del apunte de Michelle («2 个人», liǎng ge rén): delante de un clasificador, «dos» se dice 两 (liǎng), no 二 (èr).
+
+LA EXPLICACIÓN DE MICHELLE: «este 两 (liǎng) no es como un número: es como un adjetivo que describe el sustantivo». O sea, cuando contás cosas (dos personas, dos casas, dos autos), es 两 (liǎng): 两个人 (liǎng ge rén), 两本书 (liǎng běn shū).
+
+个 (gè) PARA PERSONAS: el clasificador general; para personas con respeto, 位 (wèi): 两位老师 (liǎng wèi lǎoshī).
+人 (rén): una persona caminando, vista de costado.
+
+OJO: «二个人» (èr ge rén) es un error típico. 二 (èr) se usa para contar (一、二、三 yī, èr, sān), en fechas y dentro de los números: 二十 (èrshí) veinte.
+
+PRONUNCIACIÓN: liǎng ge rén. 个 (ge) átono.`,
+en:`WHAT IT IS: the example from Michelle's handout ("2 个人", liǎng ge rén): before a measure word, "two" is 两 (liǎng), not 二 (èr).
+
+MICHELLE'S EXPLANATION: "this 两 (liǎng) isn't like a number: it's like an adjective describing the noun". So when you count things (two people, two houses, two cars), it's 两 (liǎng): 两个人 (liǎng ge rén), 两本书 (liǎng běn shū).
+
+个 (gè) FOR PEOPLE: the general measure word; for people, respectfully, 位 (wèi): 两位老师 (liǎng wèi lǎoshī).
+人 (rén): a person walking, seen from the side.
+
+CAREFUL: "二个人" (èr ge rén) is a typical mistake. 二 (èr) is for counting (一、二、三 yī, èr, sān), dates, and inside numbers: 二十 (èrshí) twenty.
+
+PRONUNCIATION: liǎng ge rén. 个 (ge) toneless.`,
+zh:`是什么：讲义上的例子：两个人。量词前的"二"要说"两"。
+
+老师：这个"两"不像数字，像形容词，修饰名词：两个人、两本书。
+
+个用于人；表示尊敬用位：两位老师。
+
+注意：不说"二个人"。数数、日期、二十用"二"。`}}
   ]
 });

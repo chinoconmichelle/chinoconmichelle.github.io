@@ -695,6 +695,31 @@ EXAMPLE: China has about 十四亿 (shísì yì) people: 14 × 100 million = 1.4
 One million = 一百万 (yìbǎi wàn), "a hundred ten-thousands". That's the trap: there's no single word for "million".
 
 PRONUNCIATION: yì, 4th tone (falling). Don't confuse it with 一 (yī, one): 一亿 (yí yì) = a hundred million.`,
-zh:`亿：一万万。老师的数位表：个、十、百、千、万、十万、百万、千万、亿、十亿。汉语四位一组，所以有万和亿。这里的"个"是个位。亻＋乙（声旁）；繁体億。中国约有十四亿人。一百万＝一个"百万"。`}}
+zh:`亿：一万万。老师的数位表：个、十、百、千、万、十万、百万、千万、亿、十亿。汉语四位一组，所以有万和亿。这里的"个"是个位。亻＋乙（声旁）；繁体億。中国约有十四亿人。一百万＝一个"百万"。`}},
+  {id:"num-29",s:"一千两百八十五",t:"一千兩百八十五",py:"yìqiān liǎngbǎi bāshíwǔ",es:"mil doscientos ochenta y cinco (1285)",en:"one thousand two hundred eighty-five (1,285)",cl:"c6",
+   x:{
+es:`QUÉ ES: el número que Michelle pidió en el repaso de la clase 6: 1285. Se lee de lo grande a lo chico, igual que la fecha: 一千 (yìqiān) mil + 两百 (liǎngbǎi) doscientos + 八十 (bāshí) ochenta + 五 (wǔ) cinco.
+
+EL DOS: Michelle: «el dos se pronuncia 两 (liǎng); solamente en la unidad se pronuncia 二 (èr)». Una precisión: en las decenas también va 二: 二十 (èrshí) veinte, nunca «两十» (liǎngshí). Entonces: 两 delante de 百 (bǎi), 千 (qiān) y 万 (wàn); 二 en las decenas y las unidades. Con 百 (bǎi) también se oye 二: 一千二百八十五 (yìqiān èrbǎi bāshíwǔ) es igual de correcto, sobre todo en medio de un número largo.
+
+DE GRANDE A CHICO: Michelle lo relacionó con la cultura: en chino todo va de lo grande a lo chico: la fecha (año, mes, día), las presentaciones (del cargo más alto al más bajo) y hasta el orden de la familia en un funeral.
+
+PRUEBA: el constructor de números de la página «Para estudiar» arma cualquier número paso a paso.
+
+PRONUNCIACIÓN: yìqiān liǎngbǎi bāshíwǔ. 一 (yī) se dice yì delante de 千 (qiān, primer tono).`,
+en:`WHAT IT IS: the number Michelle asked for in the class-6 review: 1285. It's read from big to small, just like the date: 一千 (yìqiān) a thousand + 两百 (liǎngbǎi) two hundred + 八十 (bāshí) eighty + 五 (wǔ) five.
+
+THE TWO: Michelle: "two is pronounced 两 (liǎng); only in the units is it pronounced 二 (èr)". One refinement: the tens also take 二: 二十 (èrshí) twenty, never "两十" (liǎngshí). So: 两 before 百 (bǎi), 千 (qiān) and 万 (wàn); 二 in tens and units. With 百 (bǎi) you also hear 二: 一千二百八十五 (yìqiān èrbǎi bāshíwǔ) is equally correct, especially in the middle of a long number.
+
+BIG TO SMALL: Michelle tied it to culture: in Chinese everything goes from big to small: the date (year, month, day), introductions (from the highest rank to the lowest) and even the family order at a funeral.
+
+TRY IT: the number builder on the "Para estudiar" page builds any number step by step.
+
+PRONUNCIATION: yìqiān liǎngbǎi bāshíwǔ. 一 (yī) is said yì before 千 (qiān, 1st tone).`,
+zh:`是什么：第六课复习的数字：1285＝一千两百八十五（也可以说一千二百八十五）。
+
+二和两：老师说个位用"二"，其他用"两"；补充：十位也用"二"（二十），百、千、万前多用"两"。
+
+从大到小：日期、介绍职位、葬礼上的家族顺序都是从大到小。`}}
   ]
 });

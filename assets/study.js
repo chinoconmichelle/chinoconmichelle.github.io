@@ -11,19 +11,25 @@ const STUI = {
        studyDrill:"🔢 Práctica de números", studyThen:"Después, si podés", studyMainH:"Lo principal",
        todayH:"Hoy", yesterdayH:"Ayer", todayTap:"Tocá para escucharla", learnedN:"{k} / {n} aprendidas",
        understandH:"🧠 Entender primero", memoH:"🔁 Después, memorizar", tryH:"✋ Probalo", goTo:"Ir a:",
-       numPh:"Escribí un número (0 a 99.999.999)", numHow:"Cómo se arma:", dateLbl:"Elegí una fecha:", weekToday:"Hoy, en las tres formas:", mistakesTag:"⚠️", yearHint:"Ojo: si es un AÑO, se dice cifra por cifra: {zh} ({py})." },
+       numPh:"Escribí un número (0 a 99.999.999)", numHow:"Cómo se arma:", dateLbl:"Elegí una fecha:", weekToday:"Hoy, en las tres formas:", mistakesTag:"⚠️", yearHint:"Ojo: si es un AÑO, se dice cifra por cifra: {zh} ({py}).",
+       ordHow:"Tocá las piezas en el orden del chino. Si te equivocás, tocá una pieza de arriba para devolverla.", ordOk:"✓ ¡Bien!", ordNo:"✗ Casi. En chino el orden es:", ordNext:"🔀 Otra oración", ordReset:"↺ De nuevo", ordCount:"Oración {i} de {n}",
+       rS:"sujeto", rT:"tiempo", rL:"lugar", rV:"verbo", rO:"objeto", rN:"negación", rP:"propósito", rQ:"cantidad", rM:"verbo de movimiento", rX:"posición" },
   en:{ studyTitle:"To study", studyTile:"📌 To study", studySub:"What Michelle asked for · {d}",
        studyAll:"📚 Study everything ({n} cards)", studyMain:"📚 Just the main parts ({n})", studyPart:"Practise this part ({n})",
        studyDrill:"🔢 Number practice", studyThen:"Then, if you can", studyMainH:"The main parts",
        todayH:"Today", yesterdayH:"Yesterday", todayTap:"Tap to hear it", learnedN:"{k} / {n} learned",
        understandH:"🧠 Understand first", memoH:"🔁 Then, memorise", tryH:"✋ Try it", goTo:"Go to:",
-       numPh:"Type a number (0 to 99,999,999)", numHow:"How it's built:", dateLbl:"Pick a date:", weekToday:"Today, in all three forms:", mistakesTag:"⚠️", yearHint:"Careful: if it's a YEAR, say it digit by digit: {zh} ({py})." },
+       numPh:"Type a number (0 to 99,999,999)", numHow:"How it's built:", dateLbl:"Pick a date:", weekToday:"Today, in all three forms:", mistakesTag:"⚠️", yearHint:"Careful: if it's a YEAR, say it digit by digit: {zh} ({py}).",
+       ordHow:"Tap the pieces in Chinese order. If you slip, tap a piece at the top to send it back.", ordOk:"✓ Well done!", ordNo:"✗ Almost. In Chinese the order is:", ordNext:"🔀 Another sentence", ordReset:"↺ Again", ordCount:"Sentence {i} of {n}",
+       rS:"subject", rT:"time", rL:"place", rV:"verb", rO:"object", rN:"negation", rP:"purpose", rQ:"amount", rM:"movement verb", rX:"position" },
   zh:{ studyTitle:"复习重点", studyTile:"📌 复习重点", studySub:"老师要求复习的内容 · {d}",
        studyAll:"📚 全部练习（{n} 张卡片）", studyMain:"📚 只练重点（{n}）", studyPart:"练习这一部分（{n}）",
        studyDrill:"🔢 数字练习", studyThen:"有时间再复习", studyMainH:"重点",
        todayH:"今天", yesterdayH:"昨天", todayTap:"点击收听", learnedN:"已学会 {k} / {n}",
        understandH:"🧠 先理解", memoH:"🔁 再记忆", tryH:"✋ 试一试", goTo:"跳到：",
-       numPh:"输入一个数字（0 到 99999999）", numHow:"怎么组成：", dateLbl:"选择日期：", weekToday:"今天的三种说法：", mistakesTag:"⚠️", yearHint:"注意：如果是年份，要逐个数字读：{zh}（{py}）。" }
+       numPh:"输入一个数字（0 到 99999999）", numHow:"怎么组成：", dateLbl:"选择日期：", weekToday:"今天的三种说法：", mistakesTag:"⚠️", yearHint:"注意：如果是年份，要逐个数字读：{zh}（{py}）。",
+       ordHow:"按汉语语序点击词块。点错了，点上面的词块放回去。", ordOk:"✓ 正确！", ordNo:"✗ 差一点。汉语的语序是：", ordNext:"🔀 换一句", ordReset:"↺ 重来", ordCount:"第 {i} 句，共 {n} 句",
+       rS:"主语", rT:"时间", rL:"地点", rV:"动词", rO:"宾语", rN:"否定", rP:"目的", rQ:"数量", rM:"移动动词", rX:"方位" }
 };
 Object.keys(STUI).forEach(l => Object.assign(UI[l], STUI[l]));
 
@@ -72,7 +78,7 @@ function chunk4(n, leading){            // n < 10000 → {tokens:[[zh, py]], ste
     if(x === 0){ if(started) zeroPending = true; return; }
     if(zeroPending || (!started && !leading && i > 0)){ toks.push(["零","líng"]); steps.push("0 → 零 (líng)"); zeroPending = false; }
     let dz = DG[x], dp = DP[x];
-    if(x === 2 && i < 2 && !started){ dz = "两"; dp = "liǎng"; }
+    if(x === 2 && i < 2){ dz = "两"; dp = "liǎng"; }   // Michelle (class 6): 两 before 千 and 百, 二 in tens and units: 1285 = 一千两百八十五
     if(x === 1 && i === 0) dp = "yì";
     if(x === 1 && i === 1) dp = "yì";
     const nextNonzero = d.slice(i+1).some(v => v);
@@ -155,8 +161,58 @@ function toolFor(key){
     const list = el("div","rex");
     forms.forEach(([z, p]) => { const r = el("button","rrow"); r.append(el("span","rzh", z), el("span","rpy", p)); r.onclick = () => sayZh(z); list.appendChild(r); });
     box.appendChild(list);
+  } else if(key === "sent" && window.STUDY_ORDER){
+    sentTool(box);
   } else return null;
   return box;
+}
+
+/* ---------- "put the pieces in Chinese order" (data: window.STUDY_ORDER) ---------- */
+let ordIdx = 0;
+function sentTool(box){
+  const EX = window.STUDY_ORDER;
+  box.appendChild(el("div","rp", T("ordHow")));
+  const count = el("div","stk"), prompt = el("div","stprompt"), ans = el("div","stans"), pool = el("div","stchips"), res = el("div","stres");
+  const acts = el("div","stbtns"), bReset = el("button","ghost", T("ordReset")), bNext = el("button","ghost", T("ordNext"));
+  acts.append(bReset, bNext);
+  box.append(count, prompt, ans, pool, res, acts);
+  let ex, placed, order, done;
+  const chip = (i, withRole) => {
+    const [zh, py, role] = ex.p[i];
+    const c = el("button","stchip"); c.append(el("b", null, zh), el("small", null, py));
+    if(withRole) c.appendChild(el("em", null, T("r" + role)));
+    return c;
+  };
+  const draw = () => {
+    ans.innerHTML = ""; pool.innerHTML = ""; ans.classList.remove("ok","no");
+    placed.forEach((i, k) => { const c = chip(i, done); if(!done) c.onclick = () => { placed.splice(k, 1); draw(); }; ans.appendChild(c); });
+    order.filter(i => !placed.includes(i)).forEach(i => { const c = chip(i, false); c.onclick = () => { sayZh(ex.p[i][0]); placed.push(i); if(placed.length === ex.p.length) finish(); else draw(); }; pool.appendChild(c); });
+  };
+  const finish = () => {
+    done = true;
+    const okOrders = [ex.p.map((_, i) => i)].concat(ex.alt || []);
+    const ok = okOrders.some(o => o.join() === placed.join());
+    if(!ok) placed = ex.p.map((_, i) => i);
+    draw(); ans.classList.add(ok ? "ok" : "no");
+    res.innerHTML = "";
+    res.appendChild(el("div","stresh", T(ok ? "ordOk" : "ordNo")));
+    const zh = placed.map(i => ex.p[i][0]).join(""), py = placed.map(i => ex.p[i][1]).join(" ");
+    const row = el("button","rrow stwide"); row.append(el("span","rzh", zh + "。"), el("span","rpy", py), el("span","rmean", placed.map(i => T("r" + ex.p[i][2])).join(" + ")));
+    row.onclick = () => sayZh(zh); res.appendChild(row);
+    sayZh(zh);
+  };
+  const start = () => {
+    ex = EX[ordIdx % EX.length]; placed = []; done = false; res.innerHTML = "";
+    count.textContent = T("ordCount").replace("{i}", (ordIdx % EX.length) + 1).replace("{n}", EX.length);
+    prompt.textContent = "«" + (S().lang === "en" ? ex.en : (S().lang === "zh" ? ex.es + " · " + ex.en : ex.es)) + "»";
+    const n = ex.p.length; order = ex.p.map((_, i) => i);
+    do { for(let i = n - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; } }
+    while(n > 1 && [ex.p.map((_, i) => i)].concat(ex.alt || []).some(o => o.join() === order.join()));
+    draw();
+  };
+  bReset.onclick = () => { placed = []; done = false; res.innerHTML = ""; draw(); };
+  bNext.onclick = () => { ordIdx++; start(); };
+  start();
 }
 function theoryFor(key){
   const blocks = (window.STUDY_THEORY || {})[key]; if(!blocks) return null;
